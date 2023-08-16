@@ -4,8 +4,9 @@
 #include <vector>
 
 #include <midifile/MidiFile.h>
+#include <spdlog/spdlog.h>
 
-#include <synthple_enums.hpp>
+#include <synthple_globals.hpp>
 
 namespace synthple::midi {
     
@@ -16,9 +17,12 @@ namespace synthple::midi {
         OTHER
     };
 
-    struct MidiEventNote {
+    struct MidiNote {
         Note note;
+        ushort note_value;
         ushort octave; // 0 to 9
+
+        std::string toString();
     };
 
     struct MidiEventWrapper {
@@ -26,21 +30,31 @@ namespace synthple::midi {
         MidiEventWrapper( smf::MidiEvent* mev );
 
         MidiEventType type;
-        MidiEventNote note;
+        MidiNote note;
         int ticks;
+
+        std::string toString();
 
         private:
 
             MidiEventType _getMidiEventTypeFromCode( int eventCode );
-            MidiEventNote _getMidiEventNoteFromCode( int noteCode );
+            MidiNote _getMidiEventNoteFromCode( int noteCode );
             Note _intToNote(int noteNumber);
     };
 
     class MidiFileWrapper {
 
         std::string _file_path;
-        int _ticks_per_quarter_note;
+        
         std::vector<MidiEventWrapper> _midi_events;
+        std::shared_ptr<spdlog::logger> _logger;
+        
+        double _duration_ms = 0;
+        double _ticks_per_quarter_note;
+        double _tick_duration;
+        double _tempo_bpm;
+
+        int _ticksToMilliseconds(int ticks);
 
         public:
             // When creating the MFWrapper we want to parse and
@@ -52,5 +66,17 @@ namespace synthple::midi {
             void printMidiEvents();
             // void getEventAt(int ms);
     
+    };
+
+    class Loop {
+
+       MidiFileWrapper _contents;
+       ushort _length_beats, _beats_per_min;
+       uint _length_milliseconds;
+
+       public:
+
+        
+
     };
 }

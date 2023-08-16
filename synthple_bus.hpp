@@ -1,16 +1,16 @@
 #pragma once
 
 #include <boost/lockfree/spsc_queue.hpp>
+#include <synthple_globals.hpp>
 
-namespace synthple {
-    namespace bus {
 
-        struct Queue {
-            // // boost::lockfree::spsc_queue<float,boost::lockfree::capacity<W_QUEUE_SIZE>> _queue_audio_to_ui;
-            // boost::lockfree::spsc_queue<float,boost::lockfree::capacity<W_QUEUE_SIZE>> _queue_commands;
-            
+namespace synthple::bus {
+    
+    struct AudioData_Queue {
+        boost::lockfree::spsc_queue<uint8_t,boost::lockfree::capacity<BUFFER_SIZE>> queue;
+    };
 
-        };
-
-    }
+    struct Commands_Queue {
+        boost::lockfree::spsc_queue<Signal,boost::lockfree::capacity<10>> queue;
+    };
 }
