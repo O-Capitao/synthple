@@ -7,19 +7,14 @@
 using namespace synthple::audio;
 
 AudioThread::AudioThread(
-    bus::AudioData_Queue *in_q,
-    bus::Commands_Queue *out_q
+    bus::AudioDataBus *in_bus
 )
-:_logger(spdlog::basic_logger_mt("AUDIO THREAD", "synthple.log")),
-_inputQueue( in_q ),
-_outputQueue( out_q )
+:_logger(spdlog::basic_logger_mt("AUDIO THREAD", "synthple.log"))
 {
-    _logger->set_level(spdlog::level::trace);
-    
     _data = new InternalAudioData();
-    _data->input_queue = in_q;
+    _data->inputBus = in_bus;
 
-    _logger->debug("built audio thread");
+    _logger->info("Constructed.");
 }
 
 AudioThread::~AudioThread(){
@@ -41,16 +36,14 @@ void AudioThread::run(){
     }
 
     // add this again
-    // _openStream();
-    // _startStream();
+    _openStream();
+    _startStream();
     
     bool _QUIT_SIG = false;
     
     /* Main Event Loop */
     while (!_QUIT_SIG){
-        // wait for quit sig
-        _logger->debug("run(): ping");
-        _logger->flush();
+
 
         // time interval to poll commands
         boost::this_thread::sleep_for( boost::chrono::milliseconds( AUDIO_TH_WAIT_TIME ) );
@@ -144,7 +137,7 @@ int AudioThread::paStreamCallback(
     uint8_t value;
     
     while ( 
-        p_data->input_queue->queue.pop(value) 
+        p_data->inputBus->queue.pop(value) 
         && (fill_buffer_counter < N_CHANNELS * FRAMES_IN_BUFFER)
     ){
         out[fill_buffer_counter] = value;

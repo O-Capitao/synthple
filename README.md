@@ -1,41 +1,42 @@
-# SYNTHPLE
-## What it is
+# Synthple revision: 2023 - 08 - 14
 
-A very small api for:
+===
+## Main Thread
 
-- Creating synth sounds
-    - 4 voices
-    - 8 - 16 bit depth
-    - programable parameters
+    * create **Synthple**
+    * create **Bus**
 
-- Using said synth in other apps, including
-    - infinite loops
-    - audio cues
-    - encapsulation of low level stuff
+>   Main loop
+    * handle events from *User Input*
 
-## Inputs
-
-### run in standalone:
-- synth.yaml - parameters for synth
-- song.midi
-
-### as a component in an app:
-- config.yaml - more configs relative to 
-    - event cues
-    - track order
-
-## Synth
-### Parameters
-* wave: `SQUARE`, `SINE`, `TRIANGLE`
-* ADSR env
+>       User Input:
+        * press Q -> quit program
 
 
-## Midi Files
-based on
-https://github.com/craigsapp/midifile.git
+===
+## Synthple
+* start **AudioThread** - container for paCallback
+* start **Generator**
+* flag MAIN_QUIT passed from main to stop playback/ cleanup
 
+===
+## AudioThread
 
-# About MIDI messages:
+===
+## Bus
+* one ptr to a sample queue -> for passing samples into the callback
+* sample format should be float
+
+===
+## Generator
+* generate a sine wave of frquency f for t seconds
+
+### THEORY: Frq Stuff
+1 rad/s = 1 / 2π Hz 
+
+freq_rad_s = freq_hz / 2π
+
+### THEORY: About MIDI messages:
 
 e.g.:
 
@@ -55,12 +56,12 @@ e.g.:
 
 7f -> hexadecimal for 127 - 128 notes in total in the MIDI spec
 
-## Message struct:
+### Message struct:
 
 80/90 -> note off/ on    |    4 bit for velocity
 
 
-## Notes vs Freq
+### Notes vs Freq
 https://pages.mtu.edu/~suits/NoteFreqCalcs.html
 
 fn = f0 * (a)n 
@@ -91,46 +92,33 @@ B0	        30.87 	1117.67
 A2 = 3 * 27.5
 
 
+### THEORY : Clocks:
 
+> Naive clock:
 
+```c
+/* clock example: frequency of primes */
+#include <stdio.h>      /* printf */
+#include <time.h>       /* clock_t, clock, CLOCKS_PER_SEC */
+#include <math.h>       /* sqrt */
 
+int frequency_of_primes (int n) {
+  int i,j;
+  int freq=n-1;
+  for (i=2; i<=n; ++i) for (j=sqrt(i);j>1;--j) if (i%j==0) {--freq; break;}
+  return freq;
+}
 
-
-
-# The Runtime
-
-
-1 Thread is running AudioThread 
-- Calling Callbakc
-- Reading Audio Bus
-
-main thread is hgandling the midi reading / mixer
-
-
-
-MIDI FILE IS READ BY MAIN THREAD
-    (INSTRUMENT config is also read)
-PARSED - Vec of EventMidiWrapper is passed to main
-
-
-> Mixer gets constructed,
-knowing AT START all of the event midi wrapper data needed for the entire track
-
-
-## run() ->
-
-> 
-a loop is started that runs until all event midi wrappers were handled
-
->
-timer keeps the current *playtime*
-handles **NOTE_ON** and **NOTE_OFF** commands
-instructs each instrument to start or stop playing
-
-
-
-
-
-
-
-
+int main ()
+{
+  clock_t t;
+  int f;
+  t = clock();
+  printf ("Calculating...\n");
+  f = frequency_of_primes (99999);
+  printf ("The number of primes lower than 100,000 is: %d\n",f);
+  t = clock() - t;
+  printf ("It took me %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
+  return 0;
+}
+``````

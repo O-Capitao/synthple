@@ -9,7 +9,7 @@
 namespace synthple::audio {
     
     struct InternalAudioData {
-        bus::AudioData_Queue *input_queue;
+        bus::AudioDataBus *inputBus;
     };
 
     class AudioThread {
@@ -17,8 +17,6 @@ namespace synthple::audio {
         std::shared_ptr<spdlog::logger >_logger;
         InternalAudioData *_data = NULL;
         PaStream *_stream = NULL;
-        bus::AudioData_Queue *_inputQueue;
-        bus::Commands_Queue *_outputQueue;
 
         void _openStream();
         void _closeStream();
@@ -28,8 +26,7 @@ namespace synthple::audio {
         public:
 
             AudioThread( 
-                bus::AudioData_Queue *inqueue,
-                bus::Commands_Queue *outqueue
+                bus::AudioDataBus *inqueue
             );
             
             ~AudioThread();
