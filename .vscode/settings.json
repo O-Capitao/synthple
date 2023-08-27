@@ -89,7 +89,8 @@
         "utility": "cpp",
         "stop_token": "cpp",
         "cinttypes": "cpp",
-        "span": "cpp"
-    },
-    "workbench.colorTheme": "Tomorrow Night Blue"
+        "span": "cpp",
+        "cfenv": "cpp",
+        "strstream": "cpp"
+    }
 }

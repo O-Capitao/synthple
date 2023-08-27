@@ -140,5 +140,7 @@ int AudioThread::paStreamCallback(
         out[fill_buffer_counter++] = value;
         // fill_buffer_counter++;
     }
+
+    return 0;
 }
 
