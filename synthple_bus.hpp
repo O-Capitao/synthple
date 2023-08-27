@@ -6,6 +6,6 @@
 
 namespace synthple::bus {
     struct AudioDataBus{
-        boost::lockfree::spsc_queue<uint8_t,boost::lockfree::capacity<BUFFER_SIZE>> queue;
+        boost::lockfree::spsc_queue<float,boost::lockfree::capacity<BUFFER_SIZE>> queue;
     };
 }

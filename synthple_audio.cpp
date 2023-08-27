@@ -13,7 +13,8 @@ AudioThread::AudioThread(
 {
     _data = new InternalAudioData();
     _data->inputBus = in_bus;
-
+    
+    _logger->set_level(spdlog::level::info);
     _logger->info("Constructed.");
 }
 
@@ -21,8 +22,9 @@ AudioThread::~AudioThread(){
     delete _data;
 }
 
-void AudioThread::run(){
-    _logger->debug("run()");
+void AudioThread::start()
+{
+    _logger->debug("start()");
 
     if ( Pa_Initialize() != paNoError){
         _logger->error("run() : Error initing the AudioEngine");
@@ -35,21 +37,16 @@ void AudioThread::run(){
         throw std::runtime_error("No data to play, shutting down.");
     }
 
-    // add this again
     _openStream();
     _startStream();
     
-    bool _QUIT_SIG = false;
-    
-    /* Main Event Loop */
-    while (!_QUIT_SIG){
+}
 
-
-        // time interval to poll commands
-        boost::this_thread::sleep_for( boost::chrono::milliseconds( AUDIO_TH_WAIT_TIME ) );
-    }
-
-    // _closeStream();
+void AudioThread::stop()
+{
+    _logger->debug("stop()");
+    _stopStream();
+    _closeStream();
 }
 
 /*
@@ -67,7 +64,7 @@ void AudioThread::_openStream()
         &_stream,
         0,
         N_CHANNELS,
-        paInt8,
+        paFloat32,
         FRAMERATE,
         BUFFER_SIZE,
         paStreamCallback,
@@ -129,19 +126,19 @@ int AudioThread::paStreamCallback(
     PaStreamCallbackFlags statusFlags,
     void *userData
 ){
-    uint8_t *out;
-    out = (uint8_t*)outputBuffer;
+    float *out;
+    out = (float*)outputBuffer;
     InternalAudioData *p_data = (InternalAudioData*)userData;
     
     int fill_buffer_counter = 0;
-    uint8_t value;
+    float value;
     
     while ( 
         p_data->inputBus->queue.pop(value) 
         && (fill_buffer_counter < N_CHANNELS * FRAMES_IN_BUFFER)
     ){
-        out[fill_buffer_counter] = value;
-        fill_buffer_counter++;
+        out[fill_buffer_counter++] = value;
+        // fill_buffer_counter++;
     }
 }
 

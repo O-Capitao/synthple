@@ -19,6 +19,22 @@
 * start **Generator**
 * flag MAIN_QUIT passed from main to stop playback/ cleanup
 
+### Synthple.run()
+de dt em dt
+
+> dentro do ciclo:
+-> buffer vazio? -> enche
+
+    quanto é dt?
+        t_buffer = BUFFER_SIZE / FRAMERATE
+
+
+
+
+
+
+    
+
 ===
 ## AudioThread
 
@@ -122,3 +138,8 @@ int main ()
   return 0;
 }
 ``````
+
+====
+6AM -> 24PM Col
+she comes in at 2PM -> 24PM
+10PM -> 6PM
