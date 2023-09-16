@@ -15,16 +15,10 @@ using namespace synthple;
 // Generators
 Generator::Generator( float amp, float freq_hz )
 :
-_logger(spdlog::basic_logger_mt("Generator", "synthple.log")),
-_amp(amp),
-_freq_hz(freq_hz)
+_logger(spdlog::basic_logger_mt("Generator", "synthple.log"))
 {
-    _period = 1.0f / _freq_hz;
-    _freq_rad_s = _freq_hz * (2 * M_PI);
-
     _logger->set_level(spdlog::level::info);
-    _logger->info("Generator Built, _period is {},\n_freq_rad_s is {}",
-        _period, _freq_rad_s);
+    setNewAmpAndFreq( amp, freq_hz );
 }
 
 Generator::~Generator()
@@ -32,6 +26,20 @@ Generator::~Generator()
     _logger->flush();
 }
 
+void Generator::setNewAmpAndFreq(float a, float f)
+{
+    _amp = a;
+    _freq_hz = f;
+    _freq_rad_s = _freq_hz * (2 * M_PI);
+    _period = 1.0f / _freq_hz;
+
+    _logger->set_level(spdlog::level::info);
+    _logger->info("Generator Built, _period is {},\n_freq_rad_s is {}",
+        _period, _freq_rad_s);
+}
+
+//
+// Sine Generator
 SineGenerator::SineGenerator(float amp, float freq_hz )
 :Generator(amp,freq_hz)
 {
@@ -48,7 +56,8 @@ float SineGenerator::getValueAtTime( float t )
     return retval;
 }
 
-
+//
+// Square Generator
 SquareGenerator::SquareGenerator(float amp, float freq_hz )
 :Generator(amp,freq_hz)
 {
@@ -68,14 +77,30 @@ float SquareGenerator::getValueAtTime( float t )
 
 //
 // Synthple
-Synthple::Synthple( bus::AudioDataBus *audioDataBus )
+Synthple::Synthple( bus::AudioDataBus *audioDataBus, int bpm )
 :
 _logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
 _audioThread( audio::AudioThread( audioDataBus ) ),
 _audioDataBus_ptr( audioDataBus ),
 _generator( 0.25, 440.0 ),
-_totalTime_s(3)
+_totalTime_s(3),
+_bpm(bpm)
 {}
+
+Synthple::Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper &midifile )
+:
+_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
+_audioThread( audio::AudioThread( audioDataBus ) ),
+_audioDataBus_ptr( audioDataBus ),
+// start generator w/ central A -> will be replaced
+_generator( 0.25, 440.0 ),
+_bpm(midifile.getTempoBpm())
+{
+    // what's the total time?
+    // _totalTime_s = midi::getLengthOfMidiSequence(  )
+    _logger->debug("Constructed Synthple obj");
+    // _logger->debug("MidiFile: {}", midifile.toString());
+}
 
 Synthple::~Synthple()
 {}

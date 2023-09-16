@@ -6,6 +6,7 @@
 #include <synthple_globals.hpp>
 #include <synthple_bus.hpp>
 #include <synthple_audio.hpp>
+#include <midi/synthple_midi.hpp>
 
 namespace synthple {
 
@@ -22,6 +23,7 @@ namespace synthple {
             Generator( float amp, float freq );
             ~Generator();
             virtual float getValueAtTime( float t ) = 0;
+            void setNewAmpAndFreq( float amp, float freq );
     };
 
     class SineGenerator: public Generator
@@ -52,9 +54,11 @@ namespace synthple {
         SineGenerator _generator;
 
         float _totalTime_s;
+        int _bpm;
 
         public:
-            Synthple( bus::AudioDataBus *audioDataBus );
+            Synthple( bus::AudioDataBus *audioDataBus, int bpm );
+            Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper &file );
             ~Synthple();
             void run();
             void quit();

@@ -39,7 +39,7 @@ void AudioThread::start()
 
     _openStream();
     _startStream();
-    
+
 }
 
 void AudioThread::stop()

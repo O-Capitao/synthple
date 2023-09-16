@@ -6,18 +6,22 @@
 
 * create **Synthple**
 * create **Bus**
+* agarra argumentos do comando:
+    - bpm
+    - midifilename 
 
->   Main loop
-    * handle events from *User Input*
+* Main loop
+    - handle events from *User Input*
 
->       User Input:
-        * press Q -> quit program
+
 
 
 ## Synthple
 * create and start **AudioThread** - container for paCallback
 * start **Generator**
 * flag MAIN_QUIT passed from main to stop playback/ cleanup
+* antes de correr - organiza uma sequência de notas em lista de **MidiEventWrapper**
+
 
 ### Synthple.run()
 de dt em dt
@@ -83,10 +87,12 @@ e.g.:
 
 7f -> hexadecimal for 127 - 128 notes in total in the MIDI spec
 
+### Ticks:
+In the MIDI specification, and in most DAW software, the smallest unit of metric timing is expressed in "ticks", which is to say, partial units of a beat.
+Commonly the number of ticks used is 480 or 960 parts per quarter note.
+
 ### Message struct:
-
 80/90 -> note off/ on    |    4 bit for velocity
-
 
 ### Notes vs Freq
 https://pages.mtu.edu/~suits/NoteFreqCalcs.html
@@ -148,9 +154,6 @@ int main ()
   printf ("It took me %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
   return 0;
 }
-``````
+```
 
-====
-6AM -> 24PM Col
-she comes in at 2PM -> 24PM
-10PM -> 6PM
+#

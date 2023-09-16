@@ -9,6 +9,8 @@
 #include <synthple_globals.hpp>
 
 namespace synthple::midi {
+
+    
     
     enum MidiEventType{
         NOTE_ON,
@@ -28,6 +30,11 @@ namespace synthple::midi {
     struct MidiEventWrapper {
 
         MidiEventWrapper( smf::MidiEvent* mev );
+        MidiEventWrapper(
+            MidiEventType _t,
+            MidiNote _n,
+            int _ticks
+        );
 
         MidiEventType type;
         MidiNote note;
@@ -42,6 +49,8 @@ namespace synthple::midi {
             Note _intToNote(int noteNumber);
     };
 
+    // int getLengthOfMidiSequence( const std::vector<MidiEventWrapper> &midi_vector );
+
     class MidiFileWrapper {
 
         std::string _file_path;
@@ -54,8 +63,6 @@ namespace synthple::midi {
         double _tick_duration;
         double _tempo_bpm;
 
-        int _ticksToMilliseconds(int ticks);
-
         public:
             // When creating the MFWrapper we want to parse and
             // store the entire track in a single instance 
@@ -65,7 +72,12 @@ namespace synthple::midi {
 
             void printMidiEvents();
             // void getEventAt(int ms);
-    
+            int getTempoBpm(){ return _tempo_bpm; }
+            
+            // Called by the Synthple run() to get what notes are 
+            // active at a certain time
+            std::vector<MidiNote> getNoteAtInstant( int ms );
+            std::string toString();
     };
 
     class Loop {

@@ -7,8 +7,22 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
+#include <iostream>
+
 int main(int argc, char *argv[]){
-    
+
+    if (argc < 3){
+        // error -> need a bpm and midi file to play
+        std::cerr << "Too little args, please supply a bpm and midi file path\n";
+        return 1;
+    }
+
+    // get bpm
+    int bpm = atoi(argv[1]);
+    std::string midifilepath( argv[2] );
+
+    std::cout << "Playing " << midifilepath.c_str() << std::endl;
+
     auto _logger(spdlog::basic_logger_mt("MAIN", "synthple.log"));
 
     _logger->info(LOG_DASH_SEPARATOR);
@@ -16,7 +30,8 @@ int main(int argc, char *argv[]){
     _logger->flush();
     
     synthple::bus::AudioDataBus _audioDataBus;
-    synthple::Synthple synthple( &_audioDataBus);
-    synthple.run();
+    synthple::Synthple synthple( &_audioDataBus, bpm );
+    synthple::midi::MidiFileWrapper midiFile( midifilepath );
 
+    synthple.run();
 }
