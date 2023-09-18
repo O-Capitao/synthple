@@ -2,7 +2,8 @@
 
 using namespace synthple;
 
-std::string globalsToString(){
+std::string globalsToString()
+{
     return "FRAMES_IN_BUFFER: " + std::to_string(FRAMES_IN_BUFFER) + "\n"
         +  "N_CHANNELS: " + std::to_string(N_CHANNELS) + "\n"
         +  "FRAMERATE: " + std::to_string(FRAMERATE) + "\n"
@@ -13,7 +14,8 @@ std::string globalsToString(){
         +  "TIME_FOR_BUFFER: " + std::to_string(TIME_FOR_BUFFER) + "\n";
 }
 
-NoteFrequency::NoteFrequency(){
+NoteFrequency::NoteFrequency()
+{
     // 2 oct for now
     noteFreqMap = {
         {"C0",16.35 },

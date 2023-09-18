@@ -34,13 +34,13 @@ namespace synthple {
             float getValueAtTime( float t );
     };
 
-    class SquareGenerator: public Generator
-    {
-        public:
-            SquareGenerator( float amp, float freq );
-            ~SquareGenerator();
-            float getValueAtTime( float t );
-    };
+    // class SquareGenerator: public Generator
+    // {
+    //     public:
+    //         SquareGenerator( float amp, float freq );
+    //         ~SquareGenerator();
+    //         float getValueAtTime( float t );
+    // };
     
 
 
@@ -51,14 +51,20 @@ namespace synthple {
         std::shared_ptr<spdlog::logger >_logger;
         audio::AudioThread _audioThread;
         bus::AudioDataBus *_audioDataBus_ptr;
+        midi::MidiFileWrapper *_midi_file_ptr;
+        int _bpm;
+        bool _isNotePressed;
+        float _totalTime_s;
+        
+
+        NoteFrequency _noteFrequency;
+        // std::vector<midi::MidiNote> _pressedNotes;
+        midi::MidiNote _pressedNote;
         SineGenerator _generator;
 
-        float _totalTime_s;
-        int _bpm;
-
         public:
-            Synthple( bus::AudioDataBus *audioDataBus, int bpm );
-            Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper &file );
+            // Synthple( bus::AudioDataBus *audioDataBus, int bpm );
+            Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper *file );
             ~Synthple();
             void run();
             void quit();

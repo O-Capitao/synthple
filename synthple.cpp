@@ -56,50 +56,39 @@ float SineGenerator::getValueAtTime( float t )
     return retval;
 }
 
-//
-// Square Generator
-SquareGenerator::SquareGenerator(float amp, float freq_hz )
-:Generator(amp,freq_hz)
-{
-    _logger->info("Generator is Square Generator.");
-}
+// //
+// // Square Generator
+// SquareGenerator::SquareGenerator(float amp, float freq_hz )
+// :Generator(amp,freq_hz)
+// {
+//     _logger->info("Generator is Square Generator.");
+// }
 
-SquareGenerator::~SquareGenerator()
-{}
+// SquareGenerator::~SquareGenerator()
+// {}
 
-float SquareGenerator::getValueAtTime( float t )
-{
-    float __t_in_period = t - floor( t / _period );
+// float SquareGenerator::getValueAtTime( float t )
+// {
+//     float __t_in_period = t - floor( t / _period );
 
-    return 0.0f;
-}
+//     return 0.0f;
+// }
 
 
-//
-// Synthple
-Synthple::Synthple( bus::AudioDataBus *audioDataBus, int bpm )
+Synthple::Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper *midifile )
 :
 _logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
 _audioThread( audio::AudioThread( audioDataBus ) ),
 _audioDataBus_ptr( audioDataBus ),
-_generator( 0.25, 440.0 ),
-_totalTime_s(3),
-_bpm(bpm)
-{}
-
-Synthple::Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper &midifile )
-:
-_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
-_audioThread( audio::AudioThread( audioDataBus ) ),
-_audioDataBus_ptr( audioDataBus ),
-// start generator w/ central A -> will be replaced
-_generator( 0.25, 440.0 ),
-_bpm(midifile.getTempoBpm())
+_midi_file_ptr( midifile ),
+_bpm(midifile->getTempoBpm()),
+_isNotePressed(false),
+_noteFrequency(NoteFrequency()),
+_pressedNote( midi::MidiNote( NoteKey::A, 3 )),
+// _generator( 0.25, _noteFrequency.findFrequecyForNote( _pressedNote ) )
+_generator(0.25, _noteFrequency.noteFreqMap[_pressedNote.note_value])
 {
-    // what's the total time?
-    // _totalTime_s = midi::getLengthOfMidiSequence(  )
     _logger->debug("Constructed Synthple obj");
-    // _logger->debug("MidiFile: {}", midifile.toString());
 }
 
 Synthple::~Synthple()
@@ -114,8 +103,13 @@ void Synthple::run()
     int _predicted_sample_count = _totalTime_s * FRAMERATE;
     int _buffer_writes = _predicted_sample_count / FRAMES_IN_BUFFER;
 
-    _logger->info("Starting run. Predicted sample count to be handled: {}", _predicted_sample_count);
-    _logger->debug("Size of buffer: {}.\n Writes to Buffer (Sample Count / Buffer Size) = {}", FRAMES_IN_BUFFER, _buffer_writes);
+    _logger->info(
+        "Starting run. Predicted sample count to be handled: {}", 
+        _predicted_sample_count);
+
+    _logger->debug(
+        "Size of buffer: {}.\n Writes to Buffer (Sample Count / Buffer Size) = {}", 
+        FRAMES_IN_BUFFER, _buffer_writes);
 
     // should be the same as the target sample rate
     float _logical_dt_s = 1 / (float)FRAMERATE;
@@ -126,12 +120,36 @@ void Synthple::run()
     float _cycle_advance_dt_s = 0.5 * (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
     float _this_frames_val = 0;
 
-    _logger->debug("Starting Run.\nCycle Time = {}", _cycle_advance_dt_s);
+    
 
+    _logger->debug("Starting Run.\nCycle Time = {}", _cycle_advance_dt_s);
+    
+    midi::MidiNote _requestedNote;
     _audioThread.start();
 
     while (!_MAIN_QUIT)
     {
+        // PROCESS MIDI
+        _requestedNote = _midi_file_ptr->getSingleNoteAtInstant(_logical_current_time_s / 1000.0f);
+
+        _isNotePressed = false;
+        // if (_requestedNotes.size() > 0)
+        // {
+        //     _isNotePressed = true;
+        //     bool found = false;
+        //     // did pressed notes changed?
+        //     for (int pressed_note_i = 0; pressed_note_i < _requestedNotes.size(); pressed_note_i++)
+        //     {
+        //         for ( int existing_note_i =0 ; existing_note_i < _pressedNotes.size(); existing_note_i++ )
+        //         {
+
+        //         }
+                
+        //     }
+        // }
+
+
+        // PROCESS AUDIO
         int _spaceInQueue = _audioDataBus_ptr->queue.write_available();
 
         if ( _spaceInQueue > 0 && _logical_current_time_s < _total_time_s )

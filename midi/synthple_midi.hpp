@@ -20,8 +20,12 @@ namespace synthple::midi {
     };
 
     struct MidiNote {
-        Note note;
-        ushort note_value;
+
+        MidiNote() { note = NoteKey::A; octave = 4; note_value = toString(); }
+        MidiNote( NoteKey nk, int o ){ note = nk; octave = o; note_value = toString(); }
+
+        NoteKey note;
+        std::string note_value;
         ushort octave; // 0 to 9
 
         std::string toString();
@@ -46,7 +50,7 @@ namespace synthple::midi {
 
             MidiEventType _getMidiEventTypeFromCode( int eventCode );
             MidiNote _getMidiEventNoteFromCode( int noteCode );
-            Note _intToNote(int noteNumber);
+            NoteKey _intToNote(int noteNumber);
     };
 
     // int getLengthOfMidiSequence( const std::vector<MidiEventWrapper> &midi_vector );
@@ -76,19 +80,20 @@ namespace synthple::midi {
             
             // Called by the Synthple run() to get what notes are 
             // active at a certain time
-            std::vector<MidiNote> getNoteAtInstant( int ms );
+            std::vector<MidiNote> getNotesAtInstant( int ms );
+            MidiNote getSingleNoteAtInstant( int ms );
             std::string toString();
     };
 
-    class Loop {
+    // class Loop {
 
-       MidiFileWrapper _contents;
-       ushort _length_beats, _beats_per_min;
-       uint _length_milliseconds;
+    //    MidiFileWrapper _contents;
+    //    ushort _length_beats, _beats_per_min;
+    //    uint _length_milliseconds;
 
-       public:
+    //    public:
 
         
 
-    };
+    // };
 }

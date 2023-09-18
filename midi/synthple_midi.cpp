@@ -11,40 +11,40 @@ std::string MidiNote::toString(){
 
     switch (note)
     {
-        case Note::C:
+        case NoteKey::C:
             retval += "C";
             break;
-        case Note::Cs:
+        case NoteKey::Cs:
             retval += "C#";
             break;
-        case Note::D:
+        case NoteKey::D:
             retval += "D";
             break;
-        case Note::Ds:
+        case NoteKey::Ds:
             retval += "D#";
             break;
-        case Note::E:
+        case NoteKey::E:
             retval += "E";
             break;
-        case Note::F:
+        case NoteKey::F:
             retval += "F";
             break;
-        case Note::Fs:
+        case NoteKey::Fs:
             retval += "F#";
             break;
-        case Note::G:
+        case NoteKey::G:
             retval += "G";
             break;
-        case Note::Gs:
+        case NoteKey::Gs:
             retval += "G#";
             break;
-        case Note::A:
+        case NoteKey::A:
             retval += "A";
             break;
-        case Note::As:
+        case NoteKey::As:
             retval += "A#";
             break;
-        case Note::B:
+        case NoteKey::B:
             retval += "B";
             break;
         default:
@@ -88,38 +88,39 @@ MidiEventType MidiEventWrapper::_getMidiEventTypeFromCode( int eventCode ){
 }
 
 MidiNote MidiEventWrapper::_getMidiEventNoteFromCode( int noteCode ){
-    return {
-        .note = _intToNote( noteCode % DIATONIC_SCALE_SIZE),
-        .octave = (ushort)(noteCode / DIATONIC_SCALE_SIZE)
-    };
+    // return {
+    //     .note = _intToNote( noteCode % DIATONIC_SCALE_SIZE),
+    //     .octave = (ushort)(noteCode / DIATONIC_SCALE_SIZE)
+    // };
+    return MidiNote( _intToNote( noteCode % DIATONIC_SCALE_SIZE),  (ushort)(noteCode / DIATONIC_SCALE_SIZE) );
 }
 
-synthple::Note MidiEventWrapper::_intToNote(int noteNumber){
+synthple::NoteKey MidiEventWrapper::_intToNote(int noteNumber){
     switch (noteNumber) {
         case 0:
-            return Note::C;
+            return NoteKey::C;
         case 1:
-            return Note::Cs;
+            return NoteKey::Cs;
         case 2:
-            return Note::D;
+            return NoteKey::D;
         case 3:
-            return Note::Ds;
+            return NoteKey::Ds;
         case 4:
-            return Note::E;
+            return NoteKey::E;
         case 5:
-            return Note::F;
+            return NoteKey::F;
         case 6:
-            return Note::Fs;
+            return NoteKey::Fs;
         case 7:
-            return Note::G;
+            return NoteKey::G;
         case 8:
-            return Note::Gs;
+            return NoteKey::Gs;
         case 9:
-            return Note::A;
+            return NoteKey::A;
         case 10:
-            return Note::As;
+            return NoteKey::As;
         case 11:
-            return Note::B;
+            return NoteKey::B;
         default:
             throw std::runtime_error("Invalid Note detected, aborting.\n"); 
     }
@@ -186,7 +187,8 @@ MidiFileWrapper::MidiFileWrapper(
 
 MidiFileWrapper::~MidiFileWrapper(){}
 
-std::vector<MidiNote> MidiFileWrapper::getNoteAtInstant( int ms )
+// for next step
+std::vector<MidiNote> MidiFileWrapper::getNotesAtInstant( int ms )
 {   
     std::vector<MidiNote> out;
     int curr_tick = floor( (double)ms / _tick_duration );
@@ -205,6 +207,29 @@ std::vector<MidiNote> MidiFileWrapper::getNoteAtInstant( int ms )
                     if (inner_ev.ticks > curr_tick){
                         out.push_back( ev.note );
                     }
+                }
+            }
+        }
+    }
+    return out;
+}
+
+MidiNote MidiFileWrapper::getSingleNoteAtInstant( int ms )
+{   
+    MidiNote out;
+    int curr_tick = floor( (double)ms / _tick_duration );
+    
+    for (int i = 0; i < _midi_events.size(); i++){  
+
+        MidiEventWrapper &ev = _midi_events[i];
+        if (ev.type == MidiEventType::NOTE_ON && ev.ticks <= curr_tick ){
+            // note was preseed
+            for (int j = i; j < _midi_events.size(); j++){
+                MidiEventWrapper &inner_ev = _midi_events[i];
+                if ( inner_ev.note.note_value == ev.note.note_value && inner_ev.type == MidiEventType::NOTE_OFF )
+                {
+                    out = ev.note;
+                    break;
                 }
             }
         }

@@ -11,14 +11,14 @@
 
 int main(int argc, char *argv[]){
 
-    if (argc < 3){
+    if (argc < 2){
         // error -> need a bpm and midi file to play
-        std::cerr << "Too little args, please supply a bpm and midi file path\n";
+        std::cerr << "Too little args, please supply a midi file path\n";
         return 1;
     }
 
     // get bpm
-    int bpm = atoi(argv[1]);
+    // int bpm = atoi(argv[1]);
     std::string midifilepath( argv[2] );
 
     std::cout << "Playing " << midifilepath.c_str() << std::endl;
@@ -29,9 +29,9 @@ int main(int argc, char *argv[]){
     _logger->info("Starting Run\n");
     _logger->flush();
     
-    synthple::bus::AudioDataBus _audioDataBus;
-    synthple::Synthple synthple( &_audioDataBus, bpm );
+    synthple::bus::AudioDataBus _audioDataBus;    
     synthple::midi::MidiFileWrapper midiFile( midifilepath );
 
+    synthple::Synthple synthple( &_audioDataBus, &midiFile );
     synthple.run();
 }

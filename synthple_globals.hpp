@@ -22,7 +22,7 @@ namespace synthple {
     // 0 through 255 decimal
     // using MY_SAMPLE_DEF = float;
     
-    enum Note { C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B };
+    enum NoteKey { C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B };
 
     enum Signal {
         PLAYBACK_FINISHED
@@ -31,12 +31,8 @@ namespace synthple {
     // print out defined numbers
     std::string globalsToString();
 
-    class NoteFrequency {
-
+    struct NoteFrequency {
         std::map<std::string, float> noteFreqMap;
-
-        public:
-            NoteFrequency();
-
+        NoteFrequency();
     };
 }
