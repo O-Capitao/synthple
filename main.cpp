@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
 
     // get bpm
     // int bpm = atoi(argv[1]);
-    std::string midifilepath( argv[2] );
+    std::string midifilepath( argv[1] );
 
     std::cout << "Playing " << midifilepath.c_str() << std::endl;
 

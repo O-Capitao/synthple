@@ -62,10 +62,21 @@ namespace synthple::midi {
         std::vector<MidiEventWrapper> _midi_events;
         std::shared_ptr<spdlog::logger> _logger;
         
-        double _duration_ms = 0;
+        double _duration_s = 0;
+        double _tick_duration_s;
+
+        int _total_ticks;
         double _ticks_per_quarter_note;
-        double _tick_duration;
         double _tempo_bpm;
+
+        // stuff to help reading a file
+        float _dt_s;
+        float _t_s;
+        int _current_tick = 0;
+        std::vector<MidiNote> _active_notes_vec;
+        int _curr_midi_evt_index = -1;
+
+        void _setInitialNotes(); 
 
         public:
             // When creating the MFWrapper we want to parse and
@@ -75,25 +86,14 @@ namespace synthple::midi {
             ~MidiFileWrapper();
 
             void printMidiEvents();
-            // void getEventAt(int ms);
             int getTempoBpm(){ return _tempo_bpm; }
+            double getDuration(){ return _duration_s; }
             
             // Called by the Synthple run() to get what notes are 
             // active at a certain time
-            std::vector<MidiNote> getNotesAtInstant( int ms );
-            MidiNote getSingleNoteAtInstant( int ms );
+            void initSequentialRead( float dt_s );
+            void step();
+            const std::vector<MidiNote> &getActiveNotesVec(){return _active_notes_vec;};
             std::string toString();
     };
-
-    // class Loop {
-
-    //    MidiFileWrapper _contents;
-    //    ushort _length_beats, _beats_per_min;
-    //    uint _length_milliseconds;
-
-    //    public:
-
-        
-
-    // };
 }

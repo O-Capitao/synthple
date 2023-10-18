@@ -17,7 +17,7 @@ Generator::Generator( float amp, float freq_hz )
 :
 _logger(spdlog::basic_logger_mt("Generator", "synthple.log"))
 {
-    _logger->set_level(spdlog::level::info);
+    _logger->set_level(spdlog::level::debug);
     setNewAmpAndFreq( amp, freq_hz );
 }
 
@@ -33,9 +33,10 @@ void Generator::setNewAmpAndFreq(float a, float f)
     _freq_rad_s = _freq_hz * (2 * M_PI);
     _period = 1.0f / _freq_hz;
 
-    _logger->set_level(spdlog::level::info);
-    _logger->info("Generator Built, _period is {},\n_freq_rad_s is {}",
+    
+    _logger->debug("Generator Freq Changed: _period is {} - _freq_rad_s is {}",
         _period, _freq_rad_s);
+    _logger->flush();
 }
 
 //
@@ -85,9 +86,11 @@ _bpm(midifile->getTempoBpm()),
 _isNotePressed(false),
 _noteFrequency(NoteFrequency()),
 _pressedNote( midi::MidiNote( NoteKey::A, 3 )),
+_totalTime_s( midifile->getDuration() ),
 // _generator( 0.25, _noteFrequency.findFrequecyForNote( _pressedNote ) )
 _generator(0.25, _noteFrequency.noteFreqMap[_pressedNote.note_value])
 {
+    _logger->set_level(spdlog::level::debug);
     _logger->debug("Constructed Synthple obj");
 }
 
@@ -96,7 +99,7 @@ Synthple::~Synthple()
 
 void Synthple::run()
 {   
-    _logger->set_level(spdlog::level::info);
+    
     // debug stuff
     clock_t _ticks_start = clock();
     int _writes_to_buffer = 0;
@@ -108,8 +111,9 @@ void Synthple::run()
         _predicted_sample_count);
 
     _logger->debug(
-        "Size of buffer: {}.\n Writes to Buffer (Sample Count / Buffer Size) = {}", 
-        FRAMES_IN_BUFFER, _buffer_writes);
+        "Size of buffer: {}. - Writes to Buffer (Sample Count / Buffer Size) = {}", 
+        FRAMES_IN_BUFFER, _buffer_writes
+    );
 
     // should be the same as the target sample rate
     float _logical_dt_s = 1 / (float)FRAMERATE;
@@ -117,58 +121,78 @@ void Synthple::run()
     float _logical_current_time_s = 0;
     float _total_time_s = _totalTime_s;
 
-    float _cycle_advance_dt_s = 0.5 * (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
+    float _cycle_advance_dt_s = 00.5 * (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
     float _this_frames_val = 0;
 
-    
+    std::string _current_note_name = "";
+    std::vector<NoteKey> activenotes(MAX_N_VOICES);
 
-    _logger->debug("Starting Run.\nCycle Time = {}", _cycle_advance_dt_s);
+    _logger->debug("Starting Run - Cycle Time = {}", _cycle_advance_dt_s);
     
+    _midi_file_ptr->initSequentialRead( _logical_dt_s );
+    const std::vector<midi::MidiNote> &_requestedNotes = _midi_file_ptr->getActiveNotesVec();
+
+    // quick and dirty test,
+    // use only 1st note of current chord
     midi::MidiNote _requestedNote;
+    float _requestedNoteFreq = 0;
+
     _audioThread.start();
 
     while (!_MAIN_QUIT)
     {
-        // PROCESS MIDI
-        _requestedNote = _midi_file_ptr->getSingleNoteAtInstant(_logical_current_time_s / 1000.0f);
-
-        _isNotePressed = false;
-        // if (_requestedNotes.size() > 0)
-        // {
-        //     _isNotePressed = true;
-        //     bool found = false;
-        //     // did pressed notes changed?
-        //     for (int pressed_note_i = 0; pressed_note_i < _requestedNotes.size(); pressed_note_i++)
-        //     {
-        //         for ( int existing_note_i =0 ; existing_note_i < _pressedNotes.size(); existing_note_i++ )
-        //         {
-
-        //         }
-                
-        //     }
-        // }
-
-
         // PROCESS AUDIO
         int _spaceInQueue = _audioDataBus_ptr->queue.write_available();
+
+        spdlog::debug("Starting Buffer Write. '_logical_current_time_s'={}", _logical_current_time_s);
 
         if ( _spaceInQueue > 0 && _logical_current_time_s < _total_time_s )
         {
             // advance time as we push values into the queue
             for (int i = 0; i < _spaceInQueue; i++ )
             {
+                // TIME STEP
                 if (_logical_current_time_s >= _total_time_s) {
                     break;
+                    _MAIN_QUIT = true;
+                }
+
+                // PROCESS MIDI
+                _requestedNote = _requestedNotes[0];
+                
+                
+                // DEBUG
+                if (_requestedNote.note_value != _current_note_name ){
+                    _requestedNoteFreq = _requestedNote.note == NoteKey::NOT_A_NOTE ? 0 : _noteFrequency.noteFreqMap[ _requestedNote.note_value ];
+                    _logger->debug("***Note Changed*** To: {} at {} s. Freq={} Hz",
+                        _requestedNote.note_value, _logical_current_time_s, _requestedNoteFreq);
+                    _current_note_name = _requestedNote.note_value;
+                }
+
+                if (_requestedNote.note == NoteKey::NOT_A_NOTE )
+                {
+                    _isNotePressed = false;
+                } else {
+                
+                    if (_pressedNote.note_value != _requestedNote.note_value){
+
+                        _generator.setNewAmpAndFreq( 0.25, _noteFrequency.noteFreqMap[ _requestedNote.note_value ] );
+                    }
+                    _pressedNote = _requestedNote;
+                    _isNotePressed = true;
                 }
                 
-                _this_frames_val = _generator.getValueAtTime( _logical_current_time_s );
+
+                _this_frames_val = _isNotePressed ? _generator.getValueAtTime( _logical_current_time_s ) : 0.0f;
 
                 _audioDataBus_ptr->queue.push( _this_frames_val );
-                _logger->debug("TIME = {} / VALUE = {}", _logical_current_time_s, _this_frames_val);
+                // _audioDataBus_ptr->queue.push( 0 );
                 _logical_current_time_s += _logical_dt_s;
+                _midi_file_ptr->step();
+                // END  TIME STEP
             }
 
-            // _writes_to_buffer++;
+            _writes_to_buffer++;
             
         }
 

@@ -15,13 +15,13 @@ std::string MidiNote::toString(){
             retval += "C";
             break;
         case NoteKey::Cs:
-            retval += "C#";
+            retval += "Cs";
             break;
         case NoteKey::D:
             retval += "D";
             break;
         case NoteKey::Ds:
-            retval += "D#";
+            retval += "Ds";
             break;
         case NoteKey::E:
             retval += "E";
@@ -30,22 +30,25 @@ std::string MidiNote::toString(){
             retval += "F";
             break;
         case NoteKey::Fs:
-            retval += "F#";
+            retval += "Fs";
             break;
         case NoteKey::G:
             retval += "G";
             break;
         case NoteKey::Gs:
-            retval += "G#";
+            retval += "Gs";
             break;
         case NoteKey::A:
             retval += "A";
             break;
         case NoteKey::As:
-            retval += "A#";
+            retval += "As";
             break;
         case NoteKey::B:
             retval += "B";
+            break;
+        case NoteKey::NOT_A_NOTE:
+            retval += "NOT_A_NOTE";
             break;
         default:
             throw std::runtime_error("Invalid Note detected.");
@@ -160,7 +163,7 @@ MidiFileWrapper::MidiFileWrapper(
     midifile.joinTracks();
     
     _ticks_per_quarter_note = midifile.getTicksPerQuarterNote();
-    _tick_duration = midifile.getTimeInSeconds(1);
+    _tick_duration_s = midifile.getTimeInSeconds(1);
     
     smf::MidiEvent* mev;
 
@@ -176,8 +179,10 @@ MidiFileWrapper::MidiFileWrapper(
     // get track duration from
     // last event's ticks
     long _last_event_ticks = _midi_events.back().ticks;
-    _duration_ms = _last_event_ticks * _tick_duration;
-    _tempo_bpm = 60 / (_tick_duration * _ticks_per_quarter_note);
+    _duration_s = _last_event_ticks * _tick_duration_s;
+    _tempo_bpm = 60 / (_tick_duration_s * _ticks_per_quarter_note);
+
+    
 
     _logger->info("Midi File: \n{}", toString());
 
@@ -187,54 +192,56 @@ MidiFileWrapper::MidiFileWrapper(
 
 MidiFileWrapper::~MidiFileWrapper(){}
 
-// for next step
-std::vector<MidiNote> MidiFileWrapper::getNotesAtInstant( int ms )
-{   
-    std::vector<MidiNote> out;
-    int curr_tick = floor( (double)ms / _tick_duration );
+void MidiFileWrapper::initSequentialRead( float dt_s ){
     
-    for (int i = 0; i < _midi_events.size(); i++){    
-        MidiEventWrapper &ev = _midi_events[i];
-        if (ev.type == MidiEventType::NOTE_ON && ev.ticks <= curr_tick ){
-            // note was preseed
-            for (int j = i; j < _midi_events.size(); j++){
-                MidiEventWrapper &inner_ev = _midi_events[i];
-                if ( inner_ev.note.note_value == ev.note.note_value 
-                    && inner_ev.type == MidiEventType::NOTE_OFF )
-                {
-                    // detect the 1st note off for that note, if it already occured,
-                    // ignore, otherwise, play it.
-                    if (inner_ev.ticks > curr_tick){
-                        out.push_back( ev.note );
-                    }
-                }
-            }
-        }
-    }
-    return out;
+    _dt_s = dt_s;
+    _t_s = 0;
+
+    _current_tick = 0;
+
+    _active_notes_vec = std::vector<MidiNote>(MAX_N_VOICES);
+    
+    _active_notes_vec[0] = MidiNote(NoteKey::NOT_A_NOTE, 0);
+    _active_notes_vec[1] = MidiNote(NoteKey::NOT_A_NOTE, 0);
+    _active_notes_vec[2] = MidiNote(NoteKey::NOT_A_NOTE, 0);
+    _active_notes_vec[3] = MidiNote(NoteKey::NOT_A_NOTE, 0);
+
+    _curr_midi_evt_index = 0;
+
+    _setInitialNotes();
 }
 
-MidiNote MidiFileWrapper::getSingleNoteAtInstant( int ms )
-{   
-    MidiNote out;
-    int curr_tick = floor( (double)ms / _tick_duration );
-    
-    for (int i = 0; i < _midi_events.size(); i++){  
+void MidiFileWrapper::_setInitialNotes(){
 
-        MidiEventWrapper &ev = _midi_events[i];
-        if (ev.type == MidiEventType::NOTE_ON && ev.ticks <= curr_tick ){
-            // note was preseed
-            for (int j = i; j < _midi_events.size(); j++){
-                MidiEventWrapper &inner_ev = _midi_events[i];
-                if ( inner_ev.note.note_value == ev.note.note_value && inner_ev.type == MidiEventType::NOTE_OFF )
-                {
-                    out = ev.note;
-                    break;
-                }
-            }
-        }
+    if (_midi_events[0].ticks == 0 && _midi_events[0].type == MidiEventType::NOTE_ON){
+        _active_notes_vec[0] = _midi_events[0].note;
+        _curr_midi_evt_index = 0;
+
     }
-    return out;
+
+}
+
+void MidiFileWrapper::step(){
+
+    if (_curr_midi_evt_index > _midi_events.size() - 1) return;
+    
+    MidiEventWrapper &next_event = _midi_events[ _curr_midi_evt_index + 1 ];
+
+    if (next_event.type == MidiEventType::END_OF_SEQUENCE) return;
+
+    if (next_event.ticks <= _current_tick){
+        if (next_event.type == MidiEventType::NOTE_ON){
+            _active_notes_vec[0] = next_event.note;
+        } else 
+        if (next_event.type == MidiEventType::NOTE_OFF && _active_notes_vec[0].note_value == next_event.note.note_value){
+            _active_notes_vec[0] = MidiNote(NoteKey::NOT_A_NOTE, 0);
+        }
+
+        _curr_midi_evt_index++;
+    }
+
+    _t_s += _dt_s;
+    _current_tick = _t_s / _tick_duration_s;
 }
 
 std::string MidiFileWrapper::toString(){
@@ -243,13 +250,13 @@ std::string MidiFileWrapper::toString(){
 
     retval.append(
     "Parsed MIDI file:\n  total duration = "
-     + std::to_string(_duration_ms) 
+     + std::to_string(_duration_s) 
      + "s\nticks_per_qnote ="
      + std::to_string(_ticks_per_quarter_note)
      + "\nbpm: "
      + std::to_string( _tempo_bpm )
      + "\ntick duration: "
-     + std::to_string( _tick_duration ) 
+     + std::to_string( _tick_duration_s ) 
      + "\nEvents:\n" 
     );
     

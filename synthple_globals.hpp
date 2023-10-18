@@ -8,6 +8,7 @@
 #define AUDIO_QUEUE_SIZE (BUFFER_SIZE * 4)          // number of frames in the buffer
 #define DIATONIC_SCALE_SIZE 12
 #define TIME_FOR_BUFFER (FRAMES_IN_BUFFER / FRAMERATE)
+#define MAX_N_VOICES 4
 
 #define AUDIO_TH_WAIT_TIME 33
 
@@ -22,7 +23,7 @@ namespace synthple {
     // 0 through 255 decimal
     // using MY_SAMPLE_DEF = float;
     
-    enum NoteKey { C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B };
+    enum NoteKey { C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B, NOT_A_NOTE };
 
     enum Signal {
         PLAYBACK_FINISHED
