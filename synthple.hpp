@@ -19,6 +19,9 @@ namespace synthple {
             float _freq_rad_s;
             float _period;
 
+            // the generator's own clock, starting at zero to avoid pops
+            float _internal_t = 0;
+
         public:
             Generator( float amp, float freq );
             ~Generator();
@@ -42,8 +45,6 @@ namespace synthple {
     //         float getValueAtTime( float t );
     // };
     
-
-
     class Synthple{
         
         bool _MAIN_QUIT = false;
@@ -56,7 +57,6 @@ namespace synthple {
         bool _isNotePressed;
         float _totalTime_s;
         
-
         NoteFrequency _noteFrequency;
         // std::vector<midi::MidiNote> _pressedNotes;
         midi::MidiNote _pressedNote;

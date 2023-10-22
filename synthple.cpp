@@ -14,8 +14,7 @@ using namespace synthple;
 //
 // Generators
 Generator::Generator( float amp, float freq_hz )
-:
-_logger(spdlog::basic_logger_mt("Generator", "synthple.log"))
+:_logger(spdlog::basic_logger_mt("Generator", "synthple.log"))
 {
     _logger->set_level(spdlog::level::debug);
     setNewAmpAndFreq( amp, freq_hz );
@@ -32,6 +31,7 @@ void Generator::setNewAmpAndFreq(float a, float f)
     _freq_hz = f;
     _freq_rad_s = _freq_hz * (2 * M_PI);
     _period = 1.0f / _freq_hz;
+    _internal_t = 0;
 
     
     _logger->debug("Generator Freq Changed: _period is {} - _freq_rad_s is {}",
@@ -52,7 +52,7 @@ SineGenerator::~SineGenerator()
 
 float SineGenerator::getValueAtTime( float t )
 {
-    float retval = _amp * sin( _freq_rad_s * t );
+    float retval = _amp * cos( _freq_rad_s * t );
 
     return retval;
 }
@@ -87,7 +87,6 @@ _isNotePressed(false),
 _noteFrequency(NoteFrequency()),
 _pressedNote( midi::MidiNote( NoteKey::A, 3 )),
 _totalTime_s( midifile->getDuration() ),
-// _generator( 0.25, _noteFrequency.findFrequecyForNote( _pressedNote ) )
 _generator(0.25, _noteFrequency.noteFreqMap[_pressedNote.note_value])
 {
     _logger->set_level(spdlog::level::debug);
@@ -144,8 +143,6 @@ void Synthple::run()
         // PROCESS AUDIO
         int _spaceInQueue = _audioDataBus_ptr->queue.write_available();
 
-        spdlog::debug("Starting Buffer Write. '_logical_current_time_s'={}", _logical_current_time_s);
-
         if ( _spaceInQueue > 0 && _logical_current_time_s < _total_time_s )
         {
             // advance time as we push values into the queue
@@ -164,8 +161,7 @@ void Synthple::run()
                 // DEBUG
                 if (_requestedNote.note_value != _current_note_name ){
                     _requestedNoteFreq = _requestedNote.note == NoteKey::NOT_A_NOTE ? 0 : _noteFrequency.noteFreqMap[ _requestedNote.note_value ];
-                    _logger->debug("***Note Changed*** To: {} at {} s. Freq={} Hz",
-                        _requestedNote.note_value, _logical_current_time_s, _requestedNoteFreq);
+                    
                     _current_note_name = _requestedNote.note_value;
                 }
 
@@ -186,7 +182,6 @@ void Synthple::run()
                 _this_frames_val = _isNotePressed ? _generator.getValueAtTime( _logical_current_time_s ) : 0.0f;
 
                 _audioDataBus_ptr->queue.push( _this_frames_val );
-                // _audioDataBus_ptr->queue.push( 0 );
                 _logical_current_time_s += _logical_dt_s;
                 _midi_file_ptr->step();
                 // END  TIME STEP
@@ -200,7 +195,6 @@ void Synthple::run()
         if (_logical_current_time_s >= _total_time_s && _audioDataBus_ptr->queue.empty()){
             _MAIN_QUIT = true;
         }
-        // _logger->debug("tick: _logical_current_time_s: {}", _logical_current_time_s);
         boost::this_thread::sleep_for(boost::chrono::milliseconds((int)floor(_cycle_advance_dt_s * 1000)));
     }
 
