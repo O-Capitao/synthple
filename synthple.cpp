@@ -11,71 +11,6 @@
 
 using namespace synthple;
 
-//
-// Generators
-Generator::Generator( float amp, float freq_hz )
-:_logger(spdlog::basic_logger_mt("Generator", "synthple.log"))
-{
-    _logger->set_level(spdlog::level::debug);
-    setNewAmpAndFreq( amp, freq_hz );
-}
-
-Generator::~Generator()
-{
-    _logger->flush();
-}
-
-void Generator::setNewAmpAndFreq(float a, float f)
-{
-    _amp = a;
-    _freq_hz = f;
-    _freq_rad_s = _freq_hz * (2 * M_PI);
-    _period = 1.0f / _freq_hz;
-    _internal_t = 0;
-
-    
-    _logger->debug("Generator Freq Changed: _period is {} - _freq_rad_s is {}",
-        _period, _freq_rad_s);
-    _logger->flush();
-}
-
-//
-// Sine Generator
-SineGenerator::SineGenerator(float amp, float freq_hz )
-:Generator(amp,freq_hz)
-{
-    _logger->info("Generator is Sine Generator.");
-}
-
-SineGenerator::~SineGenerator()
-{}
-
-float SineGenerator::getValueAtTime( float t )
-{
-    float retval = _amp * cos( _freq_rad_s * t );
-
-    return retval;
-}
-
-// //
-// // Square Generator
-// SquareGenerator::SquareGenerator(float amp, float freq_hz )
-// :Generator(amp,freq_hz)
-// {
-//     _logger->info("Generator is Square Generator.");
-// }
-
-// SquareGenerator::~SquareGenerator()
-// {}
-
-// float SquareGenerator::getValueAtTime( float t )
-// {
-//     float __t_in_period = t - floor( t / _period );
-
-//     return 0.0f;
-// }
-
-
 Synthple::Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper *midifile )
 :
 _logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
@@ -87,7 +22,7 @@ _isNotePressed(false),
 _noteFrequency(NoteFrequency()),
 _pressedNote( midi::MidiNote( NoteKey::A, 3 )),
 _totalTime_s( midifile->getDuration() ),
-_generator(0.25, _noteFrequency.noteFreqMap[_pressedNote.note_value])
+_generator(0.25)
 {
     _logger->set_level(spdlog::level::debug);
     _logger->debug("Constructed Synthple obj");
@@ -121,7 +56,7 @@ void Synthple::run()
     float _total_time_s = _totalTime_s;
 
     float _cycle_advance_dt_s = 00.5 * (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
-    float _this_frames_val = 0;
+    // float _this_frames_val = 0;
 
     std::string _current_note_name = "";
     std::vector<NoteKey> activenotes(MAX_N_VOICES);
@@ -172,18 +107,25 @@ void Synthple::run()
                 
                     if (_pressedNote.note_value != _requestedNote.note_value){
 
-                        _generator.setNewAmpAndFreq( 0.25, _noteFrequency.noteFreqMap[ _requestedNote.note_value ] );
+                        _generator.requestFreqChange( 
+                            _noteFrequency.noteFreqMap[_requestedNote.note_value]
+                        );
                     }
                     _pressedNote = _requestedNote;
                     _isNotePressed = true;
                 }
                 
 
-                _this_frames_val = _isNotePressed ? _generator.getValueAtTime( _logical_current_time_s ) : 0.0f;
+                // _this_frames_val = _isNotePressed ? _generator.getValue() : 0.0f;
 
-                _audioDataBus_ptr->queue.push( _this_frames_val );
+                
+                // float tempAux = _generator.getValue();
+                _audioDataBus_ptr->queue.push( _generator.getValue() );
                 _logical_current_time_s += _logical_dt_s;
+
+                _generator.requestStep( _logical_dt_s );
                 _midi_file_ptr->step();
+
                 // END  TIME STEP
             }
 

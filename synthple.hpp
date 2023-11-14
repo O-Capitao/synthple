@@ -7,44 +7,10 @@
 #include <synthple_bus.hpp>
 #include <synthple_audio.hpp>
 #include <midi/synthple_midi.hpp>
+#include <synthple_waves.hpp>
 
 namespace synthple {
-
-    class Generator
-    {
-        protected:
-            std::shared_ptr<spdlog::logger >_logger;
-            float _amp;
-            float _freq_hz;
-            float _freq_rad_s;
-            float _period;
-
-            // the generator's own clock, starting at zero to avoid pops
-            float _internal_t = 0;
-
-        public:
-            Generator( float amp, float freq );
-            ~Generator();
-            virtual float getValueAtTime( float t ) = 0;
-            void setNewAmpAndFreq( float amp, float freq );
-    };
-
-    class SineGenerator: public Generator
-    {
-        public:
-            SineGenerator( float amp, float freq );
-            ~SineGenerator();
-            float getValueAtTime( float t );
-    };
-
-    // class SquareGenerator: public Generator
-    // {
-    //     public:
-    //         SquareGenerator( float amp, float freq );
-    //         ~SquareGenerator();
-    //         float getValueAtTime( float t );
-    // };
-    
+       
     class Synthple{
         
         bool _MAIN_QUIT = false;
@@ -58,9 +24,8 @@ namespace synthple {
         float _totalTime_s;
         
         NoteFrequency _noteFrequency;
-        // std::vector<midi::MidiNote> _pressedNotes;
         midi::MidiNote _pressedNote;
-        SineGenerator _generator;
+        waves::WaveGenerator _generator;
 
         public:
             // Synthple( bus::AudioDataBus *audioDataBus, int bpm );
