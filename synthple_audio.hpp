@@ -17,7 +17,6 @@ namespace synthple::audio {
         std::shared_ptr<spdlog::logger >_logger;
         InternalAudioData *_data = NULL;
         PaStream *_stream = NULL;
-        bool _QUIT = false; 
 
         void _openStream();
         void _closeStream();

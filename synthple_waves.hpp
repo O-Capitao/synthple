@@ -43,22 +43,17 @@ namespace synthple::waves {
             bool _is_fadingIn = false;
             bool _is_fadingOut = false;
 
-
             // the generator's own inner clock, starting at zero to avoid pops
             // reset every time the wave changes
             float _int_t = 0;
-            float _ext_t = 0;
-            float _int_dt = 10.0f / FRAMERATE;
-            // float _t_last_generator_tick = 0;
-
-
+            
             // generator's value
             float _value = 0;
             float _gain = 0;
 
             // amp threshold for note change
             // (normalized amplitude)
-            float _change_amp_thresh = 0.95;
+            float _change_amp_thresh = 0.99999;
 
             // transition from/ into silence
 
@@ -74,14 +69,14 @@ namespace synthple::waves {
             float _fade_factor = 0.0;
             float _t_fade = 0.0;
 
-            
+
         public:
             WaveGenerator( float gain );
 
             float getValue(){ 
                 return _value;
             };
-            void requestStep( float dt );
+            void step( float dt );
             void requestFreqChange( float new_freq_hz );
             void requestSilence();
     };

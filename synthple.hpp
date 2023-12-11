@@ -12,26 +12,24 @@
 namespace synthple {
        
     class Synthple{
-        
+
         bool _MAIN_QUIT = false;
+        bool _QUIT_REQUESTED = false;
         
         std::shared_ptr<spdlog::logger >_logger;
         audio::AudioThread _audioThread;
         bus::AudioDataBus *_audioDataBus_ptr;
         midi::MidiFileWrapper *_midi_file_ptr;
-        int _bpm;
-        bool _isNotePressed;
-        float _totalTime_s;
         
-        NoteFrequency _noteFrequency;
-        midi::MidiNote _pressedNote;
+        int _bpm;
+        float _totalTime_s;
         waves::WaveGenerator _generator;
 
         public:
-            // Synthple( bus::AudioDataBus *audioDataBus, int bpm );
             Synthple( bus::AudioDataBus *audioDataBus, midi::MidiFileWrapper *file );
             ~Synthple();
             void run();
             void quit();
     };
+
 }

@@ -33,4 +33,4 @@
 
 *.plist
 .DS_Store
-*.mid
+# *.mid

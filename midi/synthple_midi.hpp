@@ -93,7 +93,7 @@ namespace synthple::midi {
             // active at a certain time
             void initSequentialRead( float dt_s );
             void step();
-            const std::vector<MidiNote> &getActiveNotesVec(){return _active_notes_vec;};
+            std::vector<MidiNote> &getActiveNotesVec(){return _active_notes_vec;};
             std::string toString();
     };
 }
