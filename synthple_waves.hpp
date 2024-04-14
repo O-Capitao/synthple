@@ -53,7 +53,7 @@ namespace synthple::waves {
 
             // amp threshold for note change
             // (normalized amplitude)
-            float _change_amp_thresh = 0.99999;
+            float _change_amp_thresh = 0.6;
 
             // transition from/ into silence
 
@@ -62,7 +62,7 @@ namespace synthple::waves {
             // in the time interval _fade_legth
             // resulting in _fade_step_n increments/ decrements
             // of value _fade_increment_val;
-            const float _fade_length = 0.01;
+            const float _fade_length = 1;
             const float _fade_step_n = 1 / _fade_length;
             const float _fade_increment_val = 1 / _fade_step_n;
 

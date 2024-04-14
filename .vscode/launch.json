@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Debug",
             "program": "${workspaceFolder}/synthple.a",
-            "args": ["120","smokeonthewater.mid"],
+            "args": ["bassline1.MID"],
             "cwd": "${workspaceFolder}"
         }
     ]

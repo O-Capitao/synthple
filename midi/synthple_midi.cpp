@@ -230,6 +230,8 @@ void MidiFileWrapper::step(){
     if (next_event.type == MidiEventType::END_OF_SEQUENCE) return;
 
     if (next_event.ticks <= _current_tick){
+        _logger->debug("Changing Midi state");
+        _logger->flush();
         if (next_event.type == MidiEventType::NOTE_ON){
             _active_notes_vec[0] = next_event.note;
         } else 

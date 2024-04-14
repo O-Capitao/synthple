@@ -1,6 +1,6 @@
 #pragma once
 
-#define FRAMES_IN_BUFFER 512                        // Frame - data necessary to render a timestep
+#define FRAMES_IN_BUFFER 4096                        // Frame - data necessary to render a timestep
 #define N_CHANNELS 1                                // Channels
 #define FRAMERATE 22000                             // value for the mega drive
 #define SAMPLE_DEPTH 16

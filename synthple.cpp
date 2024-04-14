@@ -23,6 +23,7 @@ _generator(0.25)
 {
     _logger->set_level(spdlog::level::debug);
     _logger->debug("Constructed Synthple obj");
+    _logger->flush();
 }
 
 Synthple::~Synthple()
@@ -36,6 +37,7 @@ void Synthple::run()
     int __writes_to_buffer = 0;
     int __predicted_sample_count = _totalTime_s * FRAMERATE;
     int __buffer_writes = __predicted_sample_count / FRAMES_IN_BUFFER;
+    int __space_in_queue = 0;
 
     _logger->info(
         "Starting run. Predicted sample count to be handled: {}", 
@@ -49,9 +51,10 @@ void Synthple::run()
     // should be the same as the target sample rate
     float __logical_dt_s = 1 / (float)FRAMERATE;
     float __logical_current_time_s = 0;
-    float __cycle_advance_dt_s = 00.5 * (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
+    float __cycle_advance_dt_s = (float)FRAMES_IN_BUFFER / (float)FRAMERATE;
 
     _logger->debug("Starting Run - Cycle Time = {}", __cycle_advance_dt_s);
+    _logger->flush();
     
     _midi_file_ptr->initSequentialRead( __logical_dt_s );
 
@@ -60,43 +63,33 @@ void Synthple::run()
     midi::MidiNote __current_note;
     NoteFrequency __note_frequency;
 
-    // // end in silence
-    // int __end_counter = 0;
-    // int __end_counterlimit = 100;
-
     _audioThread.start();
 
     while ( !_MAIN_QUIT )
     {
-        if ( _QUIT_REQUESTED )
-        {
-            _MAIN_QUIT = true;
-            break;
-        }
-        
-        int __space_in_queue = _audioDataBus_ptr->queue.write_available();
+        __space_in_queue = _audioDataBus_ptr->queue.write_available();
 
-        if ( __space_in_queue > 0 && !_QUIT_REQUESTED )
-        {
+        if ( __space_in_queue > FRAMES_IN_BUFFER / 4 ) {
+        
             if ( _QUIT_REQUESTED )
             {
-                for (int i = 0; i < __space_in_queue; i++ )
-                {
-                    _audioDataBus_ptr->queue.push( 0.0 );
-                    // __end_counter ++;
-                }
-
+                _logger->debug("main loop: _QUIT_REQUESTED");
+                _MAIN_QUIT = true;
+                break;
             } else 
             {
+                _logger->debug("MAIN LOOP: pushing {} samples into queue. t={} s", __space_in_queue, __logical_current_time_s);
                 // advance time as we push values into the queue
                 for (int i = 0; i < __space_in_queue; i++ )
                 {
+                    
                     // PROCESS MIDI
                     __requested_notes = _midi_file_ptr->getActiveNotesVec();
                     __next_note = __requested_notes[0];
 
                     if (__next_note.note == NoteKey::NOT_A_NOTE )
                     {
+
                         _generator.requestSilence();
 
                     } else {
@@ -125,7 +118,9 @@ void Synthple::run()
             }
             __writes_to_buffer++;   
         }
-        boost::this_thread::sleep_for(boost::chrono::milliseconds((int)floor(__cycle_advance_dt_s * 1000)));
+
+
+        // boost::this_thread::sleep_for(boost::chrono::milliseconds((int)floor(__cycle_advance_dt_s * 1000)));
     }
 
     _audioThread.stop();
@@ -137,6 +132,7 @@ void Synthple::run()
     _logger->info("run() Finished - took {} s and wrote {} times to the buffer" , 
         _length_secs, 
         __writes_to_buffer);
+    _logger->flush();
     
 }
 

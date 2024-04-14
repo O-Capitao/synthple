@@ -141,6 +141,6 @@ int AudioThread::paStreamCallback(
         // fill_buffer_counter++;
     }
 
-    return 0;
+    return paContinue;
 }
 

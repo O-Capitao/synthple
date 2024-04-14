@@ -17,7 +17,7 @@ SineWave::SineWave(float freqHz)
 {}
 
 float SineWave::getValue( float t ){
-    return cos(_freq_rad_s  * t );
+    return sin(_freq_rad_s  * t );
 }
 
 
@@ -45,6 +45,9 @@ void WaveGenerator::step( float dt ){
 
             } else {
                 // disarm fade
+                _logger->debug("disarm FADE IN");
+                _logger->flush();
+
                 _is_fadingIn = false;
                 _is_transient = false;
                 goto steady_state;
@@ -58,6 +61,8 @@ void WaveGenerator::step( float dt ){
                 _value = _fade_factor * _gain * _wave.getValue(_int_t);
 
             } else {
+                _logger->debug("disarm FADE OUT");
+                _logger->flush();
                 // disarm fade
                 _is_fadingIn = false;
                 _is_transient = false;
@@ -133,6 +138,9 @@ void WaveGenerator::requestFreqChange( float newFreqHz )
 
 void WaveGenerator::requestSilence()
 {
+    // _logger->debug("requested silence. _is_silent: {}, _is_transient: {} _is_fadingIn: {} _is_fadingOut: {}",
+    //     _is_silent, _is_transient, _is_fadingIn, _is_fadingOut);
+
     if (_is_silent) return;
 
     if (_is_transient && ( _is_fadingIn || _is_fadingOut ) )
