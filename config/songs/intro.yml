@@ -6,6 +6,15 @@ voices:
     type: SQUARE
   - name: bass
     type: TRIANGLE
+drumset:
+  - piece: kick
+    sample: samples/kick.wav
+    mapTo: C2
+    gain: 0.8
+  - piece: snare
+    sample: samples/snare.wav
+    mapTo: D2
+    gain: 0.5
 parts:
   - id: intro
     repeat: 1
@@ -19,6 +28,8 @@ parts:
         gain: 0.5
         voice: square_gtr
         src: midi/gtr_intro_2.mid
+      - name: DRUMS
+        
     - id: verse
       repeat: 4
       tracks:
