@@ -42,7 +42,6 @@ namespace synthple::filedata {
     };
 
     struct TrackFileData {
-        std::string id;
         std::string voice_id;
         std::string midi_file_path;
     };
@@ -58,6 +57,7 @@ namespace synthple::filedata {
         short bpm;
         std::string id;
         std::vector<VoiceFileData> voices;
+        std::vector<PartFileData> parts;
     };
 
     class SynthpleFileData{

@@ -15,8 +15,7 @@ parts:
   - id: intro
     repeat: 0 # 0 = infinite loop
     tracks:
-      - id: 
-        voice: *square1
+      - voice: *square1
         src: midi/gtr_intro.mid
       - voice: *square2
         src: midi/gtr_intro_2.mid
