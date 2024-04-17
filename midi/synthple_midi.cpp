@@ -264,7 +264,7 @@ std::string MidiFileWrapper::toString(){
     
     for (MidiEventWrapper &ev : _midi_events){
         retval.append(ev.toString());
-        retval.append("\n");
+        // retval.append("         ,        ");
     }
 
     return retval;
