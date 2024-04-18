@@ -70,8 +70,13 @@ Synthple-> play song
 - build oscillators
 - init time_counter
 
+# Mixer
 
-
-by default start by playing **Part #1**
-
-- load midi files into each used voice.
+*Synthple*
+*Mixer* -> setup by song
+    1 timer
+    n *tracks*
+        1 *oscillator*
+    n *parts* - (loops)
+        each part assigns midi to 1 track
+    

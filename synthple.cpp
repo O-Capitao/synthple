@@ -12,22 +12,10 @@
 using namespace synthple;
 
 Synthple::Synthple( std::string path_to_config )
-:
-_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
+:_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
 _audioDataBus(),
 _audioThread( &_audioDataBus ),
 _filedata( path_to_config )
-// _midi_file( midifile ),
-// _bpm(midifile->getTempoBpm()),
-// _totalTime_s( midifile->getDuration()),
-// _oscillator({
-//     .freq = 440,
-//     .amp = 0.5,
-//     .waveTableConfig = {
-//         .type = config::WaveTableType::SQUARE,
-//         .n_samples = 256
-//     }
-// })
 {
     _logger->set_level(spdlog::level::debug);
     _logger->debug("Constructed Synthple obj");

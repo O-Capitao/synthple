@@ -2,14 +2,14 @@
 
 #include <vector>
 #include <spdlog/spdlog.h>
+#include <unordered_map>
 #include <string>
 
 #include <synthple_globals.hpp>
 #include <synthple_bus.hpp>
-#include <synthple_audio.hpp>
-// #include <midi/synthple_midi.hpp>
+#include <synthple_audio.hpp>   
 #include <synthple_config.hpp>
-// #include <synthple_oscillator.hpp>
+#include <synthple_oscillator.hpp>
 #include <synthple_config.hpp>
 
 namespace synthple {
@@ -19,19 +19,18 @@ namespace synthple {
         bool _MAIN_QUIT = false;
         bool _QUIT_REQUESTED = false;
 
-        // config::OscillatorConfig _oscillatorConfig;
-        // oscillator::Oscillator _oscillator;
-
         std::shared_ptr<spdlog::logger >_logger;
         
-        bus::AudioDataBus _audioDataBus;
-        audio::AudioThread _audioThread;
+        bus::AudioDataBus           _audioDataBus;
+        audio::AudioThread          _audioThread;
+        filedata::SynthpleFileData  _filedata;
 
-        filedata::SynthpleFileData _filedata;
-        // midi::MidiFileWrapper _midi_file;
+        std::vector<oscillator::Oscillator>         _oscillators;
+        std::unordered_map<std::string,song::Song>  _songs;
+        std::string _activeSong_id, 
+            _activePart_id;
 
-        // int _bpm;
-        // float _totalTime_s;
+
 
         public:
             Synthple(std::string path_to_config);
