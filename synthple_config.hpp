@@ -4,6 +4,7 @@
 #include <vector>
 #include <yaml-cpp/yaml.h>
 #include <spdlog/spdlog.h>
+#include <unordered_map>
 
 namespace synthple::config {
 
@@ -21,17 +22,13 @@ namespace synthple::config {
     };
 
     struct OscillatorConfig{
-
-        WaveTableConfig waveTableConfig;
-        
+        WaveTableConfig waveTableConfig;        
         float freq;
         float amp;
-
     };
 }
 
 namespace synthple::filedata {
-    
     struct VoiceFileData {
         std::string id;
         std::string type;
@@ -40,32 +37,29 @@ namespace synthple::filedata {
         float offset;
         float gain;
     };
-
     struct TrackFileData {
         std::string voice_id;
         std::string midi_file_path;
     };
-
-    struct PartFileData {
+    struct SectionFileData {
         std::string id;
         short repeat;
         std::vector<TrackFileData> tracks;
     };
-
     // input structure
     struct SongFileData {
         short bpm;
         std::string id;
         std::vector<VoiceFileData> voices;
-        std::vector<PartFileData> parts;
+        std::vector<SectionFileData> sections;
     };
-
     class SynthpleFileData{
 
         std::shared_ptr<spdlog::logger >_logger;
-        std::vector<SongFileData> songs;
+        std::unordered_map<std::string,filedata::SongFileData>  _songs;
 
         public:
             SynthpleFileData(std::string path_to_data_dir);
+            filedata::SongFileData *getSongByName( const std::string &songname );
     };
 }

@@ -7,9 +7,10 @@
 #include <spdlog/sinks/basic_file_sink.h>
 
 #include <boost/chrono.hpp>
-#include <boost/thread/thread.hpp> 
+#include <boost/thread/thread.hpp>
 
 using namespace synthple;
+using namespace filedata;
 
 Synthple::Synthple( std::string path_to_config )
 :_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
@@ -22,6 +23,49 @@ _filedata( path_to_config )
     _logger->flush();
 }
 
+void Synthple::_init(){
+    _audioThread.start();
+}
+
+void Synthple::_close(){
+    _audioThread.stop();
+}
+
+void Synthple::setSong( const std::string &song_to_set ){
+    
+    SongFileData *sfd = _filedata.getSongByName( song_to_set );
+
+    assert(sfd->sections.size() > 0 && sfd->voices.size() > 0);
+
+    _mixer.loadSong(sfd);
+    _activeSong_id = sfd->id;
+    _activeSongSection_id = sfd->sections[0].id;
+    _logger->info("Loaded Song with Id = {}", _activeSong_id);
+}
+
+void Synthple::setSongSection( const std::string &sectionid ){
+    _mixer.setSection(sectionid);
+    _activeSongSection_id = sectionid;
+}
+
+void Synthple::play(){
+    boost::thread playT{
+        boost::bind(&Synthple::_run, this)
+    };
+
+    _run();
+    playT.join();
+}
+
+void Synthple::_run(){
+    bool _EXIT = false;
+    int __space_in_queue;
+
+    while (!_EXIT){
+        __space_in_queue = _audioDataBus.queue.write_available();
+
+    }
+}
 // Synthple::~Synthple()
 // {}
 

@@ -8,35 +8,41 @@
 
 namespace synthple::mixer {
 
-    class Track {
+    struct Track {
 
         oscillator::Oscillator _oscillator;
         float _gain;
 
-        public:
-            Track();
-            float getValueAt( float timeinloop_s );
+        Track();
+        // float getValueAt( float timeinloop_s );
     };
 
-    struct Part {
+    struct Section {
         short repeat;
-        midi::MidiFileWrapper _mfw;
-        // Part *nextPart;
+        std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
     };
 
     class Mixer {
 
-        Mixer();
-
         std::vector<Track> _tracks;
-        
-        int _timeInSong;
+        std::vector<Section> _sections;
+
+        Section *_activeSection_ptr;
+
+        float _timeInSong_s, _timeInSection_s;
+        short _sectionRepeat_count;
 
         public:
-            void loadSong( filedata::SongFileData _sfd );
-            void setPart( std::string partid );
-            
+            Mixer();
+            void loadSong( filedata::SongFileData *_sfd );
 
+            // override "natural" mixer state,
+            // e.g. forcibly change part
+            void setSection( std::string sectionid );
+
+            const std::string &getCurrentSectionName();
+            void produceData( std::vector<float> *requestedsamples_vector, int requestedsamples_len );
+            
     };
 
 }
