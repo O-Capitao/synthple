@@ -11,7 +11,7 @@ voices:
     offset: -0.3
     n_samples: 64
     gain: 0.3
-parts:
+sections:
   - id: intro
     repeat: 0 # 0 = infinite loop
     tracks:

@@ -1,63 +1,25 @@
-[2024-04-16 19:53:53.864] [Config_reader] [debug] Awake
-[2024-04-16 19:53:53.864] [Config_reader] [debug] Done reading
-[2024-04-16 19:53:53.864] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:53:53.864] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:55:29.704] [Config_reader] [debug] Awake
-[2024-04-16 19:55:29.705] [Config_reader] [debug] Done reading
-[2024-04-16 19:55:29.705] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:55:29.704] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:55:54.525] [Config_reader] [debug] Awake
-[2024-04-16 19:55:54.525] [Config_reader] [debug] Found 0 Songs
-[2024-04-16 19:55:54.526] [Config_reader] [debug] Done reading
-[2024-04-16 19:55:54.526] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:55:54.525] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:57:04.211] [Config_reader] [debug] Awake
-[2024-04-16 19:57:04.211] [Config_reader] [debug] Found 0 Songs
-[2024-04-16 19:57:04.211] [Config_reader] [debug] Done reading
-[2024-04-16 19:57:04.211] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:57:04.211] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:57:54.266] [Config_reader] [debug] Awake
-[2024-04-16 19:57:54.266] [Config_reader] [debug] Found 0 Songs in data/songs/
-[2024-04-16 19:57:54.266] [Config_reader] [debug] Done reading
-[2024-04-16 19:57:54.266] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:57:54.265] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:58:23.451] [Config_reader] [debug] Awake
-[2024-04-16 19:58:23.451] [Config_reader] [debug] Found 0 Songs in ./data/songs/
-[2024-04-16 19:58:23.452] [Config_reader] [debug] Done reading
-[2024-04-16 19:58:23.452] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:58:23.451] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 19:58:42.594] [Config_reader] [debug] Awake
-[2024-04-16 19:58:42.594] [Config_reader] [debug] Found 0 Songs in /Users/capitaof/THE_CODES/git/synthple/data/songs/
-[2024-04-16 19:58:42.594] [Config_reader] [debug] Done reading
-[2024-04-16 19:58:42.594] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 19:58:42.594] [AUDIO THREAD] [info] Constructed.
-[2024-04-16 23:34:50.134] [Config_reader] [debug] Awake
-[2024-04-16 23:34:50.134] [Config_reader] [debug] Found 1 Songs in data/songs/
-[2024-04-16 23:34:50.134] [Config_reader] [debug] Done reading
-[2024-04-16 23:34:50.134] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-16 23:34:50.133] [AUDIO THREAD] [info] Constructed.
-[2024-04-17 00:07:12.422] [AUDIO THREAD] [info] Constructed.
-[2024-04-17 00:07:12.422] [Config_reader] [debug] Awake
-[2024-04-17 00:07:12.423] [Config_reader] [debug] Found 1 Songs in data/songs/
-[2024-04-17 00:07:12.423] [Config_reader] [debug] Found 2 voices config.
-[2024-04-17 00:15:23.322] [AUDIO THREAD] [info] Constructed.
-[2024-04-17 00:15:23.323] [Config_reader] [debug] Awake
-[2024-04-17 00:15:23.323] [Config_reader] [debug] Found 1 Songs in data/songs/
-[2024-04-17 00:15:23.323] [Config_reader] [debug] Found 2 voices config.
-[2024-04-17 00:15:23.323] [Config_reader] [debug] Parsed voice: square_1.
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Awake
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Found 1 Songs in data/songs/
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Found 2 voices config.
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Parsed voice: square_1.
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Parsed voice: square_2.
-[2024-04-17 00:17:43.276] [Config_reader] [debug] Done reading
-[2024-04-17 00:17:43.276] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-17 00:17:43.275] [AUDIO THREAD] [info] Constructed.
-[2024-04-17 07:58:43.339] [Config_reader] [debug] Awake
-[2024-04-17 07:58:43.339] [Config_reader] [debug] Found 1 Songs in data/songs/
-[2024-04-17 07:58:43.339] [Config_reader] [debug] Found 2 voices config.
-[2024-04-17 07:58:43.340] [Config_reader] [debug] Parsed voice: square_1.
-[2024-04-17 07:58:43.340] [Config_reader] [debug] Parsed voice: square_2.
-[2024-04-17 07:58:43.340] [Config_reader] [debug] Done reading
-[2024-04-17 07:58:43.340] [SYNTHPLE] [debug] Constructed Synthple obj
-[2024-04-17 07:58:43.339] [AUDIO THREAD] [info] Constructed.
+[2024-04-23 00:07:00.547] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-23 00:07:00.547] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-23 00:07:00.548] [Config_reader] [debug] Found 2 voices config.
+[2024-04-23 00:07:00.548] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-23 00:07:00.548] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-23 00:07:00.548] [Config_reader] [debug] Found 1 parts config.
+[2024-04-23 00:07:00.548] [Config_reader] [debug] Done reading
+[2024-04-23 00:07:00.548] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-23 00:09:12.917] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Found 2 voices config.
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Found 1 parts config.
+[2024-04-23 00:09:12.917] [Config_reader] [debug] Done reading
+[2024-04-23 00:09:12.917] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-23 00:09:33.986] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-23 00:09:33.986] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-23 00:09:33.987] [Config_reader] [debug] Found 2 voices config.
+[2024-04-23 00:09:33.987] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-23 00:09:33.987] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-23 00:09:33.987] [Config_reader] [debug] Found 1 parts config.
+[2024-04-23 00:09:33.987] [Config_reader] [debug] Done reading
+[2024-04-23 00:09:33.987] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-23 00:09:33.987] [SYNTHPLE] [debug] Starting play()

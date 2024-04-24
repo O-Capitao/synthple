@@ -33,7 +33,7 @@ namespace synthple::mixer {
         short _sectionRepeat_count;
 
         public:
-            Mixer();
+            // Mixer();
             void loadSong( filedata::SongFileData *_sfd );
 
             // override "natural" mixer state,

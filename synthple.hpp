@@ -21,6 +21,7 @@ namespace synthple {
         std::shared_ptr<spdlog::logger >_logger;
 
         bus::AudioDataBus               _audioDataBus;
+        bus::CommandBus                 _commandBus;
         audio::AudioThread              _audioThread;
         filedata::SynthpleFileData      _filedata;
         mixer::Mixer                    _mixer;

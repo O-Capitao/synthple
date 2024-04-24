@@ -13,7 +13,7 @@ namespace synthple::bus {
     enum CommandType{
         PLAY,
         PAUSE,
-        END,
+        STOP,
         SET_SONG,
         SET_SECTION
     };

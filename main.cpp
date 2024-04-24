@@ -43,4 +43,9 @@ int main(int argc, char *argv[]){
 
     std::string configfilepath( argv[1] );
     synthple::Synthple synthple( configfilepath );
+
+    synthple.play();
+
+    sleep(2);
+    synthple.stop();
 }

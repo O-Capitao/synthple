@@ -26,7 +26,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
         SongFileData sfd = {
             .bpm = song["bpm"].as<short>(),
             .voices = std::vector<VoiceFileData>(),
-            .parts = std::vector<PartFileData>()
+            .sections = std::vector<SectionFileData>()
         };
 
         YAML::Node voicesNode = song["voices"];
@@ -44,13 +44,13 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
             _logger->debug("Parsed voice: {}.", currvoicedata["id"].as<std::string>());
         }
 
-        YAML::Node partsNode = song["parts"];
+        YAML::Node partsNode = song["sections"];
         _logger->debug("Found {} parts config.", partsNode.size());
 
         for (std::size_t i=0 ; i < partsNode.size(); i++) {
             auto currpartdata = partsNode[i];
 
-            PartFileData pfd = {
+            SectionFileData pfd = {
                 .id = currpartdata["id"].as<std::string>(),
                 .repeat = currpartdata["repeat"].as<short>(),
                 .tracks = std::vector<TrackFileData>()
@@ -67,12 +67,17 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
                 });
             }
 
-            sfd.parts.push_back(pfd);
+            sfd.sections.push_back(pfd);
         }
 
-        songs.push_back(sfd);
+        // _songs.push_back(sfd);
+        _songs[sfd.id] = sfd;
     }
 
     _logger->debug("Done reading");
     _logger->flush();
+}
+
+SongFileData *SynthpleFileData::getSongByName( const std::string &songname ){
+    return &_songs[songname];
 }

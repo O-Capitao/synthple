@@ -37,34 +37,62 @@ void Synthple::setSong( const std::string &song_to_set ){
 
     assert(sfd->sections.size() > 0 && sfd->voices.size() > 0);
 
-    _mixer.loadSong(sfd);
+    // _mixer.loadSong(sfd);
     _activeSong_id = sfd->id;
     _activeSongSection_id = sfd->sections[0].id;
     _logger->info("Loaded Song with Id = {}", _activeSong_id);
 }
 
 void Synthple::setSongSection( const std::string &sectionid ){
-    _mixer.setSection(sectionid);
+    // _mixer.setSection(sectionid);
     _activeSongSection_id = sectionid;
 }
 
 void Synthple::play(){
+
+    _logger->debug("Starting play()");
+    _logger->flush();
+    
     boost::thread playT{
         boost::bind(&Synthple::_run, this)
     };
 
     _run();
     playT.join();
+
+    _close();
+
 }
 
 void Synthple::_run(){
+
     bool _EXIT = false;
     int __space_in_queue;
+    // std::vector<bus::Command> _pending_commands;
+    bus::Command __aux_command;
+
+    _logger->debug("entering _run() / while loop");
 
     while (!_EXIT){
         __space_in_queue = _audioDataBus.queue.write_available();
 
+        while ( _commandBus.queue.pop(__aux_command)){
+            _logger->debug("got a command!");
+            // process commands
+            if (__aux_command.cmdType == bus::CommandType::STOP){
+                _EXIT = true;
+            }
+        }
     }
+
+    _logger->debug("_run() exiting.");
+}
+
+void Synthple::stop(){
+    _commandBus.queue.push({
+        .cmdType = bus::CommandType::STOP,
+        .arg = ""
+    });
 }
 // Synthple::~Synthple()
 // {}
