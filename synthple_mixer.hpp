@@ -10,8 +10,8 @@ namespace synthple::mixer {
 
     struct Track {
 
-        oscillator::Oscillator _oscillator;
-        float _gain;
+        oscillator::Oscillator oscillator;
+        float gain;
 
         // Track();
         // float getValueAt( float timeinloop_s );

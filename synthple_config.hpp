@@ -6,29 +6,32 @@
 #include <spdlog/spdlog.h>
 #include <unordered_map>
 
-namespace synthple::config {
+// namespace synthple::config {
 
-    enum WaveTableType {
-        SINE,
-        SQUARE,
-        SAW,
-        TRIANGLE,
-        CUSTOM
-    };
+//     enum WaveTableType {
+//         SINE,
+//         SQUARE,
+//         SAW,
+//         TRIANGLE,
+//         CUSTOM
+//     };
 
-    struct WaveTableConfig {
-        WaveTableType type;
-        short n_samples;
-    };
+//     struct WaveTableConfig {
+//         WaveTableType type;
+//         short n_samples;
+//     };
 
-    struct OscillatorConfig{
-        WaveTableConfig waveTableConfig;        
-        float freq;
-        float amp;
-    };
-}
+//     struct OscillatorConfig{
+//         WaveTableConfig waveTableConfig;        
+//         float freq;
+//         float amp;
+//     };
+
+//     WaveTableType mapStringToWaveTableType( std::string wtt_str );
+// }
 
 namespace synthple::filedata {
+
     struct VoiceFileData {
         std::string id;
         std::string type;

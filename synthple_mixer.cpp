@@ -35,10 +35,22 @@ void Mixer::loadSong( filedata::SongFileData *_sfd ){
 
         }
 
-        // for (int __voice_i = 0; __voice_i < _sfd->voices.size(); __voice_i++){
-        //     filedata::VoiceFileData &__vfd = _sfd->voices[__voice_i];
+        for (int __voice_i = 0; __voice_i < _sfd->voices.size(); __voice_i++){
+            filedata::VoiceFileData &__vfd = _sfd->voices[__voice_i];
 
-        // }
+            _tracks.push_back({
+                .gain = __vfd.gain ,
+                .oscillator = oscillator::Oscillator( __vfd.type, __vfd.n_samples
+                    // .waveTableConfig = {
+                    //     .type = config::mapStringToWaveTableType( __vfd.type ),
+                    //     .n_samples = __vfd.n_samples,
+                    // },
+                    // .freq = 440,
+                    // .amp = 0.5
+                )
+            });
+
+        }
 
     }
 }
