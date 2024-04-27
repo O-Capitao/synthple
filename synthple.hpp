@@ -1,9 +1,10 @@
 #pragma once
 
 #include <vector>
-#include <spdlog/spdlog.h>
-
 #include <string>
+
+#include <boost/thread/thread.hpp>
+#include <spdlog/spdlog.h>
 
 #include <synthple_globals.hpp>
 #include <synthple_bus.hpp>
@@ -15,9 +16,6 @@ namespace synthple {
        
     class Synthple {
 
-        bool                            _MAIN_QUIT = false;
-        bool                            _QUIT_REQUESTED = false;
-
         std::shared_ptr<spdlog::logger >_logger;
 
         bus::AudioDataBus               _audioDataBus;
@@ -28,20 +26,25 @@ namespace synthple {
         std::string                     _activeSong_id,
                                         _activeSongSection_id;
 
-
+        boost::thread _playThread;
         // audio runtime lifecycle
-        void _init();
-        void _close();
+
         void _run();
+
+        // aux
+        void _pushToAudioDataBus( float *topush_data_arr, int topush_length  );
 
         public:
             Synthple( std::string path_to_config );
-
+            // ~Synthple();
+            
+            void init();
+            void close();
             // accepted commands
             void setSong( const std::string &song_to_set );
             void setSongSection( const std::string &_sectionid );
-            void play();
-            void pause();
+            // void play();
+            // void pause();
             void stop();
     };
 }

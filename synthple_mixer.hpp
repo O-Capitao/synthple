@@ -13,7 +13,7 @@ namespace synthple::mixer {
         oscillator::Oscillator _oscillator;
         float _gain;
 
-        Track();
+        // Track();
         // float getValueAt( float timeinloop_s );
     };
 
@@ -23,14 +23,16 @@ namespace synthple::mixer {
     };
 
     class Mixer {
-
+        
+        std::string _loaded_song_name;
         std::vector<Track> _tracks;
         std::vector<Section> _sections;
 
-        Section *_activeSection_ptr;
+        Section *_activeSection_ptr = nullptr;
 
         float _timeInSong_s, _timeInSection_s;
         short _sectionRepeat_count;
+        int _tempo_bpm;
 
         public:
             // Mixer();
@@ -41,7 +43,7 @@ namespace synthple::mixer {
             void setSection( std::string sectionid );
 
             const std::string &getCurrentSectionName();
-            void produceData( std::vector<float> *requestedsamples_vector, int requestedsamples_len );
+            void produceData( float *requestedsamples_vector, int requestedsamples_len );
             
     };
 

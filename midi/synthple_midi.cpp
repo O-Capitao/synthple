@@ -153,7 +153,7 @@ std::string MidiEventWrapper::toString(){
  *  MIDI FILE WRAPPER Class
 *************************************************************************/
 MidiFileWrapper::MidiFileWrapper(
-    const std::string &fp 
+    std::string fp 
 ):_logger(spdlog::basic_logger_mt("MIDI", "synthple.log"))
 {                                       
     _logger->info("ENTER constructor");
@@ -190,7 +190,7 @@ MidiFileWrapper::MidiFileWrapper(
     _logger->flush();
 }
 
-MidiFileWrapper::~MidiFileWrapper(){}
+// MidiFileWrapper::~MidiFileWrapper(){}
 
 void MidiFileWrapper::initSequentialRead( float dt_s ){
     

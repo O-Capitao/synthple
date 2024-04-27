@@ -5,7 +5,6 @@
 #define FRAMERATE 22000                             // value for the mega drive
 #define SAMPLE_DEPTH 16
 #define BUFFER_SIZE (FRAMES_IN_BUFFER * N_CHANNELS) // total of values inside the queue
-#define AUDIO_QUEUE_SIZE (BUFFER_SIZE * 4)          // number of frames in the buffer
 #define DIATONIC_SCALE_SIZE 12
 #define TIME_FOR_BUFFER (FRAMES_IN_BUFFER / FRAMERATE)
 #define MAX_N_VOICES 4
