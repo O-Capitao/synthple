@@ -5,16 +5,13 @@
 #include <synthple_config.hpp>
 #include <synthple_oscillator.hpp>
 #include <midi/synthple_midi.hpp>
+#include <spdlog/spdlog.h>
 
 namespace synthple::mixer {
 
     struct Track {
-
         oscillator::Oscillator oscillator;
         float gain;
-
-        // Track();
-        // float getValueAt( float timeinloop_s );
     };
 
     struct Section {
@@ -23,7 +20,8 @@ namespace synthple::mixer {
     };
 
     class Mixer {
-        
+
+        std::shared_ptr<spdlog::logger >_logger;
         std::string _loaded_song_name;
         std::vector<Track> _tracks;
         std::vector<Section> _sections;
@@ -35,7 +33,7 @@ namespace synthple::mixer {
         int _tempo_bpm;
 
         public:
-            // Mixer();
+            Mixer();
             void loadSong( filedata::SongFileData *_sfd );
 
             // override "natural" mixer state,
@@ -44,7 +42,6 @@ namespace synthple::mixer {
 
             const std::string &getCurrentSectionName();
             void produceData( float *requestedsamples_vector, int requestedsamples_len );
-            
     };
 
 }

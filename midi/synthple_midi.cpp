@@ -153,14 +153,16 @@ std::string MidiEventWrapper::toString(){
  *  MIDI FILE WRAPPER Class
 *************************************************************************/
 MidiFileWrapper::MidiFileWrapper(
-    std::string fp 
-):_logger(spdlog::basic_logger_mt("MIDI", "synthple.log"))
-{                                       
-    _logger->info("ENTER constructor");
+    std::string fp, std::shared_ptr<spdlog::logger> logger
+){
+    _logger = logger;                                     
+    _logger->info("MIDI: ENTER constructor");
 
     smf::MidiFile midifile( fp );
 
     midifile.joinTracks();
+
+    assert(midifile.getEventCount(0) > 0);
     
     _ticks_per_quarter_note = midifile.getTicksPerQuarterNote();
     _tick_duration_s = midifile.getTimeInSeconds(1);
@@ -184,9 +186,9 @@ MidiFileWrapper::MidiFileWrapper(
 
     
 
-    _logger->info("Midi File: \n{}", toString());
+    _logger->info("MIDI: Midi File: \n{}", toString());
 
-    _logger->info("EXIT constructor");
+    _logger->info("MIDI: EXIT constructor");
     _logger->flush();
 }
 
@@ -230,7 +232,7 @@ void MidiFileWrapper::step(){
     if (next_event.type == MidiEventType::END_OF_SEQUENCE) return;
 
     if (next_event.ticks <= _current_tick){
-        _logger->debug("Changing Midi state");
+        _logger->debug("MIDI: Changing Midi state");
         _logger->flush();
         if (next_event.type == MidiEventType::NOTE_ON){
             _active_notes_vec[0] = next_event.note;

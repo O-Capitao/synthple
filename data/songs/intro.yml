@@ -16,7 +16,7 @@ sections:
     repeat: 0 # 0 = infinite loop
     tracks:
       - voice: *square1
-        src: midi/gtr_intro.mid
+        src: midi/bassline1.MID
       - voice: *square2
-        src: midi/gtr_intro_2.mid
+        src: midi/bassline1.MID
 

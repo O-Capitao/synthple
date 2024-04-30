@@ -9,8 +9,8 @@ using namespace synthple::oscillator;
 // Wave Table /////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-WaveTable::WaveTable( int nsamples, std::string wavetabletype_str )
-:_logger(spdlog::basic_logger_mt("WAVETABLE", "synthple.log")),
+WaveTable::WaveTable( int nsamples, std::string wavetabletype_str, std::shared_ptr<spdlog::logger >logger )
+:_logger(logger),
 _n_samples(nsamples),
 _wt_type( mapStringToWaveTableType(wavetabletype_str) ),
 _data( nsamples )
@@ -82,9 +82,9 @@ WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
 //Oscillator //////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-Oscillator::Oscillator( std::string wavetabletype_str, int wavetable_nsamples )
-:_logger(spdlog::basic_logger_mt("OSCILLATOR", "synthple.log")),
-_waveTable(wavetable_nsamples, wavetabletype_str)
+Oscillator::Oscillator( std::string wavetabletype_str, int wavetable_nsamples, std::shared_ptr<spdlog::logger >logger )
+:_logger(logger),
+_waveTable(wavetable_nsamples, wavetabletype_str, logger)
 {}
 
 float Oscillator::getValueAt(float t_ms){

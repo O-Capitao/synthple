@@ -1,15 +1,18 @@
 #include <synthple_mixer.hpp>
+#include <spdlog/sinks/basic_file_sink.h>
 
 using namespace synthple::mixer;
 
-// Track //////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-
-
-
 
 // Mixer //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+Mixer::Mixer()
+:_logger(spdlog::basic_logger_mt("Mixer", "synthple.log"))
+{
+    _logger->set_level(spdlog::level::debug);
+}
+
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 void Mixer::loadSong( filedata::SongFileData *_sfd ){
@@ -29,30 +32,24 @@ void Mixer::loadSong( filedata::SongFileData *_sfd ){
 
             filedata::TrackFileData &__tfd = _sfd->sections[__section_index].tracks[__midi_ass_ind];
 
-            std::pair<std::string, midi::MidiFileWrapper> __pair(__tfd.voice_id,  midi::MidiFileWrapper( __tfd.midi_file_path));
+            std::pair<std::string, midi::MidiFileWrapper> __pair(__tfd.voice_id,  midi::MidiFileWrapper( __tfd.midi_file_path, _logger));
             // __section._midiFiles_perTrack_map[ __tfd.voice_id ] = midi::MidiFileWrapper( __tfd.midi_file_path );
             __section._midiFiles_perTrack_map.insert( __pair );
 
         }
-
-        for (int __voice_i = 0; __voice_i < _sfd->voices.size(); __voice_i++){
-            filedata::VoiceFileData &__vfd = _sfd->voices[__voice_i];
-
-            _tracks.push_back({
-                .gain = __vfd.gain ,
-                .oscillator = oscillator::Oscillator( __vfd.type, __vfd.n_samples
-                    // .waveTableConfig = {
-                    //     .type = config::mapStringToWaveTableType( __vfd.type ),
-                    //     .n_samples = __vfd.n_samples,
-                    // },
-                    // .freq = 440,
-                    // .amp = 0.5
-                )
-            });
-
-        }
-
     }
+
+    for (int __voice_i = 0; __voice_i < _sfd->voices.size(); __voice_i++){
+        filedata::VoiceFileData &__vfd = _sfd->voices[__voice_i];
+
+        _tracks.push_back({
+            .gain = __vfd.gain ,
+            .oscillator = oscillator::Oscillator( __vfd.type, __vfd.n_samples, _logger )
+        });
+    }
+
+    _logger->debug("Mixer setup complete, loaded {} tracks, {} sections", _tracks.size(), _sections.size());
+    _logger->flush();
 }
 
 ///////////////////////////////////////////////////////////////////////

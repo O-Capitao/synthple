@@ -5,20 +5,6 @@
 
 using namespace synthple::filedata;
 
-// WaveTableType mapStringToWaveTableType( std::string wtt_str ){
-//     if (wtt_str == "SINE"){
-//         return WaveTableType::SINE;
-//     } else if (wtt_str == "SQUARE" ) {
-//         return WaveTableType::SQUARE;
-//     } else if (wtt_str == "SAW" ) {
-//         return WaveTableType::SAW;
-//     } else if (wtt_str == "TRIANGLE" ) {
-//         return WaveTableType::TRIANGLE;
-//     } else {
-//         throw std::runtime_error("invalid Wave Table Type.");
-//     }
-// }
-
 SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
 :_logger(spdlog::basic_logger_mt("Config_reader", "synthple.log"))
 {
@@ -77,7 +63,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
                 
                 pfd.tracks.push_back({
                     .voice_id = currtrackdata["voice"].as<std::string>(),
-                    .midi_file_path = currtrackdata["src"].as<std::string>()
+                    .midi_file_path = path_to_data_dir + "/" + currtrackdata["src"].as<std::string>()
                 });
             }
 

@@ -28,7 +28,7 @@ namespace synthple::oscillator {
         void _generateSquareWaveform();
 
         public:
-            WaveTable( int nsamples, std::string wavetabletype_str );
+            WaveTable( int nsamples, std::string wavetabletype_str, std::shared_ptr<spdlog::logger > logger );
             float lookupValueAt( short index );
             static WaveTableType mapStringToWaveTableType( std::string wtt_str );
             int get__n_samples(){ return _n_samples; }
@@ -52,7 +52,8 @@ namespace synthple::oscillator {
         public:
             Oscillator(
                 std::string wavetabletype_str,
-                int wavetable_nsamples
+                int wavetable_nsamples,
+                std::shared_ptr<spdlog::logger > logger
             );
 
             // OUTPUT

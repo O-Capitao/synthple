@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Debug",
             "program": "${workspaceFolder}/synthple.a",
-            "args": ["bassline1.MID"],
+            "args": ["./data"],
             "cwd": "${workspaceFolder}"
         }
     ]

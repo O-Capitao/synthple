@@ -23,3 +23,2105 @@
 [2024-04-23 00:09:33.987] [Config_reader] [debug] Done reading
 [2024-04-23 00:09:33.987] [SYNTHPLE] [debug] Constructed Synthple obj
 [2024-04-23 00:09:33.987] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:27:57.883] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:27:57.883] [Config_reader] [debug] Done reading
+[2024-04-24 18:27:57.884] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:27:57.884] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:29:26.523] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:29:26.524] [Config_reader] [debug] Done reading
+[2024-04-24 18:29:26.524] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:29:26.524] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:30:18.633] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:30:18.633] [Config_reader] [debug] Done reading
+[2024-04-24 18:30:18.633] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:30:18.633] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:32:57.430] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:32:57.430] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:32:57.430] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:32:57.431] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:32:57.431] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:32:57.431] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:32:57.431] [Config_reader] [debug] Done reading
+[2024-04-24 18:32:57.431] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:32:57.431] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:34:41.513] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:34:41.513] [Config_reader] [debug] Done reading
+[2024-04-24 18:34:41.513] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:34:41.513] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:34:41.513] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:34:41.513] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:34:43.518] [SYNTHPLE] [debug] stopping.
+[2024-04-24 18:34:41.512] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 18:34:43.518] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:34:43.518] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:34:43.518] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:34:43.518] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:36:14.660] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:36:14.660] [Config_reader] [debug] Done reading
+[2024-04-24 18:36:14.660] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:36:14.660] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:36:14.660] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:36:14.660] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:36:16.665] [SYNTHPLE] [debug] stopping.
+[2024-04-24 18:36:14.659] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 18:36:16.665] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:36:16.665] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:36:16.665] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:36:16.665] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:37:13.075] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:37:13.076] [Config_reader] [debug] Done reading
+[2024-04-24 18:37:13.076] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:37:13.076] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:37:13.076] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:37:13.076] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:37:15.081] [SYNTHPLE] [debug] stopping.
+[2024-04-24 18:37:15.081] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:37:15.081] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:37:15.081] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:37:15.081] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 18:37:16.086] [SYNTHPLE] [debug] closing
+[2024-04-24 18:37:13.075] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 18:37:16.086] [AUDIO THREAD] [error] Error stopping stream. msg; PortAudio not initialized
+[2024-04-24 18:38:31.653] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 18:38:31.653] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 18:38:31.654] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 18:38:31.654] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 18:38:31.654] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 18:38:31.654] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 18:38:31.654] [Config_reader] [debug] Done reading
+[2024-04-24 18:38:31.654] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 18:38:31.654] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 18:38:31.654] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:38:31.654] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 18:38:33.659] [SYNTHPLE] [debug] stopping.
+[2024-04-24 18:38:31.653] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 18:38:33.659] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:38:33.659] [SYNTHPLE] [debug] closing
+[2024-04-24 18:38:33.659] [SYNTHPLE] [debug] got a command!
+[2024-04-24 18:38:33.659] [SYNTHPLE] [debug] closing
+[2024-04-24 20:28:12.169] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 20:28:12.169] [Config_reader] [debug] Done reading
+[2024-04-24 20:28:12.169] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 20:28:12.169] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:28:12.225] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 20:28:12.225] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] stopping.
+[2024-04-24 20:28:12.168] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] closing
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:28:14.230] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:30:17.982] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 20:30:17.982] [Config_reader] [debug] Done reading
+[2024-04-24 20:30:17.982] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 20:30:17.982] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:30:18.038] [SYNTHPLE] [debug] Starting play()
+[2024-04-24 20:30:18.038] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:30:20.043] [SYNTHPLE] [debug] stopping.
+[2024-04-24 20:30:17.981] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 20:30:20.043] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:30:20.043] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:30:20.043] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:30:20.043] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:30:21.048] [SYNTHPLE] [debug] closing
+[2024-04-24 20:33:03.905] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 20:33:03.905] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 20:33:03.905] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 20:33:03.905] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 20:33:03.905] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 20:33:03.905] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 20:33:03.906] [Config_reader] [debug] Done reading
+[2024-04-24 20:33:03.906] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 20:33:03.906] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:33:05.965] [SYNTHPLE] [debug] stopping.
+[2024-04-24 20:33:03.905] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 20:33:05.965] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:33:05.965] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:33:06.970] [SYNTHPLE] [debug] closing
+[2024-04-24 20:34:28.269] [Config_reader] [info] Constructed. Data File will be read at: data
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Found 1 Songs in data/songs/
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Found 2 voices config.
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Found 1 parts config.
+[2024-04-24 20:34:28.269] [Config_reader] [debug] Done reading
+[2024-04-24 20:34:28.269] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-24 20:34:28.269] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-24 20:34:30.330] [SYNTHPLE] [debug] stopping.
+[2024-04-24 20:34:28.268] [AUDIO THREAD] [info] Constructed.
+[2024-04-24 20:34:30.330] [SYNTHPLE] [debug] got a command!
+[2024-04-24 20:34:30.330] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-24 20:34:31.335] [SYNTHPLE] [debug] closing
+[2024-04-25 11:17:13.019] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Found 2 voices config.
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Found 1 parts config.
+[2024-04-25 11:17:13.019] [Config_reader] [debug] Done reading
+[2024-04-25 11:17:13.020] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-25 11:17:13.020] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-25 11:17:15.087] [SYNTHPLE] [debug] stopping.
+[2024-04-25 11:17:13.019] [AUDIO THREAD] [info] Constructed.
+[2024-04-25 11:17:15.087] [SYNTHPLE] [debug] got a command!
+[2024-04-25 11:17:15.087] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-25 11:17:16.092] [SYNTHPLE] [debug] closing
+[2024-04-25 12:38:49.013] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Found 2 voices config.
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Found 1 parts config.
+[2024-04-25 12:38:49.013] [Config_reader] [debug] Done reading
+[2024-04-25 12:38:49.013] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-25 12:38:49.013] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-25 12:38:51.076] [SYNTHPLE] [debug] stopping.
+[2024-04-25 12:38:49.012] [AUDIO THREAD] [info] Constructed.
+[2024-04-25 12:38:51.077] [SYNTHPLE] [debug] got a command!
+[2024-04-25 12:38:51.077] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-25 12:38:52.082] [SYNTHPLE] [debug] closing
+[2024-04-27 23:13:45.706] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Found 2 voices config.
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Found 1 parts config.
+[2024-04-27 23:13:45.707] [Config_reader] [debug] Done reading
+[2024-04-27 23:13:45.707] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-27 23:13:45.707] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-27 23:13:47.775] [SYNTHPLE] [debug] stopping.
+[2024-04-27 23:13:45.706] [AUDIO THREAD] [info] Constructed.
+[2024-04-27 23:13:47.775] [SYNTHPLE] [debug] got a command!
+[2024-04-27 23:13:47.775] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-27 23:13:48.780] [SYNTHPLE] [debug] closing
+[2024-04-27 23:26:34.782] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-27 23:26:34.782] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-27 23:26:34.783] [Config_reader] [debug] Found 2 voices config.
+[2024-04-27 23:26:34.783] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-27 23:26:34.783] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-27 23:26:34.783] [Config_reader] [debug] Found 1 parts config.
+[2024-04-27 23:26:34.783] [Config_reader] [debug] Done reading
+[2024-04-27 23:26:34.783] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-27 23:26:34.783] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-27 23:26:36.843] [SYNTHPLE] [debug] stopping.
+[2024-04-27 23:26:34.782] [AUDIO THREAD] [info] Constructed.
+[2024-04-27 23:26:36.843] [SYNTHPLE] [debug] got a command!
+[2024-04-27 23:26:36.843] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-27 23:26:37.848] [SYNTHPLE] [debug] closing
+[2024-04-28 00:37:53.661] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-28 00:37:53.661] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-28 00:37:53.662] [Config_reader] [debug] Found 2 voices config.
+[2024-04-28 00:37:53.662] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-28 00:37:53.662] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-28 00:37:53.662] [Config_reader] [debug] Found 1 parts config.
+[2024-04-28 00:37:53.662] [Config_reader] [debug] Done reading
+[2024-04-28 00:37:53.662] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-28 00:37:53.662] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-28 00:37:55.768] [SYNTHPLE] [debug] stopping.
+[2024-04-28 00:37:53.661] [AUDIO THREAD] [info] Constructed.
+[2024-04-28 00:37:55.768] [SYNTHPLE] [debug] got a command!
+[2024-04-28 00:37:55.768] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-28 00:37:56.773] [SYNTHPLE] [debug] closing
+[2024-04-28 23:51:29.254] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-28 23:51:29.254] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-28 23:51:29.255] [Config_reader] [debug] Found 2 voices config.
+[2024-04-28 23:51:29.255] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-28 23:51:29.255] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-28 23:51:29.255] [Config_reader] [debug] Found 1 parts config.
+[2024-04-28 23:51:29.255] [Config_reader] [debug] Done reading
+[2024-04-28 23:51:29.255] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-28 23:51:29.255] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-28 23:51:31.321] [SYNTHPLE] [debug] stopping.
+[2024-04-28 23:51:29.254] [AUDIO THREAD] [info] Constructed.
+[2024-04-28 23:51:31.321] [SYNTHPLE] [debug] got a command!
+[2024-04-28 23:51:31.321] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-28 23:51:32.326] [SYNTHPLE] [debug] closing
+[2024-04-28 23:52:43.659] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Found 2 voices config.
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Found 1 parts config.
+[2024-04-28 23:52:43.659] [Config_reader] [debug] Done reading
+[2024-04-28 23:52:43.659] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-28 23:52:43.659] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-28 23:52:45.721] [SYNTHPLE] [debug] stopping.
+[2024-04-28 23:52:43.658] [AUDIO THREAD] [info] Constructed.
+[2024-04-28 23:52:45.721] [SYNTHPLE] [debug] got a command!
+[2024-04-28 23:52:45.721] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-28 23:52:46.726] [SYNTHPLE] [debug] closing
+[2024-04-28 23:58:27.929] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Found 2 voices config.
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Found 1 parts config.
+[2024-04-28 23:58:27.930] [Config_reader] [debug] Done reading
+[2024-04-28 23:58:27.930] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-28 23:58:27.930] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-28 23:58:29.993] [SYNTHPLE] [debug] stopping.
+[2024-04-28 23:58:27.929] [AUDIO THREAD] [info] Constructed.
+[2024-04-28 23:58:29.993] [SYNTHPLE] [debug] got a command!
+[2024-04-28 23:58:29.993] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-28 23:58:30.998] [SYNTHPLE] [debug] closing
+[2024-04-28 23:59:38.301] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Found 2 voices config.
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Found 1 parts config.
+[2024-04-28 23:59:38.301] [Config_reader] [debug] Done reading
+[2024-04-28 23:59:38.301] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-28 23:59:57.383] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-28 23:59:59.465] [SYNTHPLE] [debug] stopping.
+[2024-04-28 23:59:38.301] [AUDIO THREAD] [info] Constructed.
+[2024-04-28 23:59:59.465] [SYNTHPLE] [debug] got a command!
+[2024-04-28 23:59:59.465] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-29 00:00:00.466] [SYNTHPLE] [debug] closing
+[2024-04-29 00:00:58.026] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-29 00:00:58.026] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-29 00:00:58.027] [Config_reader] [debug] Found 2 voices config.
+[2024-04-29 00:00:58.027] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-29 00:00:58.027] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-29 00:00:58.027] [Config_reader] [debug] Found 1 parts config.
+[2024-04-29 00:00:58.027] [Config_reader] [debug] Done reading
+[2024-04-29 00:00:58.027] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-29 00:03:36.983] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-29 00:03:36.983] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-29 00:03:36.984] [Config_reader] [debug] Found 2 voices config.
+[2024-04-29 00:03:36.984] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-29 00:03:36.984] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-29 00:03:36.984] [Config_reader] [debug] Found 1 parts config.
+[2024-04-29 00:03:36.984] [Config_reader] [debug] Done reading
+[2024-04-29 00:03:36.984] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-29 00:05:11.502] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Found 2 voices config.
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Found 1 parts config.
+[2024-04-29 00:05:11.503] [Config_reader] [debug] Done reading
+[2024-04-29 00:05:11.503] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-29 00:05:17.927] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-29 00:05:17.927] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-29 00:05:17.927] [Config_reader] [debug] Found 2 voices config.
+[2024-04-29 00:05:17.927] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-29 00:05:17.927] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-29 00:05:17.927] [Config_reader] [debug] Found 1 parts config.
+[2024-04-29 00:05:23.669] [Config_reader] [debug] Done reading
+[2024-04-29 00:05:23.670] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:11:11.908] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:11:11.909] [Config_reader] [debug] Done reading
+[2024-04-30 23:11:11.909] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:12:36.055] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:12:36.055] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:12:36.055] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:12:36.055] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:12:36.055] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:12:36.055] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:12:47.479] [Config_reader] [debug] Done reading
+[2024-04-30 23:12:47.479] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:13:41.711] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:13:41.711] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:13:41.711] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:13:41.711] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:13:41.711] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:13:41.711] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:13:47.315] [Config_reader] [debug] Done reading
+[2024-04-30 23:13:47.316] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:14:12.034] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:14:12.035] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:14:12.035] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:14:12.035] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:14:12.035] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:14:12.035] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:14:14.310] [Config_reader] [debug] Done reading
+[2024-04-30 23:14:14.310] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:16:30.381] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:16:30.381] [Config_reader] [debug] Done reading
+[2024-04-30 23:16:30.381] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:16:46.671] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:16:46.671] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:16:46.672] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:16:46.672] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:16:46.672] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:16:46.672] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:16:48.995] [Config_reader] [debug] Done reading
+[2024-04-30 23:16:48.995] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:20:07.957] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:20:07.957] [Config_reader] [debug] Done reading
+[2024-04-30 23:20:07.957] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:20:15.953] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:20:15.953] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:20:15.953] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:20:15.953] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:20:15.953] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:20:15.953] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:20:21.678] [Config_reader] [debug] Done reading
+[2024-04-30 23:20:21.678] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:20:49.253] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:20:49.253] [Config_reader] [debug] Done reading
+[2024-04-30 23:20:49.253] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:22:20.928] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:22:20.928] [Config_reader] [debug] Done reading
+[2024-04-30 23:22:20.928] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:22:20.928] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:22:20.927] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:22:20.928] [MIDI] [info] ENTER constructor
+[2024-04-30 23:23:33.194] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:23:33.194] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:23:33.194] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:23:33.194] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:23:33.194] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:23:33.194] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:23:33.195] [Config_reader] [debug] Done reading
+[2024-04-30 23:23:33.195] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:23:33.195] [MIDI] [info] ENTER constructor
+[2024-04-30 23:23:33.195] [MIDI] [info] Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:23:33.195] [MIDI] [info] EXIT constructor
+[2024-04-30 23:23:33.195] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:23:33.194] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:24:59.179] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:24:59.179] [Config_reader] [debug] Done reading
+[2024-04-30 23:24:59.179] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:24:59.179] [MIDI./data/midi/bassline1.MID] [info] ENTER constructor
+[2024-04-30 23:24:59.180] [MIDI./data/midi/bassline1.MID] [info] Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:24:59.180] [MIDI./data/midi/bassline1.MID] [info] EXIT constructor
+[2024-04-30 23:24:59.179] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:24:59.178] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:29:13.166] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:29:13.166] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:29:13.166] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:29:13.166] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:29:13.166] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:29:13.166] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:29:13.167] [Config_reader] [debug] Done reading
+[2024-04-30 23:29:13.167] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:29:13.167] [MIDI16807] [info] ENTER constructor
+[2024-04-30 23:29:13.167] [MIDI16807] [info] Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:29:13.167] [MIDI16807] [info] EXIT constructor
+[2024-04-30 23:29:13.167] [MIDI282475249] [info] ENTER constructor
+[2024-04-30 23:29:13.167] [MIDI282475249] [info] Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:29:13.167] [MIDI282475249] [info] EXIT constructor
+[2024-04-30 23:29:13.167] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:29:13.166] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:29:13.168] [WAVETABLE] [debug] constructed.
+[2024-04-30 23:46:05.993] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:46:05.993] [Config_reader] [debug] Done reading
+[2024-04-30 23:46:05.993] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:46:05.993] [Mixer] [info] MIDI: ENTER constructor
+[2024-04-30 23:46:05.994] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:46:05.994] [Mixer] [info] MIDI: EXIT constructor
+[2024-04-30 23:46:05.994] [Mixer] [info] MIDI: ENTER constructor
+[2024-04-30 23:46:05.994] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:46:05.994] [Mixer] [info] MIDI: EXIT constructor
+[2024-04-30 23:46:05.993] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:46:05.992] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:46:05.994] [WAVETABLE] [debug] constructed.
+[2024-04-30 23:49:43.346] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-04-30 23:49:43.346] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-04-30 23:49:43.346] [Config_reader] [debug] Found 2 voices config.
+[2024-04-30 23:49:43.347] [Config_reader] [debug] Parsed voice: square_1.
+[2024-04-30 23:49:43.347] [Config_reader] [debug] Parsed voice: square_2.
+[2024-04-30 23:49:43.347] [Config_reader] [debug] Found 1 parts config.
+[2024-04-30 23:49:43.347] [Config_reader] [debug] Done reading
+[2024-04-30 23:49:43.347] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: ENTER constructor
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: EXIT constructor
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: ENTER constructor
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-04-30 23:49:43.347] [Mixer] [info] MIDI: EXIT constructor
+[2024-04-30 23:49:43.348] [Mixer] [debug] constructed.
+[2024-04-30 23:49:43.348] [Mixer] [debug] constructed.
+[2024-04-30 23:49:43.348] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 0 sections
+[2024-04-30 23:49:43.347] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-04-30 23:49:45.412] [SYNTHPLE] [debug] stopping.
+[2024-04-30 23:49:43.346] [AUDIO THREAD] [info] Constructed.
+[2024-04-30 23:49:45.413] [SYNTHPLE] [debug] got a command!
+[2024-04-30 23:49:45.413] [SYNTHPLE] [debug] _run() exiting.
+[2024-04-30 23:49:46.418] [SYNTHPLE] [debug] closing
