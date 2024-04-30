@@ -9,7 +9,6 @@ std::string globalsToString()
         +  "FRAMERATE: " + std::to_string(FRAMERATE) + "\n"
         +  "SAMPLE_DEPTH: : " + std::to_string(SAMPLE_DEPTH) + "\n"
         +  "BUFFER_SIZE: " + std::to_string(BUFFER_SIZE) + "\n"
-        +  "AUDIO_QUEUE_SIZE: " + std::to_string(AUDIO_QUEUE_SIZE) + "\n"
         +  "DIATONIC_SCALE_SIZE: " + std::to_string(DIATONIC_SCALE_SIZE) + "\n"
         +  "TIME_FOR_BUFFER: " + std::to_string(TIME_FOR_BUFFER) + "\n";
 }

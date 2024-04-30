@@ -6,66 +6,121 @@
 using namespace synthple::oscillator;
 
 
-
-// Wavetable
-WaveTable::WaveTable( config::WaveTableConfig cnf )
-:_logger(spdlog::basic_logger_mt("WAVETABLE", "synthple.log")),
-_config( cnf )
+// Wave Table /////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+WaveTable::WaveTable( int nsamples, std::string wavetabletype_str, std::shared_ptr<spdlog::logger >logger )
+:_logger(logger),
+_n_samples(nsamples),
+_wt_type( mapStringToWaveTableType(wavetabletype_str) ),
+_data( nsamples )
 {
-    // TODO : init c style array from pointer?
-    // float _data[ _config.n_samples ];
 
-    switch( _config.type ){
-        case config::WaveTableType::SINE:
+    switch( _wt_type ){
+        case WaveTableType::SINE:
             _generateSinWaveform();
             break;
-        case config::WaveTableType::SQUARE:
+        case WaveTableType::SQUARE:
             _generateSquareWaveform();
             break;
         default:
             throw std::runtime_error("invalid WaveTableType.");
     }
-        
+    _logger->set_level(spdlog::level::debug);
+    _logger->debug("constructed.");
 }
 
-WaveTable::~WaveTable(){
-    delete _data;
-}
-
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 float WaveTable::lookupValueAt(short i){
-    assert(i < _config.n_samples);
+    assert(i < _n_samples);
     return _data[i];
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 void WaveTable::_generateSinWaveform(){
-    float angle_step = (2 * M_PI) / (float)_config.n_samples;
+    float angle_step = (2 * M_PI) / (float)_n_samples;
 
-    for (int i = 0; i < _config.n_samples; i++){
+    for (int i = 0; i < _n_samples; i++){
         _data[i] = sin( i * angle_step );
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 void WaveTable::_generateSquareWaveform(){
 
-    for (int i = 0; i < _config.n_samples; i++){
-        _data[i] = i > _config.n_samples / 2 ? 0 : 1;
+    for (int i = 0; i < _n_samples; i++){
+        _data[i] = i <= _n_samples / 2 ? 0 : 1;
+    }
+
+    // give it some countour
+    for (int i = 3; i < _n_samples; i++){    
+        _data[i] = (_data[i] + _data[i-1] + sqrtf(_data[i-2]))/3;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
+    if (wtt_str == "SINE"){
+        return WaveTableType::SINE;
+    } else if (wtt_str == "SQUARE" ) {
+        return WaveTableType::SQUARE;
+    } else if (wtt_str == "SAW" ) {
+        return WaveTableType::SAW;
+    } else if (wtt_str == "TRIANGLE" ) {
+        return WaveTableType::TRIANGLE;
+    } else {
+        throw std::runtime_error("invalid Wave Table Type.");
     }
 }
 
 
-// Oscillator
-Oscillator::Oscillator( config::OscillatorConfig cnf )
-:_logger(spdlog::basic_logger_mt("OSCILLATOR", "synthple.log")),
-_config(cnf),
-_waveTable(cnf.waveTableConfig)
+
+//Oscillator //////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+Oscillator::Oscillator( std::string wavetabletype_str, int wavetable_nsamples, std::shared_ptr<spdlog::logger >logger )
+:_logger(logger),
+_waveTable(wavetable_nsamples, wavetabletype_str, logger)
 {}
 
 float Oscillator::getValueAt(float t_ms){
 
-    float _t_in_cycle = fmod( (t_ms / 1000.0), _outputPeriod );
-    short _index = (short)floor(((float)_config.waveTableConfig.n_samples * _t_in_cycle) / (_outputPeriod));
+    float retval = 0;
 
-    assert(_index < _config.waveTableConfig.n_samples);
+    if (!_outputSilence){
 
-    return _waveTable.lookupValueAt( _index );
+        float _t_in_cycle = fmod( (t_ms), _outputPeriod );
+        short _index = (short)floor(((float)_waveTable.get__n_samples() * _t_in_cycle) / (_outputPeriod));
+
+        assert(_index < _waveTable.get__n_samples());
+
+        if (_isSilenceRequested && (_lastIndex > _index)){
+            _isSilenceRequested = false;
+            _outputSilence = true;
+            
+            retval = 0;
+        } else {
+            
+            retval = _waveTable.lookupValueAt( _index );
+        }
+
+        _lastIndex = _index;
+    }
+
+    return retval;
+}
+
+void Oscillator::requestSilence(){
+    _isSilenceRequested = true;
+}
+
+void Oscillator::setFrequency(float newf){
+    _outputFreq = newf;
+    _outputPeriod = 1 / newf;
+    _outputSilence = false;
+    _isSilenceRequested = false;
 }

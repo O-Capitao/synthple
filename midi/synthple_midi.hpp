@@ -82,8 +82,8 @@ namespace synthple::midi {
             // When creating the MFWrapper we want to parse and
             // store the entire track in a single instance 
             // and get rid of the file itself 
-            MidiFileWrapper( const std::string &filePath );
-            ~MidiFileWrapper();
+            MidiFileWrapper( std::string filePath, std::shared_ptr<spdlog::logger> logger );
+            // ~MidiFileWrapper();
 
             void printMidiEvents();
             int getTempoBpm(){ return _tempo_bpm; }
