@@ -3,9 +3,9 @@
 
 using namespace synthple::midi;
 
-/*************************************************************************
- * MIDI NOTE
-*************************************************************************/
+// MidiNote ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 std::string MidiNote::toString(){
     std::string retval = "";
 
@@ -59,9 +59,10 @@ std::string MidiNote::toString(){
     return retval;
 }
 
-/*************************************************************************
- *  MIDI EVENT WRAPPER Class
-*************************************************************************/
+
+// MidiEventWrapper////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 MidiEventWrapper::MidiEventWrapper( smf::MidiEvent* mev ){
     
     ticks = mev->tick;
@@ -73,10 +74,14 @@ MidiEventWrapper::MidiEventWrapper( smf::MidiEvent* mev ){
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 MidiEventWrapper::MidiEventWrapper( MidiEventType _t, MidiNote _n, int _ticks )
 :type( _t ), note( _n ), ticks( _ticks )
 {}
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 MidiEventType MidiEventWrapper::_getMidiEventTypeFromCode( int eventCode ){
     switch (eventCode) {
         case 128:
@@ -90,6 +95,8 @@ MidiEventType MidiEventWrapper::_getMidiEventTypeFromCode( int eventCode ){
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 MidiNote MidiEventWrapper::_getMidiEventNoteFromCode( int noteCode ){
     // return {
     //     .note = _intToNote( noteCode % DIATONIC_SCALE_SIZE),
@@ -98,6 +105,8 @@ MidiNote MidiEventWrapper::_getMidiEventNoteFromCode( int noteCode ){
     return MidiNote( _intToNote( noteCode % DIATONIC_SCALE_SIZE),  (ushort)(noteCode / DIATONIC_SCALE_SIZE) );
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 synthple::NoteKey MidiEventWrapper::_intToNote(int noteNumber){
     switch (noteNumber) {
         case 0:
@@ -129,6 +138,8 @@ synthple::NoteKey MidiEventWrapper::_intToNote(int noteNumber){
     }
 }
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 std::string MidiEventWrapper::toString(){
     std::string retval = "\nEvent @:" + std::to_string(ticks) + "\n";
 
@@ -149,9 +160,9 @@ std::string MidiEventWrapper::toString(){
 }
 
 
-/*************************************************************************
- *  MIDI FILE WRAPPER Class
-*************************************************************************/
+// MidiFileWrapper/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 MidiFileWrapper::MidiFileWrapper(
     std::string fp, std::shared_ptr<spdlog::logger> logger
 ){
@@ -270,4 +281,39 @@ std::string MidiFileWrapper::toString(){
     }
 
     return retval;
+}
+
+
+
+// MonophonicMidiFileReader ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+MonophonicMidiFileReader::MonophonicMidiFileReader(
+    std::string fp,
+    std::shared_ptr<spdlog::logger> logger,
+    float tempobpm,
+    float dts
+){
+    _logger = logger;                                     
+    _logger->info("MIDI: ENTER constructor");
+
+    smf::MidiFile midifile( fp );
+    midifile.joinTracks();
+
+    _populateMidiEvents();
+
+
+
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+void MonophonicMidiFileReader::reset(){
+
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+MidiNote MonophonicMidiFileReader::getNextActiveNote(){
+
 }

@@ -24,10 +24,10 @@ _data( nsamples )
             _generateSquareWaveform();
             break;
         default:
-            throw std::runtime_error("invalid WaveTableType.");
+            throw std::runtime_error("WTABLE: invalid WaveTableType.");
     }
     _logger->set_level(spdlog::level::debug);
-    _logger->debug("constructed.");
+    _logger->debug("WTABLE: constructed.");
 }
 
 ///////////////////////////////////////////////////////////////////////

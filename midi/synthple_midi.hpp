@@ -96,4 +96,28 @@ namespace synthple::midi {
             std::vector<MidiNote> &getActiveNotesVec(){return _active_notes_vec;};
             std::string toString();
     };
+
+
+    class MonophonicMidiFileReader {
+        std::string _file_path;
+        std::vector<MidiEventWrapper> _midi_events;
+        std::shared_ptr<spdlog::logger> _logger;
+
+        // stuff to help reading a file
+        float _dt_s, _t_s, _tempo_bpm;
+        int _current_tick = 0;
+        int _curr_midi_evt_index = -1;
+        bool _is_silent;
+
+        MidiNote _active_note;
+
+        void _populateMidiEvents();
+
+        public:
+
+            MonophonicMidiFileReader( std::string filePath, std::shared_ptr<spdlog::logger> logger, float tempobpm, float dts );
+
+            void reset();
+            MidiNote getNextActiveNote();
+    }
 }

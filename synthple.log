@@ -2125,3 +2125,861 @@ Event @:30120
 [2024-04-30 23:49:45.413] [SYNTHPLE] [debug] got a command!
 [2024-04-30 23:49:45.413] [SYNTHPLE] [debug] _run() exiting.
 [2024-04-30 23:49:46.418] [SYNTHPLE] [debug] closing
+[2024-05-01 00:01:42.339] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Found 2 voices config.
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Found 1 parts config.
+[2024-05-01 00:01:42.339] [Config_reader] [debug] Done reading
+[2024-05-01 00:01:42.340] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-01 00:02:04.927] [Mixer] [info] MIDI: ENTER constructor
+[2024-05-01 00:02:07.943] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-05-01 00:02:07.943] [Mixer] [info] MIDI: EXIT constructor
+[2024-05-01 00:02:07.943] [Mixer] [info] MIDI: ENTER constructor
+[2024-05-01 00:02:07.943] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-05-01 00:02:07.943] [Mixer] [info] MIDI: EXIT constructor
+[2024-05-01 00:02:07.944] [Mixer] [debug] constructed.
+[2024-05-01 00:02:07.944] [Mixer] [debug] constructed.
+[2024-05-01 00:02:07.944] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 0 sections
+[2024-05-01 00:11:55.893] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-01 00:11:55.893] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-01 00:11:55.893] [Config_reader] [debug] Found 2 voices config.
+[2024-05-01 00:11:55.893] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-01 00:11:55.893] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-01 00:11:55.893] [Config_reader] [debug] Found 1 parts config.
+[2024-05-01 00:11:55.894] [Config_reader] [debug] Done reading
+[2024-05-01 00:11:55.894] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: ENTER constructor
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: EXIT constructor
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: ENTER constructor
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: Midi File: 
+Parsed MIDI file:
+  total duration = 15.687500s
+ticks_per_qnote =960.000000
+bpm: 120.000000
+tick duration: 0.000521
+Events:
+
+Event @:0
+  ON A2
+Event @:360
+  OFF A2
+Event @:360
+  ON Cs3
+Event @:600
+  OFF Cs3
+Event @:600
+  ON A2
+Event @:840
+  OFF A2
+Event @:960
+  ON A2
+Event @:1320
+  OFF A2
+Event @:1920
+  ON A2
+Event @:2280
+  OFF A2
+Event @:2880
+  ON A2
+Event @:3240
+  OFF A2
+Event @:3840
+  ON A2
+Event @:4200
+  OFF A2
+Event @:4200
+  ON Cs3
+Event @:4440
+  OFF Cs3
+Event @:4440
+  ON A2
+Event @:4680
+  OFF A2
+Event @:4800
+  ON A2
+Event @:5160
+  OFF A2
+Event @:5760
+  ON A2
+Event @:6120
+  OFF A2
+Event @:6720
+  ON A2
+Event @:7080
+  OFF A2
+Event @:7680
+  ON A2
+Event @:8040
+  OFF A2
+Event @:8040
+  ON Cs3
+Event @:8280
+  OFF Cs3
+Event @:8280
+  ON A2
+Event @:8520
+  OFF A2
+Event @:8640
+  ON Fs2
+Event @:9000
+  OFF Fs2
+Event @:9600
+  ON Fs2
+Event @:9960
+  OFF Fs2
+Event @:10560
+  ON Fs2
+Event @:10920
+  OFF Fs2
+Event @:11520
+  ON Fs2
+Event @:11880
+  OFF Fs2
+Event @:11880
+  ON Cs3
+Event @:12120
+  OFF Cs3
+Event @:12120
+  ON Fs2
+Event @:12360
+  OFF Fs2
+Event @:12480
+  ON Fs2
+Event @:12840
+  OFF Fs2
+Event @:13440
+  ON Fs2
+Event @:13800
+  OFF Fs2
+Event @:14400
+  ON Fs2
+Event @:14760
+  OFF Fs2
+Event @:15360
+  ON A2
+Event @:15720
+  OFF A2
+Event @:15720
+  ON Cs3
+Event @:15960
+  OFF Cs3
+Event @:15960
+  ON A2
+Event @:16200
+  OFF A2
+Event @:16320
+  ON A2
+Event @:16680
+  OFF A2
+Event @:17280
+  ON A2
+Event @:17640
+  OFF A2
+Event @:18240
+  ON A2
+Event @:18600
+  OFF A2
+Event @:19200
+  ON A2
+Event @:19560
+  OFF A2
+Event @:19560
+  ON Cs3
+Event @:19800
+  OFF Cs3
+Event @:19800
+  ON A2
+Event @:20040
+  OFF A2
+Event @:20160
+  ON A2
+Event @:20520
+  OFF A2
+Event @:21120
+  ON A2
+Event @:21480
+  OFF A2
+Event @:22080
+  ON A2
+Event @:22440
+  OFF A2
+Event @:23040
+  ON A2
+Event @:23400
+  OFF A2
+Event @:23400
+  ON Cs3
+Event @:23640
+  OFF Cs3
+Event @:23640
+  ON A2
+Event @:23880
+  OFF A2
+Event @:24000
+  ON Fs2
+Event @:24360
+  OFF Fs2
+Event @:24960
+  ON Fs2
+Event @:25320
+  OFF Fs2
+Event @:25920
+  ON Fs2
+Event @:26280
+  OFF Fs2
+Event @:26880
+  ON Fs2
+Event @:27240
+  OFF Fs2
+Event @:27240
+  ON Cs3
+Event @:27480
+  OFF Cs3
+Event @:27480
+  ON Fs2
+Event @:27720
+  OFF Fs2
+Event @:27840
+  ON Fs2
+Event @:28200
+  OFF Fs2
+Event @:28800
+  ON Fs2
+Event @:29160
+  OFF Fs2
+Event @:29760
+  ON Fs2
+Event @:30120
+  OFF Fs2
+Event @:30120
+ END OF SEQUECE
+[2024-05-01 00:11:55.894] [Mixer] [info] MIDI: EXIT constructor
+[2024-05-01 00:11:55.894] [Mixer] [debug] WTABLE: constructed.
+[2024-05-01 00:11:55.894] [Mixer] [debug] WTABLE: constructed.
+[2024-05-01 00:11:55.894] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 0 sections
+[2024-05-01 00:11:55.894] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-01 00:11:57.938] [SYNTHPLE] [debug] stopping.
+[2024-05-01 00:11:55.893] [AUDIO THREAD] [info] Constructed.
+[2024-05-01 00:11:57.939] [SYNTHPLE] [debug] got a command!
+[2024-05-01 00:11:57.939] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-01 00:11:58.944] [SYNTHPLE] [debug] closing
+[2024-05-01 18:35:21.986] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Found 2 voices config.
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Found 1 parts config.
+[2024-05-01 18:35:21.986] [Config_reader] [debug] Done reading
+[2024-05-01 18:35:21.986] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-01 18:35:21.986] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-01 18:35:24.032] [SYNTHPLE] [debug] stopping.
+[2024-05-01 18:35:21.985] [AUDIO THREAD] [info] Constructed.
+[2024-05-01 18:35:24.033] [SYNTHPLE] [debug] got a command!
+[2024-05-01 18:35:24.033] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-01 18:35:25.038] [SYNTHPLE] [debug] closing

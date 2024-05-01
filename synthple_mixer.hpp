@@ -11,34 +11,43 @@ namespace synthple::mixer {
 
     struct Track {
         oscillator::Oscillator oscillator;
-        float gain;
+        midi::MidiFileWrapper *midi_fw_ptr = nullptr;
+        float gain = 0;
     };
 
     struct Section {
         short repeat;
-        std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
+        // std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
+        std::vector<midi::MidiFileWrapper> _midiFiles_perTrack;
     };
 
     class Mixer {
 
         std::shared_ptr<spdlog::logger >_logger;
-        std::string _loaded_song_name;
+
         std::vector<Track> _tracks;
         std::vector<Section> _sections;
 
-        Section *_activeSection_ptr = nullptr;
+        std::string _loaded_song_name = "";
+        int _loaded_section_index = 0;
 
         float _timeInSong_s, _timeInSection_s;
-        short _sectionRepeat_count;
-        int _tempo_bpm;
+        
+        const float _dt_s = 1 / FRAMERATE;
+        const int _input_period_in_samplerates = 10;
+        int _midi_click_counter = 0;
 
-        public:
+        short _sectionRepeat_count = 0;
+        int _tempo_bpm = 0;
+        bool _is_silent = true;
+
+        public:  
+            // constructs a silent mixer.
             Mixer();
-            void loadSong( filedata::SongFileData *_sfd );
-
-            // override "natural" mixer state,
-            // e.g. forcibly change part
-            void setSection( std::string sectionid );
+            
+            void setSong( filedata::SongFileData *_sfd );
+            void setSection( int sectionindex );
+            void setSilence();
 
             const std::string &getCurrentSectionName();
             void produceData( float *requestedsamples_vector, int requestedsamples_len );

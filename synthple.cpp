@@ -28,7 +28,8 @@ _playThread( boost::bind(&Synthple::_run, this) )
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 void Synthple::init(){
-    _mixer.loadSong(_filedata.getSongByName( "" ));
+    // _mixer.loadSong(_filedata.getSongByName( "" ));
+    // _mixer.setSong
     _audioThread.start();
 }
 
@@ -50,15 +51,17 @@ void Synthple::setSong( const std::string &song_to_set ){
 
     // _mixer.loadSong(sfd);
     _activeSong_id = sfd->id;
-    _activeSongSection_id = sfd->sections[0].id;
+    _active_song_section_index = 0;
+
     _logger->info("Loaded Song with Id = {}", _activeSong_id);
 }
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-void Synthple::setSongSection( const std::string &sectionid ){
-    // _mixer.setSection(sectionid);
-    _activeSongSection_id = sectionid;
+void Synthple::setSongSection( int sectionindex ){
+
+    _mixer.setSection(sectionindex);
+    _active_song_section_index = sectionindex;
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -90,9 +93,7 @@ void Synthple::_run(){
             if (__aux_command.cmdType == bus::CommandType::STOP){
                 _EXIT = true;
             }
-        }
-
-        
+        }        
     }
 
     // _close();
