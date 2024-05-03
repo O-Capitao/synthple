@@ -53,71 +53,46 @@ namespace synthple::midi {
             NoteKey _intToNote(int noteNumber);
     };
 
-    // int getLengthOfMidiSequence( const std::vector<MidiEventWrapper> &midi_vector );
-
-    class MidiFileWrapper {
-
-        std::string _file_path;
-        
-        std::vector<MidiEventWrapper> _midi_events;
-        std::shared_ptr<spdlog::logger> _logger;
-        
-        double _duration_s = 0;
-        double _tick_duration_s;
-
-        int _total_ticks;
-        double _ticks_per_quarter_note;
-        double _tempo_bpm;
-
-        // stuff to help reading a file
-        float _dt_s;
-        float _t_s;
-        int _current_tick = 0;
-        std::vector<MidiNote> _active_notes_vec;
-        int _curr_midi_evt_index = -1;
-
-        void _setInitialNotes(); 
-
-        public:
-            // When creating the MFWrapper we want to parse and
-            // store the entire track in a single instance 
-            // and get rid of the file itself 
-            MidiFileWrapper( std::string filePath, std::shared_ptr<spdlog::logger> logger );
-            // ~MidiFileWrapper();
-
-            void printMidiEvents();
-            int getTempoBpm(){ return _tempo_bpm; }
-            double getDuration(){ return _duration_s; }
-            
-            // Called by the Synthple run() to get what notes are 
-            // active at a certain time
-            void initSequentialRead( float dt_s );
-            void step();
-            std::vector<MidiNote> &getActiveNotesVec(){return _active_notes_vec;};
-            std::string toString();
-    };
-
-
     class MonophonicMidiFileReader {
+
         std::string _file_path;
         std::vector<MidiEventWrapper> _midi_events;
         std::shared_ptr<spdlog::logger> _logger;
 
         // stuff to help reading a file
-        float _dt_s, _t_s, _tempo_bpm;
-        int _current_tick = 0;
-        int _curr_midi_evt_index = -1;
+        int _current_tick,
+            _current_midi_evt_index,
+            _ticks_per_loop;
+
+        short _length_bars;
+        
+        float _dt_s,
+              _current_time_s,
+              _tempo_bpm,
+              _ticks_per_beat,
+              _tick_duration_s,
+              _duration_s;
+
         bool _is_silent;
+
 
         MidiNote _active_note;
 
-        void _populateMidiEvents();
+        void _populateMidiEvents(smf::MidiFile &file);
+        int _getMidiEventIndexAtTick(int tick);
+        // MidiNote  _getActiveNoteAtTick(int tick);
+        void _activateMidiEvent(int midieventindex);
 
         public:
 
-            MonophonicMidiFileReader( std::string filePath, std::shared_ptr<spdlog::logger> logger, float tempobpm, float dts );
+            MonophonicMidiFileReader( 
+                std::string filePath, 
+                std::shared_ptr<spdlog::logger> logger, 
+                float tempobpm, 
+                float dts,
+                short lengthbars );
 
-            void reset();
-            MidiNote getNextActiveNote();
-    }
+            void        resetToTicks(int tick);
+            MidiNote    getNextActiveNote();
+    };
 }

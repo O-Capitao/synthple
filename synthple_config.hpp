@@ -16,22 +16,26 @@ namespace synthple::filedata {
         float offset;
         float gain;
     };
+
     struct TrackFileData {
         std::string voice_id;
         std::string midi_file_path;
     };
+
     struct SectionFileData {
         std::string id;
         short repeat;
+        short length_bars;
         std::vector<TrackFileData> tracks;
     };
-    // input structure
+
     struct SongFileData {
         short bpm;
         std::string id;
         std::vector<VoiceFileData> voices;
         std::vector<SectionFileData> sections;
     };
+
     class SynthpleFileData{
 
         std::shared_ptr<spdlog::logger >_logger;

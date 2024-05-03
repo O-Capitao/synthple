@@ -160,131 +160,6 @@ std::string MidiEventWrapper::toString(){
 }
 
 
-// MidiFileWrapper/////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-MidiFileWrapper::MidiFileWrapper(
-    std::string fp, std::shared_ptr<spdlog::logger> logger
-){
-    _logger = logger;                                     
-    _logger->info("MIDI: ENTER constructor");
-
-    smf::MidiFile midifile( fp );
-
-    midifile.joinTracks();
-
-    assert(midifile.getEventCount(0) > 0);
-    
-    _ticks_per_quarter_note = midifile.getTicksPerQuarterNote();
-    _tick_duration_s = midifile.getTimeInSeconds(1);
-    
-    smf::MidiEvent* mev;
-
-    for (int event=0; event < midifile[0].size(); event++) {
-
-        mev = &midifile[0][event];
-
-        _midi_events.push_back({
-            MidiEventWrapper(mev)
-        });
-    }
-
-    // get track duration from
-    // last event's ticks
-    long _last_event_ticks = _midi_events.back().ticks;
-    _duration_s = _last_event_ticks * _tick_duration_s;
-    _tempo_bpm = 60 / (_tick_duration_s * _ticks_per_quarter_note);
-
-    
-
-    _logger->info("MIDI: Midi File: \n{}", toString());
-
-    _logger->info("MIDI: EXIT constructor");
-    _logger->flush();
-}
-
-// MidiFileWrapper::~MidiFileWrapper(){}
-
-void MidiFileWrapper::initSequentialRead( float dt_s ){
-    
-    _dt_s = dt_s;
-    _t_s = 0;
-
-    _current_tick = 0;
-
-    _active_notes_vec = std::vector<MidiNote>(MAX_N_VOICES);
-    
-    _active_notes_vec[0] = MidiNote(NoteKey::NOT_A_NOTE, 0);
-    _active_notes_vec[1] = MidiNote(NoteKey::NOT_A_NOTE, 0);
-    _active_notes_vec[2] = MidiNote(NoteKey::NOT_A_NOTE, 0);
-    _active_notes_vec[3] = MidiNote(NoteKey::NOT_A_NOTE, 0);
-
-    _curr_midi_evt_index = 0;
-
-    _setInitialNotes();
-}
-
-void MidiFileWrapper::_setInitialNotes(){
-
-    if (_midi_events[0].ticks == 0 && _midi_events[0].type == MidiEventType::NOTE_ON){
-        _active_notes_vec[0] = _midi_events[0].note;
-        _curr_midi_evt_index = 0;
-
-    }
-
-}
-
-void MidiFileWrapper::step(){
-
-    if (_curr_midi_evt_index > _midi_events.size() - 1) return;
-    
-    MidiEventWrapper &next_event = _midi_events[ _curr_midi_evt_index + 1 ];
-
-    if (next_event.type == MidiEventType::END_OF_SEQUENCE) return;
-
-    if (next_event.ticks <= _current_tick){
-        _logger->debug("MIDI: Changing Midi state");
-        _logger->flush();
-        if (next_event.type == MidiEventType::NOTE_ON){
-            _active_notes_vec[0] = next_event.note;
-        } else 
-        if (next_event.type == MidiEventType::NOTE_OFF && _active_notes_vec[0].note_value == next_event.note.note_value){
-            _active_notes_vec[0] = MidiNote(NoteKey::NOT_A_NOTE, 0);
-        }
-
-        _curr_midi_evt_index++;
-    }
-
-    _t_s += _dt_s;
-    _current_tick = _t_s / _tick_duration_s;
-}
-
-std::string MidiFileWrapper::toString(){
-    
-    std::string retval;
-
-    retval.append(
-    "Parsed MIDI file:\n  total duration = "
-     + std::to_string(_duration_s) 
-     + "s\nticks_per_qnote ="
-     + std::to_string(_ticks_per_quarter_note)
-     + "\nbpm: "
-     + std::to_string( _tempo_bpm )
-     + "\ntick duration: "
-     + std::to_string( _tick_duration_s ) 
-     + "\nEvents:\n" 
-    );
-    
-    for (MidiEventWrapper &ev : _midi_events){
-        retval.append(ev.toString());
-        // retval.append("         ,        ");
-    }
-
-    return retval;
-}
-
-
-
 // MonophonicMidiFileReader ///////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -292,28 +167,126 @@ MonophonicMidiFileReader::MonophonicMidiFileReader(
     std::string fp,
     std::shared_ptr<spdlog::logger> logger,
     float tempobpm,
-    float dts
-){
+    float dts,
+    short lbars
+):_tempo_bpm(tempobpm),
+_dt_s(dts),
+_length_bars(lbars)
+{
     _logger = logger;                                     
-    _logger->info("MIDI: ENTER constructor");
+    _logger->info("MIDI: path = \"{}\", ENTER constructor", fp);
 
     smf::MidiFile midifile( fp );
     midifile.joinTracks();
 
-    _populateMidiEvents();
+    assert(midifile.getEventCount(0) > 0);
 
+    // file's own tempo maybe different from actual target tempo.
+    _ticks_per_beat = midifile.getTicksPerQuarterNote();
+    
+    float _file__tick_duration_s = midifile.getTimeInSeconds(1);
+    float _file__tempo_bpm = (60 * _ticks_per_beat) / _file__tick_duration_s;
 
+    _tick_duration_s = _tempo_bpm / (60 * _ticks_per_beat);
 
+    // TODO : time signatures?
+    _ticks_per_loop = 4 * _ticks_per_beat;
+
+    _populateMidiEvents(midifile);
+    resetToTicks(0);
+
+    _logger->debug(
+        "MIDI: path = \"{}\", exiting constructor. \"_tick_duration_s\"={} s, \"_ticks_per_beat\"={}.",
+        fp, _tick_duration_s, _ticks_per_beat );
+    _logger->flush();
 }
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-void MonophonicMidiFileReader::reset(){
+void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
+    
+    smf::MidiEvent* mev;
 
+    for (int event=0; event < file[0].size(); event++) {
+
+        mev = &file[0][event];
+
+        _midi_events.push_back({
+            MidiEventWrapper(mev)
+        });
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+int MonophonicMidiFileReader::_getMidiEventIndexAtTick(int tick){
+    int retval = 0;
+    for (MidiEventWrapper &_mew : _midi_events){
+        if (_mew.ticks < tick ){
+            retval ++;
+        } else {
+            break;
+        }
+    }
+    return retval;
+}
+
+// ///////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////
+// MidiNote MonophonicMidiFileReader::_getActiveNoteAtTick(int tick){
+//     MidiNote retval = _midi_events[]
+// }
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+void MonophonicMidiFileReader::_activateMidiEvent(int midieventindex){
+    MidiEventWrapper &mew = _midi_events[midieventindex];
+    _active_note = mew.note;
+
+    if (mew.type == MidiEventType::NOTE_OFF){
+        _is_silent = true;
+    } else {
+        _is_silent = false;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+void MonophonicMidiFileReader::resetToTicks(int tick){
+    _current_tick = tick;
+    _current_time_s = _tick_duration_s * tick;
+    _current_midi_evt_index = _getMidiEventIndexAtTick(tick);
+    _activateMidiEvent(_current_midi_evt_index);
 }
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 MidiNote MonophonicMidiFileReader::getNextActiveNote(){
+    
+     // check current time:
+    MidiEventWrapper &next_event = _midi_events[ _current_midi_evt_index++ ];
 
+    if (next_event.ticks <= _current_tick){
+        // advance event
+        if (next_event.type == MidiEventType::NOTE_ON){
+            _active_note = next_event.note;
+        } else if (next_event.type == MidiEventType::NOTE_OFF && _active_note.note_value == next_event.note.note_value){
+            _active_note = MidiNote(NoteKey::NOT_A_NOTE, 0);
+        }
+        _active_note = next_event.note;
+    }
+
+    // increment time
+    _current_time_s += _dt_s;
+    _current_tick = (int)floor(_current_time_s / _tick_duration_s);
+
+    // check bounds and loop
+    int _ticks_over = _current_tick - _ticks_per_loop;
+
+    if (_ticks_over > 0){
+        // reset to ticks
+        resetToTicks(_ticks_over);
+    }
+
+    return _active_note;
 }

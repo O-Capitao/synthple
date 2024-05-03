@@ -17,6 +17,7 @@ int main(int argc, char *argv[]){
     synthple::Synthple synthple( configfilepath );
 
     synthple.init();
+    synthple.setSong("intro");
 
     // synthple.play();
 

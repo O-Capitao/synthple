@@ -24,14 +24,18 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
     _tempo_bpm = _sfd->bpm;
     _loaded_song_name = _sfd->id;
 
+
     for (int __section_index = 0; __section_index < _sfd->sections.size(); __section_index++){
         Section __section = {
-            .repeat = _sfd->sections[ __section_index ].repeat
+            .repeat = _sfd->sections[ __section_index ].repeat,
+            .length_bars = _sfd->sections[ __section_index ].length_bars,
         };
 
         for (int __midi_ass_ind = 0; __midi_ass_ind < _sfd->sections[__section_index].tracks.size(); __midi_ass_ind++){
             filedata::TrackFileData &__tfd = _sfd->sections[__section_index].tracks[__midi_ass_ind];
-            __section._midiFiles_perTrack.push_back( midi::MidiFileWrapper( __tfd.midi_file_path, _logger ));
+            __section._midiFiles_perTrack.push_back( 
+                midi::MonophonicMidiFileReader( __tfd.midi_file_path, _logger, _tempo_bpm, _input_period_in_samplerates*_dt_s, __section.length_bars )
+            );
         }
 
         _sections.push_back(__section);
@@ -57,14 +61,14 @@ void Mixer::setSection(int sectionindex){
 
     _loaded_section_index = sectionindex;
     Section &__loaded_sect = _sections[sectionindex];
-    midi::MidiFileWrapper *__first_mfw = __loaded_sect._midiFiles_perTrack.data();
+    midi::MonophonicMidiFileReader *__first_mfw = __loaded_sect._midiFiles_perTrack.data();
 
     // assign midi to tracks
     for (int i = 0; i < __loaded_sect._midiFiles_perTrack.size(); i ++ ){
         _tracks[i].midi_fw_ptr = &__first_mfw[i];
 
         // input is processed in intervals of "_input_period_in_samplerates" clicks.
-        _tracks[i].midi_fw_ptr->initSequentialRead(_input_period_in_samplerates * _dt_s);
+        _tracks[i].midi_fw_ptr->resetToTicks(0);
     }
 
     _is_silent = false;

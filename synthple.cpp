@@ -28,8 +28,6 @@ _playThread( boost::bind(&Synthple::_run, this) )
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 void Synthple::init(){
-    // _mixer.loadSong(_filedata.getSongByName( "" ));
-    // _mixer.setSong
     _audioThread.start();
 }
 
@@ -53,6 +51,8 @@ void Synthple::setSong( const std::string &song_to_set ){
     _activeSong_id = sfd->id;
     _active_song_section_index = 0;
 
+    _mixer.setSong(sfd);
+    
     _logger->info("Loaded Song with Id = {}", _activeSong_id);
 }
 

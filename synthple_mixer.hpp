@@ -11,14 +11,15 @@ namespace synthple::mixer {
 
     struct Track {
         oscillator::Oscillator oscillator;
-        midi::MidiFileWrapper *midi_fw_ptr = nullptr;
+        midi::MonophonicMidiFileReader *midi_fw_ptr = nullptr;
         float gain = 0;
     };
 
     struct Section {
         short repeat;
+        short length_bars;
         // std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
-        std::vector<midi::MidiFileWrapper> _midiFiles_perTrack;
+        std::vector<midi::MonophonicMidiFileReader> _midiFiles_perTrack;
     };
 
     class Mixer {

@@ -28,6 +28,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
         YAML::Node song = YAML::LoadFile( songfilepath );
         
         SongFileData sfd = {
+            .id = song["id"].as<std::string>(),
             .bpm = song["bpm"].as<short>(),
             .voices = std::vector<VoiceFileData>(),
             .sections = std::vector<SectionFileData>()
@@ -57,6 +58,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
             SectionFileData pfd = {
                 .id = currpartdata["id"].as<std::string>(),
                 .repeat = currpartdata["repeat"].as<short>(),
+                .length_bars = currpartdata["length_bars"].as<short>(),
                 .tracks = std::vector<TrackFileData>()
             };
             
