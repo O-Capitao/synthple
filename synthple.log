@@ -92,3 +92,2269 @@
 [2024-05-03 23:47:36.587] [SYNTHPLE] [debug] got a command!
 [2024-05-03 23:47:36.587] [SYNTHPLE] [debug] _run() exiting.
 [2024-05-03 23:47:37.592] [SYNTHPLE] [debug] closing
+[2024-05-04 18:52:32.624] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:52:32.624] [Config_reader] [debug] Done reading
+[2024-05-04 18:52:32.625] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:52:32.694] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:52:32.695] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:52:32.695] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:52:32.695] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:52:32.695] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:52:32.695] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:52:32.695] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:52:32.625] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:52:32.695] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:52:34.700] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:52:32.623] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 18:52:34.700] [SYNTHPLE] [debug] got a command!
+[2024-05-04 18:52:34.700] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 18:52:35.706] [SYNTHPLE] [debug] closing
+[2024-05-04 18:53:34.638] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:53:34.639] [Config_reader] [debug] Done reading
+[2024-05-04 18:53:34.639] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:53:45.080] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:53:45.080] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:53:45.080] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:53:45.080] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:53:45.080] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:53:45.080] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:53:45.080] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:54:25.737] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:54:25.737] [Config_reader] [debug] Done reading
+[2024-05-04 18:54:25.737] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:54:36.125] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:54:36.125] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:54:36.125] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:54:36.125] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:54:36.125] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:54:36.125] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:54:36.125] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:54:25.738] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:54:36.125] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:54:41.614] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:54:25.736] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 18:54:41.615] [SYNTHPLE] [debug] got a command!
+[2024-05-04 18:54:41.615] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 18:54:42.620] [SYNTHPLE] [debug] closing
+[2024-05-04 18:55:16.043] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:55:16.043] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:55:16.044] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:55:16.044] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:55:16.044] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:55:16.044] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:55:16.044] [Config_reader] [debug] Done reading
+[2024-05-04 18:55:16.044] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:55:16.112] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:55:16.113] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:55:16.113] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:55:16.113] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:55:16.113] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:55:16.113] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:55:16.113] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:55:16.044] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:55:16.113] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:55:18.118] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:55:16.043] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 18:55:18.118] [SYNTHPLE] [debug] got a command!
+[2024-05-04 18:55:18.118] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 18:55:19.123] [SYNTHPLE] [debug] closing
+[2024-05-04 18:56:06.251] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:56:06.251] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:56:06.251] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:56:06.252] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:56:06.252] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:56:06.252] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:56:06.252] [Config_reader] [debug] Done reading
+[2024-05-04 18:56:06.252] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:56:06.313] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:06.314] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:06.314] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:06.314] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:06.314] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:06.314] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:06.314] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:56:06.252] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:56:06.314] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:56:08.319] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:56:06.251] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 18:56:08.319] [SYNTHPLE] [debug] got a command!
+[2024-05-04 18:56:08.319] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 18:56:09.324] [SYNTHPLE] [debug] closing
+[2024-05-04 18:56:29.542] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:56:29.542] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:56:29.543] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:56:29.543] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:56:29.543] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:56:29.543] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:56:29.543] [Config_reader] [debug] Done reading
+[2024-05-04 18:56:29.543] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:56:29.605] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:29.606] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:29.606] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:29.606] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:29.606] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:29.606] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:29.606] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:56:29.543] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:56:29.606] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:56:31.611] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:56:29.542] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 18:56:31.611] [SYNTHPLE] [debug] got a command!
+[2024-05-04 18:56:31.611] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 18:56:32.616] [SYNTHPLE] [debug] closing
+[2024-05-04 18:56:37.832] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:56:37.832] [Config_reader] [debug] Done reading
+[2024-05-04 18:56:37.833] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:56:37.900] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:37.900] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:37.900] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:56:37.901] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:56:37.901] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:37.901] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:56:41.575] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:56:37.833] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:56:41.575] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:57:03.628] [SYNTHPLE] [debug] stopping.
+[2024-05-04 18:57:32.095] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 18:57:32.095] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 18:57:32.096] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 18:57:32.096] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 18:57:32.096] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 18:57:32.096] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 18:57:32.096] [Config_reader] [debug] Done reading
+[2024-05-04 18:57:32.096] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 18:57:36.938] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:57:36.938] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:57:36.938] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 18:57:36.939] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 18:57:36.939] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:57:36.939] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 18:57:39.191] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 18:57:32.096] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 18:57:39.191] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 18:57:58.005] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:02:05.181] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:02:05.181] [Config_reader] [debug] Done reading
+[2024-05-04 19:02:05.181] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:02:05.251] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:02:05.251] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:02:05.251] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:02:05.251] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:02:05.252] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:02:05.252] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:02:09.470] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:02:05.181] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:02:09.470] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:02:41.425] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:05:11.636] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:05:11.636] [Config_reader] [debug] Done reading
+[2024-05-04 19:05:11.636] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:05:11.701] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:05:11.701] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:05:11.701] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:05:11.701] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:05:11.701] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:05:11.701] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:05:11.701] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:05:11.636] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:05:11.701] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:05:11.635] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:06:02.174] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:06:02.174] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:06:02.175] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:06:02.175] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:06:02.175] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:06:02.175] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:06:02.175] [Config_reader] [debug] Done reading
+[2024-05-04 19:06:02.175] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:06:16.796] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:06:16.797] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:06:16.797] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:06:16.797] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:06:16.797] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:06:16.797] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:06:16.797] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:06:02.175] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:06:16.797] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:06:23.852] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:06:02.174] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:06:51.306] [SYNTHPLE] [debug] closing
+[2024-05-04 19:06:51.306] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:06:51.306] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:07:10.340] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:07:10.340] [Config_reader] [debug] Done reading
+[2024-05-04 19:07:10.340] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:07:10.427] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:07:10.428] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:07:10.428] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:07:10.428] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:07:10.428] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:07:10.428] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:07:10.428] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:07:10.340] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:07:10.428] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:07:14.317] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:07:10.339] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:07:25.831] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:07:25.831] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:07:26.836] [SYNTHPLE] [debug] closing
+[2024-05-04 19:07:33.625] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:07:33.625] [Config_reader] [debug] Done reading
+[2024-05-04 19:07:33.626] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:07:33.686] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:07:33.687] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:07:33.687] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:07:33.687] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:07:33.687] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:07:33.687] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:07:33.687] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:09:46.367] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:09:46.367] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:09:46.368] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:09:46.368] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:09:46.368] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:09:46.368] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:09:46.368] [Config_reader] [debug] Done reading
+[2024-05-04 19:09:46.368] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:09:46.443] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:09:46.444] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:09:46.444] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:09:46.444] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:09:46.444] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:09:46.444] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:09:46.444] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:09:46.368] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:09:46.444] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:09:48.965] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:09:46.367] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:09:52.648] [SYNTHPLE] [debug] closing
+[2024-05-04 19:10:30.060] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:10:30.060] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:10:36.786] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Found 2 voices config.
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Parsed voice: square_2.
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:10:36.786] [Config_reader] [debug] Done reading
+[2024-05-04 19:10:36.786] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:10:36.856] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:10:36.856] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:10:36.856] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:10:36.857] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:10:36.857] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:10:36.857] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:10:36.857] [Mixer] [debug] Mixer setup complete, loaded 2 tracks, 1 sections
+[2024-05-04 19:10:36.786] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:10:36.857] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:10:40.812] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:10:36.785] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:10:40.812] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:10:40.812] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:10:41.817] [SYNTHPLE] [debug] closing
+[2024-05-04 19:11:28.459] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:11:28.459] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:11:28.459] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:11:28.460] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:11:28.460] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:11:28.460] [Config_reader] [debug] Done reading
+[2024-05-04 19:11:28.460] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:11:28.523] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:11:28.524] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:11:28.524] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:11:28.524] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:11:28.460] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:11:28.524] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:11:28.458] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:13:02.426] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:13:02.426] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:13:02.426] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:13:02.426] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:13:02.426] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:13:02.426] [Config_reader] [debug] Done reading
+[2024-05-04 19:13:02.426] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:13:02.488] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:13:02.489] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:13:02.489] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:13:02.489] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:13:02.426] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:13:02.489] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:13:02.425] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:14:47.383] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:14:47.383] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:14:47.384] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:14:47.384] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:14:47.384] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:14:47.384] [Config_reader] [debug] Done reading
+[2024-05-04 19:14:47.384] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:14:47.445] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:14:47.446] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:14:47.446] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:14:47.446] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:14:47.384] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:14:47.446] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:14:49.447] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:14:47.383] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:14:49.447] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:14:49.447] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:14:50.452] [SYNTHPLE] [debug] closing
+[2024-05-04 19:15:54.692] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:15:54.692] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:15:54.692] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:15:54.692] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:15:54.692] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:15:54.692] [Config_reader] [debug] Done reading
+[2024-05-04 19:15:54.692] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:15:54.754] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:15:54.754] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:15:54.754] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:15:54.754] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:15:54.692] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:15:54.754] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:15:56.759] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:15:54.691] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:15:56.760] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:15:56.760] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:15:57.765] [SYNTHPLE] [debug] closing
+[2024-05-04 19:16:47.571] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:16:47.571] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:16:47.572] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:16:47.572] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:16:47.572] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:16:47.572] [Config_reader] [debug] Done reading
+[2024-05-04 19:16:47.572] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:16:47.642] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:16:47.642] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:16:47.642] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:16:47.642] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:16:47.572] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:16:47.642] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:17:25.130] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:16:47.571] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:17:25.130] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:17:25.130] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:17:26.135] [SYNTHPLE] [debug] closing
+[2024-05-04 19:18:38.300] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:18:38.300] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:18:38.300] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:18:38.300] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:18:38.300] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:18:38.300] [Config_reader] [debug] Done reading
+[2024-05-04 19:18:38.301] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:18:38.363] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:18:38.363] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:18:38.364] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:18:38.364] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:18:38.301] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:18:38.364] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:18:48.369] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:18:38.300] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:18:48.369] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:18:48.369] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:18:49.374] [SYNTHPLE] [debug] closing
+[2024-05-04 19:18:51.969] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:18:51.970] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:18:51.970] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:18:51.970] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:18:51.970] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:18:51.970] [Config_reader] [debug] Done reading
+[2024-05-04 19:18:51.970] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:18:52.033] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:18:52.034] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:18:52.034] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:18:52.034] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:18:51.970] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:18:52.034] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:18:51.969] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:18:55.795] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:18:55.795] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:18:55.795] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:18:55.795] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:18:55.795] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:18:55.795] [Config_reader] [debug] Done reading
+[2024-05-04 19:18:55.795] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:18:55.857] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:18:55.857] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:18:55.857] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:18:55.857] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:18:55.795] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:18:55.857] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:19:05.862] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:18:55.794] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:19:05.862] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:19:05.862] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:19:06.867] [SYNTHPLE] [debug] closing
+[2024-05-04 19:19:31.700] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:19:31.700] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:19:31.701] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:19:31.701] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:19:31.701] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:19:31.701] [Config_reader] [debug] Done reading
+[2024-05-04 19:19:31.701] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:19:31.762] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:19:31.763] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:19:31.763] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:19:31.763] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:19:31.701] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:19:31.763] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:19:41.764] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:19:31.700] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:19:41.764] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:19:41.764] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:19:42.769] [SYNTHPLE] [debug] closing
+[2024-05-04 19:19:48.847] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:19:48.847] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:19:48.847] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:19:48.847] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:19:48.847] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:19:48.847] [Config_reader] [debug] Done reading
+[2024-05-04 19:19:48.847] [SYNTHPLE] [debug] Constructed Synthple obj
+[2024-05-04 19:19:48.911] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:19:48.911] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:19:48.911] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:19:48.911] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:19:48.847] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:19:48.911] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:19:58.916] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:19:48.846] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:19:58.916] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:19:58.916] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:19:59.924] [SYNTHPLE] [debug] closing
+[2024-05-04 19:23:15.467] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:23:15.467] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:23:15.468] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:23:15.468] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:23:15.468] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:23:15.468] [Config_reader] [debug] Done reading
+[2024-05-04 19:23:15.468] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 19:23:15.532] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:23:15.533] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:23:15.533] [Mixer] [debug] WTABLE: constructed.
+[2024-05-04 19:23:15.533] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:23:15.468] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:23:15.533] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:23:25.538] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:23:15.467] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:23:25.538] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:23:25.538] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:23:26.543] [SYNTHPLE] [debug] closing
+[2024-05-04 19:26:51.473] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:26:51.473] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:26:51.474] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:26:51.474] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:26:51.474] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:26:51.474] [Config_reader] [debug] Done reading
+[2024-05-04 19:26:51.474] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 19:26:51.539] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:26:51.539] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:26:51.540] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 19:26:51.540] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:26:51.474] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:26:51.540] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:26:51.473] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:26:51.625] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 19:26:51.626] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 19:26:56.476] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 19:26:56.476] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 19:26:56.476] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 19:26:56.477] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 19:26:56.477] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 19:26:56.477] [Config_reader] [debug] Done reading
+[2024-05-04 19:26:56.477] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 19:26:56.539] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 19:26:56.539] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 19:26:56.539] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 19:26:56.539] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 19:26:56.477] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 19:26:56.539] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 19:27:06.544] [SYNTHPLE] [debug] stopping.
+[2024-05-04 19:26:56.476] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 19:26:56.625] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 19:26:56.625] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 19:27:04.393] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 19:27:04.561] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 19:27:06.544] [SYNTHPLE] [debug] got a command!
+[2024-05-04 19:27:06.544] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 19:27:07.550] [SYNTHPLE] [debug] closing
+[2024-05-04 23:02:54.144] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:02:54.144] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:02:54.145] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:02:54.145] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:02:54.145] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:02:54.145] [Config_reader] [debug] Done reading
+[2024-05-04 23:02:54.145] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:02:54.209] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:02:54.209] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:02:54.210] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:02:54.210] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:02:54.210] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:02:54.210] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:02:54.210] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:02:54.145] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:02:54.210] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:02:54.144] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:02:54.297] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:02:54.298] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:02:54.467] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:04:21.351] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:04:21.351] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:04:21.352] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:04:21.352] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:04:21.352] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:04:21.352] [Config_reader] [debug] Done reading
+[2024-05-04 23:04:21.352] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:04:21.413] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:04:21.413] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:04:21.413] [Mixer] [debug] Note: "A2" at "0.000000s"
+Note: "A2" at "0.750000s"
+Note: "Cs3" at "0.750000s"
+Note: "Cs3" at "1.250000s"
+Note: "A2" at "1.250000s"
+Note: "A2" at "1.750000s"
+Note: "A2" at "2.000000s"
+Note: "A2" at "2.750000s"
+Note: "A2" at "4.000000s"
+Note: "A2" at "4.750000s"
+Note: "A2" at "6.000000s"
+Note: "A2" at "6.750000s"
+Note: "A2" at "8.000000s"
+Note: "A2" at "8.750000s"
+Note: "Cs3" at "8.750000s"
+Note: "Cs3" at "9.250001s"
+Note: "A2" at "9.250001s"
+Note: "A2" at "9.750001s"
+Note: "A2" at "10.000001s"
+Note: "A2" at "10.750001s"
+Note: "A2" at "12.000001s"
+Note: "A2" at "12.750001s"
+Note: "A2" at "14.000001s"
+Note: "A2" at "14.750001s"
+Note: "A2" at "16.000000s"
+Note: "A2" at "16.750000s"
+Note: "Cs3" at "16.750000s"
+Note: "Cs3" at "17.250000s"
+Note: "A2" at "17.250000s"
+Note: "A2" at "17.750000s"
+Note: "Fs2" at "18.000000s"
+Note: "Fs2" at "18.750002s"
+Note: "Fs2" at "20.000002s"
+Note: "Fs2" at "20.750002s"
+Note: "Fs2" at "22.000002s"
+Note: "Fs2" at "22.750002s"
+Note: "Fs2" at "24.000002s"
+Note: "Fs2" at "24.750002s"
+Note: "Cs3" at "24.750002s"
+Note: "Cs3" at "25.250002s"
+Note: "Fs2" at "25.250002s"
+Note: "Fs2" at "25.750002s"
+Note: "Fs2" at "26.000002s"
+Note: "Fs2" at "26.750002s"
+Note: "Fs2" at "28.000002s"
+Note: "Fs2" at "28.750002s"
+Note: "Fs2" at "30.000002s"
+Note: "Fs2" at "30.750002s"
+Note: "A2" at "32.000000s"
+Note: "A2" at "32.750000s"
+Note: "Cs3" at "32.750000s"
+Note: "Cs3" at "33.250000s"
+Note: "A2" at "33.250000s"
+Note: "A2" at "33.750000s"
+Note: "A2" at "34.000000s"
+Note: "A2" at "34.750000s"
+Note: "A2" at "36.000000s"
+Note: "A2" at "36.750004s"
+Note: "A2" at "38.000004s"
+Note: "A2" at "38.750004s"
+Note: "A2" at "40.000004s"
+Note: "A2" at "40.750004s"
+Note: "Cs3" at "40.750004s"
+Note: "Cs3" at "41.250004s"
+Note: "A2" at "41.250004s"
+Note: "A2" at "41.750004s"
+Note: "A2" at "42.000004s"
+Note: "A2" at "42.750004s"
+Note: "A2" at "44.000004s"
+Note: "A2" at "44.750004s"
+Note: "A2" at "46.000004s"
+Note: "A2" at "46.750004s"
+Note: "A2" at "48.000004s"
+Note: "A2" at "48.750004s"
+Note: "Cs3" at "48.750004s"
+Note: "Cs3" at "49.250004s"
+Note: "A2" at "49.250004s"
+Note: "A2" at "49.750004s"
+Note: "Fs2" at "50.000004s"
+Note: "Fs2" at "50.750004s"
+Note: "Fs2" at "52.000004s"
+Note: "Fs2" at "52.750004s"
+Note: "Fs2" at "54.000004s"
+Note: "Fs2" at "54.750004s"
+Note: "Fs2" at "56.000004s"
+Note: "Fs2" at "56.750004s"
+Note: "Cs3" at "56.750004s"
+Note: "Cs3" at "57.250004s"
+Note: "Fs2" at "57.250004s"
+Note: "Fs2" at "57.750004s"
+Note: "Fs2" at "58.000004s"
+Note: "Fs2" at "58.750004s"
+Note: "Fs2" at "60.000004s"
+Note: "Fs2" at "60.750004s"
+Note: "Fs2" at "62.000004s"
+Note: "Fs2" at "62.750004s"
+Note: "A4" at "62.750004s"
+
+[2024-05-04 23:04:21.413] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:04:21.413] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:04:21.413] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:04:21.413] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:04:21.413] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:04:21.352] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:04:21.413] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:04:31.418] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:04:21.351] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:04:21.499] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:04:21.499] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:04:29.267] [Mixer] [debug] MIDI: resetting to 1.
+[2024-05-04 23:04:29.267] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:04:29.436] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:04:31.418] [SYNTHPLE] [debug] got a command!
+[2024-05-04 23:04:31.418] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 23:04:32.423] [SYNTHPLE] [debug] closing
+[2024-05-04 23:07:37.132] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:07:37.133] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:07:37.133] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:07:37.133] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:07:37.133] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:07:37.133] [Config_reader] [debug] Done reading
+[2024-05-04 23:07:37.133] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:07:37.196] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:07:37.196] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:07:37.196] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:07:37.197] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:07:37.197] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:07:37.197] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:07:37.197] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:07:37.197] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:07:37.133] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:07:37.197] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:07:47.202] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:07:37.132] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:07:37.282] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:07:37.282] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:07:45.050] [Mixer] [debug] MIDI: resetting to 1.
+[2024-05-04 23:07:45.050] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:07:45.219] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:07:47.202] [SYNTHPLE] [debug] got a command!
+[2024-05-04 23:07:47.202] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 23:07:48.207] [SYNTHPLE] [debug] closing
+[2024-05-04 23:10:23.626] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:10:23.627] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:10:23.627] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:10:23.627] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:10:23.627] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:10:23.627] [Config_reader] [debug] Done reading
+[2024-05-04 23:10:23.627] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:10:23.690] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:10:23.690] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:10:23.690] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:10:23.690] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:23.690] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:10:23.690] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:10:23.690] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:23.690] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:10:23.627] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:10:23.690] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:10:23.626] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:10:23.776] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:10:23.776] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:26.166] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:10:26.166] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:10:26.166] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:10:26.167] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:10:26.167] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:10:26.167] [Config_reader] [debug] Done reading
+[2024-05-04 23:10:26.167] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:10:26.227] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:10:26.228] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:10:26.228] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:10:26.228] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:26.228] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:10:26.228] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:10:26.228] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:26.228] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:10:26.167] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:10:26.228] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:10:26.166] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:10:26.314] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:10:26.314] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:26.315] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:27.271] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:10:27.271] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:10:27.271] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:10:27.271] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:10:27.271] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:10:27.271] [Config_reader] [debug] Done reading
+[2024-05-04 23:10:27.271] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:10:27.333] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:10:27.333] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:10:27.333] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:10:27.333] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:27.333] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:10:27.333] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:10:27.333] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:27.333] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:10:27.271] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:10:27.333] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:10:27.270] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:10:27.419] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:10:27.419] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:27.421] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:27.421] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:27.421] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:28.397] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:10:28.397] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:10:28.397] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:10:28.397] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:10:28.397] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:10:28.397] [Config_reader] [debug] Done reading
+[2024-05-04 23:10:28.398] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:10:28.460] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:10:28.460] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:10:28.460] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:10:28.460] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:28.460] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:10:28.460] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:10:28.460] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:28.460] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:10:28.398] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:10:28.460] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:10:28.397] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:10:28.546] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:10:28.547] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:10:29.543] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:10:29.543] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:10:29.543] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:10:29.543] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:10:29.543] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:10:29.543] [Config_reader] [debug] Done reading
+[2024-05-04 23:10:29.543] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:10:29.605] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:10:29.605] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:10:29.605] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:10:29.605] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:29.605] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:10:29.605] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:10:29.605] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:10:29.605] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:10:29.543] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:10:29.605] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:10:29.542] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:10:29.691] [Mixer] [debug] OSCILLATOR: got new freq = 110
+[2024-05-04 23:10:29.691] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:13:48.584] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:13:48.584] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:13:48.584] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:13:48.584] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:13:48.584] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:13:48.584] [Config_reader] [debug] Done reading
+[2024-05-04 23:13:48.584] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:13:48.653] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:13:48.653] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:13:48.653] [Mixer] [debug] Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:13:48.653] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:13:48.653] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:13:48.653] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:13:48.653] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:13:48.653] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:13:48.584] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:13:48.653] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:14:06.998] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:17:40.856] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:17:40.856] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:17:40.856] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:17:40.856] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:17:40.856] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:17:40.856] [Config_reader] [debug] Done reading
+[2024-05-04 23:17:40.857] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:17:40.927] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:17:40.927] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:17:40.927] [Mixer] [debug] MIDI: file events:
+Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:17:40.927] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:17:40.927] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:17:40.927] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:17:40.927] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:17:40.927] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:21:51.813] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:21:51.813] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:21:51.813] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:21:51.813] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:21:51.813] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:21:51.813] [Config_reader] [debug] Done reading
+[2024-05-04 23:21:51.813] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:21:51.898] [Mixer] [info] MIDI: path = "./data/midi/bassline1.MID", ENTER constructor
+[2024-05-04 23:21:51.899] [Mixer] [debug] MIDI: populating. Getting 97 events.
+[2024-05-04 23:21:51.899] [Mixer] [debug] MIDI: file events:
+Note: "A2 *ON* " at "0.000000s"
+Note: "A2 *OFF* " at "0.750000s"
+Note: "Cs3 *ON* " at "0.750000s"
+Note: "Cs3 *OFF* " at "1.250000s"
+Note: "A2 *ON* " at "1.250000s"
+Note: "A2 *OFF* " at "1.750000s"
+Note: "A2 *ON* " at "2.000000s"
+Note: "A2 *OFF* " at "2.750000s"
+Note: "A2 *ON* " at "4.000000s"
+Note: "A2 *OFF* " at "4.750000s"
+Note: "A2 *ON* " at "6.000000s"
+Note: "A2 *OFF* " at "6.750000s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.750000s"
+Note: "Cs3 *ON* " at "8.750000s"
+Note: "Cs3 *OFF* " at "9.250001s"
+Note: "A2 *ON* " at "9.250001s"
+Note: "A2 *OFF* " at "9.750001s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.750001s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.750001s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.750001s"
+Note: "A2 *ON* " at "16.000000s"
+Note: "A2 *OFF* " at "16.750000s"
+Note: "Cs3 *ON* " at "16.750000s"
+Note: "Cs3 *OFF* " at "17.250000s"
+Note: "A2 *ON* " at "17.250000s"
+Note: "A2 *OFF* " at "17.750000s"
+Note: "Fs2 *ON* " at "18.000000s"
+Note: "Fs2 *OFF* " at "18.750002s"
+Note: "Fs2 *ON* " at "20.000002s"
+Note: "Fs2 *OFF* " at "20.750002s"
+Note: "Fs2 *ON* " at "22.000002s"
+Note: "Fs2 *OFF* " at "22.750002s"
+Note: "Fs2 *ON* " at "24.000002s"
+Note: "Fs2 *OFF* " at "24.750002s"
+Note: "Cs3 *ON* " at "24.750002s"
+Note: "Cs3 *OFF* " at "25.250002s"
+Note: "Fs2 *ON* " at "25.250002s"
+Note: "Fs2 *OFF* " at "25.750002s"
+Note: "Fs2 *ON* " at "26.000002s"
+Note: "Fs2 *OFF* " at "26.750002s"
+Note: "Fs2 *ON* " at "28.000002s"
+Note: "Fs2 *OFF* " at "28.750002s"
+Note: "Fs2 *ON* " at "30.000002s"
+Note: "Fs2 *OFF* " at "30.750002s"
+Note: "A2 *ON* " at "32.000000s"
+Note: "A2 *OFF* " at "32.750000s"
+Note: "Cs3 *ON* " at "32.750000s"
+Note: "Cs3 *OFF* " at "33.250000s"
+Note: "A2 *ON* " at "33.250000s"
+Note: "A2 *OFF* " at "33.750000s"
+Note: "A2 *ON* " at "34.000000s"
+Note: "A2 *OFF* " at "34.750000s"
+Note: "A2 *ON* " at "36.000000s"
+Note: "A2 *OFF* " at "36.750004s"
+Note: "A2 *ON* " at "38.000004s"
+Note: "A2 *OFF* " at "38.750004s"
+Note: "A2 *ON* " at "40.000004s"
+Note: "A2 *OFF* " at "40.750004s"
+Note: "Cs3 *ON* " at "40.750004s"
+Note: "Cs3 *OFF* " at "41.250004s"
+Note: "A2 *ON* " at "41.250004s"
+Note: "A2 *OFF* " at "41.750004s"
+Note: "A2 *ON* " at "42.000004s"
+Note: "A2 *OFF* " at "42.750004s"
+Note: "A2 *ON* " at "44.000004s"
+Note: "A2 *OFF* " at "44.750004s"
+Note: "A2 *ON* " at "46.000004s"
+Note: "A2 *OFF* " at "46.750004s"
+Note: "A2 *ON* " at "48.000004s"
+Note: "A2 *OFF* " at "48.750004s"
+Note: "Cs3 *ON* " at "48.750004s"
+Note: "Cs3 *OFF* " at "49.250004s"
+Note: "A2 *ON* " at "49.250004s"
+Note: "A2 *OFF* " at "49.750004s"
+Note: "Fs2 *ON* " at "50.000004s"
+Note: "Fs2 *OFF* " at "50.750004s"
+Note: "Fs2 *ON* " at "52.000004s"
+Note: "Fs2 *OFF* " at "52.750004s"
+Note: "Fs2 *ON* " at "54.000004s"
+Note: "Fs2 *OFF* " at "54.750004s"
+Note: "Fs2 *ON* " at "56.000004s"
+Note: "Fs2 *OFF* " at "56.750004s"
+Note: "Cs3 *ON* " at "56.750004s"
+Note: "Cs3 *OFF* " at "57.250004s"
+Note: "Fs2 *ON* " at "57.250004s"
+Note: "Fs2 *OFF* " at "57.750004s"
+Note: "Fs2 *ON* " at "58.000004s"
+Note: "Fs2 *OFF* " at "58.750004s"
+Note: "Fs2 *ON* " at "60.000004s"
+Note: "Fs2 *OFF* " at "60.750004s"
+Note: "Fs2 *ON* " at "62.000004s"
+Note: "Fs2 *OFF* " at "62.750004s"
+Note: "A4 *OFF* " at "62.750004s"
+
+[2024-05-04 23:21:51.899] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:21:51.899] [Mixer] [debug] MIDI: path = "./data/midi/bassline1.MID", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:21:51.899] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:21:51.899] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:21:51.899] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:25:45.997] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:25:45.997] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:25:45.998] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:25:45.998] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:25:45.998] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:25:45.998] [Config_reader] [debug] Done reading
+[2024-05-04 23:25:45.999] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:25:45.999] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:25:45.996] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:25:46.062] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:26:43.725] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:26:43.725] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:26:43.725] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:26:43.725] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:26:43.725] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:26:43.725] [Config_reader] [debug] Done reading
+[2024-05-04 23:26:43.725] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:26:43.789] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:26:43.789] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:26:43.789] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:26:43.789] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:26:43.791] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:26:43.791] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:26:43.791] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:26:43.791] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:26:43.725] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:26:43.791] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:26:53.796] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:26:43.724] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:26:43.875] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:26:43.875] [Mixer] [debug] opppps
+[2024-05-04 23:26:43.875] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:26:51.643] [Mixer] [debug] MIDI: resetting to 1.
+[2024-05-04 23:26:51.643] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:26:51.811] [Mixer] [debug] opppps
+[2024-05-04 23:26:51.811] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:26:53.796] [SYNTHPLE] [debug] got a command!
+[2024-05-04 23:26:53.796] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 23:26:54.797] [SYNTHPLE] [debug] closing
+[2024-05-04 23:28:53.142] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:28:53.142] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:28:53.142] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:28:53.142] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:28:53.142] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:28:53.142] [Config_reader] [debug] Done reading
+[2024-05-04 23:28:53.143] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:28:53.204] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:28:53.204] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:28:53.204] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:28:53.204] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:28:53.204] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:28:53.204] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:28:53.204] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:28:53.204] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:30:19.081] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:30:19.081] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:30:19.081] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:30:19.081] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:30:19.081] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:30:19.081] [Config_reader] [debug] Done reading
+[2024-05-04 23:30:19.081] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:30:19.152] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:30:19.152] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:30:19.152] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:30:19.152] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:30:19.152] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:30:19.152] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:30:19.152] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:30:19.152] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:34:25.430] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:34:25.431] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:34:25.431] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:34:25.431] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:34:25.431] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:34:25.431] [Config_reader] [debug] Done reading
+[2024-05-04 23:34:25.432] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:34:31.598] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:34:31.598] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:34:31.598] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:34:31.598] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:34:31.598] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:34:31.599] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:34:31.599] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:34:31.599] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:34:25.432] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:34:31.599] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:35:37.231] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:41:55.306] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:41:55.306] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:41:55.307] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:41:55.307] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:41:55.307] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:41:55.307] [Config_reader] [debug] Done reading
+[2024-05-04 23:41:55.307] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:41:55.370] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:41:55.371] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:41:55.371] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:41:55.371] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:41:55.371] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:41:55.371] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:41:55.371] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:41:55.371] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:41:55.307] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:41:55.371] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:42:05.371] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:41:55.306] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:41:55.456] [Mixer] [debug] Changing note: C3
+[2024-05-04 23:41:55.456] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:41:55.456] [Mixer] [debug] Changing note:  "A4 *OFF* " at "14.697917Ëo   0OO `      :    "n  `  B
+[2024-05-04 23:41:55.456] [Mixer] [debug] opppps
+[2024-05-04 23:41:55.456] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:41:55.456] [Mixer] [debug] Changing note: 
+[2024-05-04 23:41:55.456] [Mixer] [debug] opppps
+[2024-05-04 23:41:55.456] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:41:55.457] [Mixer] [debug] Changing note:  "A4 *OFF* " at "14.697917Ëo   0OO `           "n  `  
+[2024-05-04 23:41:55.457] [Mixer] [debug] opppps
+[2024-05-04 23:41:55.457] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:41:55.457] [Mixer] [debug] Changing note: 
+[2024-05-04 23:41:55.457] [Mixer] [debug] opppps
+[2024-05-04 23:41:55.457] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:42:03.223] [Mixer] [debug] MIDI: resetting to 1.
+[2024-05-04 23:42:03.223] [Mixer] [debug] Changing note: C3
+[2024-05-04 23:42:03.223] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:42:03.393] [Mixer] [debug] Changing note:  "A4 *OFF* " at "14.697917Ëo   0OO `          "n  `  
+[2024-05-04 23:42:03.393] [Mixer] [debug] opppps
+[2024-05-04 23:42:03.393] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:42:03.393] [Mixer] [debug] Changing note: 
+[2024-05-04 23:42:03.393] [Mixer] [debug] opppps
+[2024-05-04 23:42:03.393] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:42:03.393] [Mixer] [debug] Changing note:  "A4 *OFF* " at "14.697917Ëo   0OO `           "n  `  Z
+[2024-05-04 23:42:03.393] [Mixer] [debug] opppps
+[2024-05-04 23:42:03.393] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:42:03.393] [Mixer] [debug] Changing note: 
+[2024-05-04 23:42:03.393] [Mixer] [debug] opppps
+[2024-05-04 23:42:03.393] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:42:05.371] [SYNTHPLE] [debug] got a command!
+[2024-05-04 23:42:05.371] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 23:42:06.376] [SYNTHPLE] [debug] closing
+[2024-05-04 23:48:21.008] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:48:21.008] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:48:21.008] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:48:21.008] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:48:21.008] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:48:21.008] [Config_reader] [debug] Done reading
+[2024-05-04 23:48:21.009] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:48:21.073] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:48:21.074] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:48:21.074] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:48:21.074] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:21.074] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:48:21.074] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:48:21.074] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:21.074] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note: C3
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note: 
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:21.074] [Mixer] [debug] Changing note: 
+[2024-05-04 23:48:21.074] [Mixer] [debug] opppps
+[2024-05-04 23:48:21.074] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.757] [Mixer] [debug] MIDI: resetting to 1.
+[2024-05-04 23:48:28.757] [Mixer] [debug] Changing note: C3
+[2024-05-04 23:48:28.757] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note: 
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.924] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.924] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.924] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.925] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.925] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.925] [Mixer] [debug] Changing note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.925] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.925] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.925] [Mixer] [debug] Chan[2024-05-04 23:48:21.074] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:48:21.074] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:48:31.079] [SYNTHPLE] [debug] stopping.
+[2024-05-04 23:48:21.007] [AUDIO THREAD] [info] Constructed.
+ging note:         °¦‰m   3 *ON* "  µm   °Ó
+[2024-05-04 23:48:28.925] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.925] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:28.925] [Mixer] [debug] Changing note: 
+[2024-05-04 23:48:28.925] [Mixer] [debug] opppps
+[2024-05-04 23:48:28.925] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:31.079] [SYNTHPLE] [debug] got a command!
+[2024-05-04 23:48:31.079] [SYNTHPLE] [debug] _run() exiting.
+[2024-05-04 23:48:32.084] [SYNTHPLE] [debug] closing
+[2024-05-04 23:48:35.447] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:48:35.448] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:48:35.448] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:48:35.448] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:48:35.448] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:48:35.448] [Config_reader] [debug] Done reading
+[2024-05-04 23:48:35.448] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:48:35.518] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:48:35.518] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:48:35.518] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:48:35.518] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:35.518] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:48:35.518] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:48:35.518] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:35.518] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections
+[2024-05-04 23:48:35.518] [SYNTHPLE] [info] Loaded Song with Id = intro
+[2024-05-04 23:48:35.518] [SYNTHPLE] [debug] entering _run() / while loop
+[2024-05-04 23:48:35.447] [AUDIO THREAD] [info] Constructed.
+[2024-05-04 23:48:35.518] [Mixer] [debug] Changing note: C3
+[2024-05-04 23:48:35.518] [Mixer] [debug] OSCILLATOR: got new freq = 130.81
+[2024-05-04 23:48:35.518] [Mixer] [debug] Changing note: 
+[2024-05-04 23:48:35.518] [Mixer] [debug] opppps
+[2024-05-04 23:48:35.518] [Mixer] [debug] OSCILLATOR: got new freq = 0
+[2024-05-04 23:48:37.405] [Config_reader] [info] Constructed. Data File will be read at: ./data
+[2024-05-04 23:48:37.405] [Config_reader] [debug] Found 1 Songs in ./data/songs/
+[2024-05-04 23:48:37.406] [Config_reader] [debug] Found 1 voices config.
+[2024-05-04 23:48:37.406] [Config_reader] [debug] Parsed voice: square_1.
+[2024-05-04 23:48:37.406] [Config_reader] [debug] Found 1 parts config.
+[2024-05-04 23:48:37.406] [Config_reader] [debug] Done reading
+[2024-05-04 23:48:37.406] [SYNTHPLE] [debug] 
+***************************************
+***************************************
+
+
+Constructed Synthple. Starting Run
+[2024-05-04 23:48:37.474] [Mixer] [info] MIDI: path = "./data/midi/midi_test_case.mid", ENTER constructor
+[2024-05-04 23:48:37.474] [Mixer] [debug] MIDI: populating. Getting 17 events.
+[2024-05-04 23:48:37.474] [Mixer] [debug] MIDI: file events:
+Note: "C3 *ON* " at "0.000000s"
+Note: "C3 *OFF* " at "0.697917s"
+Note: "C3 *ON* " at "2.000000s"
+Note: "C3 *OFF* " at "2.697917s"
+Note: "C3 *ON* " at "4.000000s"
+Note: "C3 *OFF* " at "4.697917s"
+Note: "C3 *ON* " at "6.000000s"
+Note: "C3 *OFF* " at "6.697917s"
+Note: "A2 *ON* " at "8.000000s"
+Note: "A2 *OFF* " at "8.697917s"
+Note: "A2 *ON* " at "10.000001s"
+Note: "A2 *OFF* " at "10.697917s"
+Note: "A2 *ON* " at "12.000001s"
+Note: "A2 *OFF* " at "12.697917s"
+Note: "A2 *ON* " at "14.000001s"
+Note: "A2 *OFF* " at "14.697917s"
+Note: "A4 *OFF* " at "14.697917s"
+
+[2024-05-04 23:48:37.474] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:37.474] [Mixer] [debug] MIDI: path = "./data/midi/midi_test_case.mid", exiting constructor. "_tick_duration_s"=0.0020833334 s, "_ticks_per_beat"=960.
+[2024-05-04 23:48:37.474] [Mixer] [debug] WTABLE: constructed with 64 samples
+[2024-05-04 23:48:37.474] [Mixer] [debug] MIDI: resetting to 0.
+[2024-05-04 23:48:37.474] [Mixer] [debug] Mixer setup complete, loaded 1 tracks, 1 sections

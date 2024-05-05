@@ -27,7 +27,7 @@ _data( nsamples )
             throw std::runtime_error("WTABLE: invalid WaveTableType.");
     }
     _logger->set_level(spdlog::level::debug);
-    _logger->debug("WTABLE: constructed.");
+    _logger->debug("WTABLE: constructed with {} samples", _n_samples);
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -119,6 +119,8 @@ void Oscillator::requestSilence(){
 }
 
 void Oscillator::setFrequency(float newf){
+
+    _logger->debug("OSCILLATOR: got new freq = {}", newf);
     _outputFreq = newf;
     _outputPeriod = 1 / newf;
     _outputSilence = false;

@@ -43,7 +43,6 @@ namespace synthple::oscillator {
 
         float _outputFreq = 1;
         float _outputPeriod = 1;
-        // float _outputAmp = 1;
         bool _outputSilence = false;
 
         bool _isSilenceRequested = false;
@@ -61,7 +60,6 @@ namespace synthple::oscillator {
             
             // controls
             void setFrequency( float newfreq );
-            void setAmp( float newamp );
             void requestSilence();
     };
 }

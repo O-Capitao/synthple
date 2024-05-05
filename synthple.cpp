@@ -17,11 +17,11 @@ Synthple::Synthple( std::string path_to_config )
 :_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
 _audioDataBus(),
 _audioThread( &_audioDataBus ),
-_filedata( path_to_config ),
-_playThread( boost::bind(&Synthple::_run, this) )
+_filedata( path_to_config )//,
+// _playThread( boost::bind(&Synthple::_run, this) )
 {
     _logger->set_level(spdlog::level::debug);
-    _logger->debug("Constructed Synthple obj");
+    _logger->debug("\n***************************************\n***************************************\n\n\nConstructed Synthple. Starting Run");
     _logger->flush();
 }
 
@@ -52,7 +52,7 @@ void Synthple::setSong( const std::string &song_to_set ){
     _active_song_section_index = 0;
 
     _mixer.setSong(sfd);
-    
+    _playThread = boost::thread( boost::bind(&Synthple::_run, this) );
     _logger->info("Loaded Song with Id = {}", _activeSong_id);
 }
 

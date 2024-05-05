@@ -50,6 +50,8 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
         });
     }
 
+    setSection(0);
+
     _logger->debug("Mixer setup complete, loaded {} tracks, {} sections", _tracks.size(), _sections.size());
     _logger->flush();
 }
@@ -60,13 +62,12 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
 void Mixer::setSection(int sectionindex){
 
     _loaded_section_index = sectionindex;
-    Section &__loaded_sect = _sections[sectionindex];
+    Section &__loaded_sect = _sections[_loaded_section_index];
     midi::MonophonicMidiFileReader *__first_mfw = __loaded_sect._midiFiles_perTrack.data();
 
     // assign midi to tracks
     for (int i = 0; i < __loaded_sect._midiFiles_perTrack.size(); i ++ ){
         _tracks[i].midi_fw_ptr = &__first_mfw[i];
-
         // input is processed in intervals of "_input_period_in_samplerates" clicks.
         _tracks[i].midi_fw_ptr->resetToTicks(0);
     }
@@ -84,7 +85,7 @@ void Mixer::setSilence(){
 ///////////////////////////////////////////////////////////////////////
 void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_len ){
 
-    if ( !_is_silent ){
+    if ( _is_silent ){
         // nothing is loaded, just produce silence.
 
         for (int i = 0; i < requestedsamples_len; i++){
@@ -92,9 +93,61 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
         }
     
     } else {
-        std::runtime_error("asd");
-
         
+        Section &__loaded_sect = _sections[_loaded_section_index];
 
+        for (int i = 0; i < requestedsamples_len; i++){
+
+            if (_midi_click_counter++ % _input_period_in_samplerates == 0){
+
+                // time to process midi and set track statuses
+                for (int j = 0; j < __loaded_sect._midiFiles_perTrack.size(); j ++){
+
+                    Track &__track = _tracks[j];
+                    midi::MidiNote __next_active_note = __track.midi_fw_ptr->getNextActiveNote();
+
+                    if (__next_active_note.note != NoteKey::NOT_A_NOTE && __track.last_played_note.note_value != __next_active_note.note_value ){
+                        _logger->debug("Changing note: {}", __next_active_note.note_value);
+
+                        float __tgt_freq = _note_frequency_map.noteFreqMap[ __next_active_note.note_value ];
+
+                        if (__tgt_freq == 0){
+                            _logger->debug("opppps");
+                        }
+                        
+                        __track.oscillator.setFrequency( _note_frequency_map.noteFreqMap[ __next_active_note.note_value ] );
+
+                        __track.last_played_note = __next_active_note;
+                        __track.is_silent = false;
+
+                     } else if (__next_active_note.note == NoteKey::NOT_A_NOTE && __track.last_played_note.note_value != __next_active_note.note_value ){
+
+                        // set to silence.
+                        __track.is_silent = true;
+                     }
+                }
+            }
+            // end event processing
+
+            // mixdown for each track
+            float __mixed_values = 0;
+            for (int j = 0; j < _tracks.size(); j++){
+                Track &__track = _tracks[j];
+
+                __mixed_values += __track.is_silent ? 0 : __track.gain * __track.oscillator.getValueAt(_timeInSection_s);
+
+            }
+
+            assert(__mixed_values < 1.0);
+            requestedsamples_vector[i] = __mixed_values;
+
+            float __section_t_spillover = ( (_sections[_loaded_section_index].length_bars * 4 * 60 )/_tempo_bpm) - _timeInSection_s;
+
+            if (__section_t_spillover > 0 ){
+                _timeInSection_s += _dt_s;
+            } else {
+                _timeInSection_s = __section_t_spillover;
+            }
+        }
     }
 }

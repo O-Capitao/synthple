@@ -12,12 +12,16 @@ namespace synthple::mixer {
     struct Track {
         oscillator::Oscillator oscillator;
         midi::MonophonicMidiFileReader *midi_fw_ptr = nullptr;
-        float gain = 0;
+        midi::MidiNote last_played_note;
+
+        float gain;
+        bool is_silent = true;
     };
 
     struct Section {
         short repeat;
         short length_bars;
+        float length_s;
         // std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
         std::vector<midi::MonophonicMidiFileReader> _midiFiles_perTrack;
     };
@@ -34,13 +38,15 @@ namespace synthple::mixer {
 
         float _timeInSong_s, _timeInSection_s;
         
-        const float _dt_s = 1 / FRAMERATE;
+        const float _dt_s = 1.0f / (float)FRAMERATE;
         const int _input_period_in_samplerates = 10;
         int _midi_click_counter = 0;
 
         short _sectionRepeat_count = 0;
-        int _tempo_bpm = 0;
+        float _tempo_bpm = 0;
         bool _is_silent = true;
+
+        NoteFrequency _note_frequency_map;
 
         public:  
             // constructs a silent mixer.

@@ -205,6 +205,7 @@ _length_bars(lbars)
 ///////////////////////////////////////////////////////////////////////
 void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
     
+    _logger->debug("MIDI: populating. Getting {} events.", file[0].size());
     smf::MidiEvent* mev;
 
     for (int event=0; event < file[0].size(); event++) {
@@ -215,6 +216,18 @@ void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
             MidiEventWrapper(mev)
         });
     }
+
+    std::string __events_string = "MIDI: file events:\n";
+    for (int i=0; i < _midi_events.size(); i++) {
+
+        __events_string += 
+            "Note: \"" 
+            + _midi_events[i].note.note_value 
+            + " *" + (_midi_events[i].type == MidiEventType::NOTE_ON ? "ON" : "OFF" ) + "* "
+            + "\" at \"" 
+            + std::to_string( _midi_events[i].ticks * _tick_duration_s  ) + "s\"\n";
+    }
+    _logger->debug(__events_string);
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -253,6 +266,8 @@ void MonophonicMidiFileReader::_activateMidiEvent(int midieventindex){
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 void MonophonicMidiFileReader::resetToTicks(int tick){
+
+    _logger->debug("MIDI: resetting to " + std::to_string(tick) + ".");
     _current_tick = tick;
     _current_time_s = _tick_duration_s * tick;
     _current_midi_evt_index = _getMidiEventIndexAtTick(tick);

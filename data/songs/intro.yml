@@ -6,18 +6,18 @@ voices:
     offset: 0  #centered
     n_samples: 64
     gain: 0.7
-  - id: &square2 square_2
-    type: SQUARE
-    offset: -0.3
-    n_samples: 64
-    gain: 0.3
+  # - id: &square2 square_2
+  #   type: SQUARE
+  #   offset: -0.3
+  #   n_samples: 64
+  #   gain: 0.3
 sections:
   - id: intro
     repeat: 0 # 0 = infinite loop
     length_bars: 4
     tracks:
       - voice: *square1
-        src: midi/bassline1.MID
-      - voice: *square2
-        src: midi/bassline1.MID
+        src: midi/midi_test_case.mid
+      # - voice: *square2
+      #   src: midi/bassline1.MID
 

@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
 
     std::cout << "\nStarting Synthple.\n";
 
-    sleep(2);
+    sleep(10);
 
     std::cout << "Stopping Synthple.\n";
     synthple.stop();
