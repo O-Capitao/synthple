@@ -189,24 +189,15 @@ _beats_per_bar(beatsperbar)
 
     assert(midifile.getEventCount(0) > 0);
 
-    // file's own tempo maybe different from actual target tempo.
+    _beat_duration_s = 60.0 / _tempo_bpm;
     _ticks_per_beat = midifile.getTicksPerQuarterNote();
-    
-    float _file__tick_duration_s = midifile.getTimeInSeconds(1);
-    float _file__tempo_bpm = (60 * _ticks_per_beat) / _file__tick_duration_s;
-
-    _tick_duration_s = _tempo_bpm / (60 * _ticks_per_beat);
-
-    // TODO : time signatures?
-    // _ticks_per_loop = _length_bars * 4 * _ticks_per_beat;
-    
-
+    _tick_duration_s = _beat_duration_s / _ticks_per_beat;
     
     _populateMidiEvents(midifile);
     _midi_events_iter = _midi_events.begin();
-    // resetToTicks(0);
 
     _end_of_sequence__tick = _midi_events.back().ticks;
+
     _duration_s = _tick_duration_s * _ticks_per_beat * (float)_beats_per_bar * (float)_length_bars;
     _total_ticks = _ticks_per_beat * _beats_per_bar * _length_bars;
 
@@ -338,10 +329,13 @@ MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
     if (_midi_events_iter != _midi_events.end()){
         int _curr_tick = _t_secs__toTicks(t_s);
 
+        // if (_curr_tick > 960){
+        //     _logger->debug("nhe");
+        // }
         auto _next_iter = std::next(_midi_events_iter, 1);
         
         if ( std::next(_midi_events_iter, 1)->ticks <= _curr_tick ){
-            
+
             _midi_events_iter = std::next(_midi_events_iter, 1);
 
             std::string _logginginAux = ((_midi_events_iter->type == MidiEventType::NOTE_ON) ? "NOTE_ON" : "NOTE_OFF");
@@ -349,7 +343,8 @@ MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
             _logger->debug("Transitioning into new event at ticks={}\n"
                  "{}\n"
                 "NOTE={}",
-                _curr_tick, _logginginAux, _midi_events_iter->note.note_value);
+                _curr_tick, _logginginAux, _midi_events_iter->note.note_value );
+
         }
 
         if (_midi_events_iter->type == MidiEventType::NOTE_ON){
@@ -365,7 +360,6 @@ int MonophonicMidiFileReader::_t_secs__toTicks( float tsecs){
     assert(_tick_duration_s > 0 && tsecs < _duration_s );
     
     int ticks = (int)floor( tsecs / _tick_duration_s );
-
-
+    
     return ticks;
 }

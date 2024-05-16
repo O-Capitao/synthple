@@ -6,14 +6,14 @@ voices:
     type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
     offset: 0  #centered
     n-samples: 64
-    gain: 0.7
+    gain: 0.1
 sections:
   - id: intro
     repeat: 0 # 0 = infinite loop
-    length-bars: 1
+    length-bars: 2
     tracks:
       - voice: *square1
-        src: midi/midi_test_case.mid
+        src: midi/testcase1_single_track_alteredtempo.mid
       # - voice: *square2
       #   src: midi/bassline1.MID
 

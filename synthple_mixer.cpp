@@ -116,7 +116,9 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                     // midi::MidiNote __next_active_note = __track.midi_fw_ptr->getNextActiveNote();
                     midi::MidiNote *_curr_note = __track.midi_fw_ptr->getStateAt_Time_s( _timeInSection_s );
 
-                    if (_curr_note != __track.last_played_note_ptr){
+                    if ( _curr_note && _curr_note != __track.last_played_note_ptr){
+
+                        _logger->debug("processing midi events at t=\"{}\"s", _timeInSection_s);
 
                         // Change oscillator state
                         float __tgt_freq = _note_frequency_map.noteFreqMap[ _curr_note->note_value ];
@@ -130,7 +132,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
 
                         __track.last_played_note_ptr = _curr_note;
 
-                     } else if ( _curr_note == nullptr ){
+                     } else if ( !_curr_note ){
 
                         // set to silence.
                         __track.is_silent = true;
@@ -148,16 +150,24 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
 
             }
 
-            assert(__mixed_values < 1.0);
             requestedsamples_vector[i] = __mixed_values;
 
-            float __section_t_spillover = ( (_sections[_loaded_section_index].length_bars * 4 * 60 )/_tempo_bpm) - _timeInSection_s;
+            assert(__mixed_values < 1.0);
+            
+            _timeInSection_s += _dt_s;
 
-            if (__section_t_spillover > 0 ){
-                _timeInSection_s += _dt_s;
-            } else {
-                _timeInSection_s = __section_t_spillover;
-            }
+
+
+            // // handle time stuff
+            // 
+
+            // float __section_t_spillover = ( (_sections[_loaded_section_index].length_bars * 4 * 60 )/_tempo_bpm) - _timeInSection_s;
+
+            // if (__section_t_spillover > 0 ){
+            //     _timeInSection_s += _dt_s;
+            // } else {
+            //     _timeInSection_s = __section_t_spillover;
+            // }
         }
     }
 }

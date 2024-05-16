@@ -76,6 +76,7 @@ namespace synthple::midi {
               _current_time_s,
               _tempo_bpm,
               _ticks_per_beat,
+              _beat_duration_s,
               _tick_duration_s,
               _duration_s;
 
