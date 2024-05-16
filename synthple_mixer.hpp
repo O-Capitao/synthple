@@ -12,7 +12,7 @@ namespace synthple::mixer {
     struct Track {
         oscillator::Oscillator oscillator;
         midi::MonophonicMidiFileReader *midi_fw_ptr = nullptr;
-        midi::MidiNote last_played_note;
+        midi::MidiNote *last_played_note_ptr;
 
         float gain;
         bool is_silent = true;

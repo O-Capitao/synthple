@@ -25,12 +25,10 @@ namespace synthple::audio {
 
         public:
 
-            AudioThread( 
-                bus::AudioDataBus *inqueue
-            );
-            
+            AudioThread();
             ~AudioThread();
 
+            void init(bus::AudioDataBus *in_bus);
             void start();
             void stop();
 

@@ -35,7 +35,7 @@ namespace synthple::oscillator {
     };
 
     class Oscillator {
-
+        int _id;
         std::shared_ptr<spdlog::logger >_logger;
         // const config::OscillatorConfig _config;
         
@@ -50,9 +50,9 @@ namespace synthple::oscillator {
 
         public:
             Oscillator(
+                int _oscillator_id,
                 std::string wavetabletype_str,
-                int wavetable_nsamples,
-                std::shared_ptr<spdlog::logger > logger
+                int wavetable_nsamples
             );
 
             // OUTPUT

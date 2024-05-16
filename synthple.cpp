@@ -14,15 +14,17 @@ using namespace filedata;
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 Synthple::Synthple( std::string path_to_config )
-:_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log")),
-_audioDataBus(),
-_audioThread( &_audioDataBus ),
-_filedata( path_to_config )//,
-// _playThread( boost::bind(&Synthple::_run, this) )
+:_logger(spdlog::basic_logger_mt("SYNTHPLE", "synthple.log"))
 {
     _logger->set_level(spdlog::level::debug);
-    _logger->debug("\n***************************************\n***************************************\n\n\nConstructed Synthple. Starting Run");
+    _logger->debug("\n***************************************\n***************************************\n\n\nStarting Synthple.");
     _logger->flush();
+
+    _audioThread.init( &_audioDataBus );
+    _filedata.init(path_to_config);
+
+    _logger->debug("Finished Construction.");
+
 }
 
 ///////////////////////////////////////////////////////////////////////

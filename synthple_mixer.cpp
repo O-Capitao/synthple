@@ -24,6 +24,8 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
     _tempo_bpm = _sfd->bpm;
     _loaded_song_name = _sfd->id;
 
+    int _midireader_id = 0;
+    int _oscillator_id = 0;
 
     for (int __section_index = 0; __section_index < _sfd->sections.size(); __section_index++){
         Section __section = {
@@ -34,7 +36,13 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
         for (int __midi_ass_ind = 0; __midi_ass_ind < _sfd->sections[__section_index].tracks.size(); __midi_ass_ind++){
             filedata::TrackFileData &__tfd = _sfd->sections[__section_index].tracks[__midi_ass_ind];
             __section._midiFiles_perTrack.push_back( 
-                midi::MonophonicMidiFileReader( __tfd.midi_file_path, _logger, _tempo_bpm, _input_period_in_samplerates*_dt_s, __section.length_bars )
+                midi::MonophonicMidiFileReader( 
+                    _midireader_id++, 
+                    __tfd.midi_file_path,
+                    _tempo_bpm,
+                    _input_period_in_samplerates*_dt_s,
+                    __section.length_bars,
+                    _sfd->beats_per_bar )
             );
         }
 
@@ -46,7 +54,7 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
 
         _tracks.push_back({
             .gain = __vfd.gain,
-            .oscillator = oscillator::Oscillator( __vfd.type, __vfd.n_samples, _logger )
+            .oscillator = oscillator::Oscillator( _oscillator_id, __vfd.type, __vfd.n_samples )
         });
     }
 
@@ -69,7 +77,7 @@ void Mixer::setSection(int sectionindex){
     for (int i = 0; i < __loaded_sect._midiFiles_perTrack.size(); i ++ ){
         _tracks[i].midi_fw_ptr = &__first_mfw[i];
         // input is processed in intervals of "_input_period_in_samplerates" clicks.
-        _tracks[i].midi_fw_ptr->resetToTicks(0);
+        // _tracks[i].midi_fw_ptr->resetToTicks(0);
     }
 
     _is_silent = false;
@@ -104,23 +112,25 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                 for (int j = 0; j < __loaded_sect._midiFiles_perTrack.size(); j ++){
 
                     Track &__track = _tracks[j];
-                    midi::MidiNote __next_active_note = __track.midi_fw_ptr->getNextActiveNote();
 
-                    if (__next_active_note.note != NoteKey::NOT_A_NOTE && __track.last_played_note.note_value != __next_active_note.note_value ){
-                        _logger->debug("Changing note: {}", __next_active_note.note_value);
+                    // midi::MidiNote __next_active_note = __track.midi_fw_ptr->getNextActiveNote();
+                    midi::MidiNote *_curr_note = __track.midi_fw_ptr->getStateAt_Time_s( _timeInSection_s );
 
-                        float __tgt_freq = _note_frequency_map.noteFreqMap[ __next_active_note.note_value ];
+                    if (_curr_note != __track.last_played_note_ptr){
 
-                        if (__tgt_freq == 0){
-                            _logger->debug("opppps");
-                        }
+                        // Change oscillator state
+                        float __tgt_freq = _note_frequency_map.noteFreqMap[ _curr_note->note_value ];
+
+                        assert(__tgt_freq > 0);
                         
-                        __track.oscillator.setFrequency( _note_frequency_map.noteFreqMap[ __next_active_note.note_value ] );
+                        __track.oscillator.setFrequency( _note_frequency_map.noteFreqMap[ _curr_note->note_value ] );
 
-                        __track.last_played_note = __next_active_note;
+                        __track.last_played_note_ptr = _curr_note;
                         __track.is_silent = false;
 
-                     } else if (__next_active_note.note == NoteKey::NOT_A_NOTE && __track.last_played_note.note_value != __next_active_note.note_value ){
+                        __track.last_played_note_ptr = _curr_note;
+
+                     } else if ( _curr_note == nullptr ){
 
                         // set to silence.
                         __track.is_silent = true;

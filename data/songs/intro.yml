@@ -1,20 +1,16 @@
 id: intro
 bpm: 120
+beats-per-bar: 4
 voices:
   - id: &square1 square_1
     type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
     offset: 0  #centered
-    n_samples: 64
+    n-samples: 64
     gain: 0.7
-  # - id: &square2 square_2
-  #   type: SQUARE
-  #   offset: -0.3
-  #   n_samples: 64
-  #   gain: 0.3
 sections:
   - id: intro
     repeat: 0 # 0 = infinite loop
-    length_bars: 4
+    length-bars: 1
     tracks:
       - voice: *square1
         src: midi/midi_test_case.mid

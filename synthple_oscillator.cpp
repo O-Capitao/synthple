@@ -82,10 +82,14 @@ WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
 //Oscillator //////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-Oscillator::Oscillator( std::string wavetabletype_str, int wavetable_nsamples, std::shared_ptr<spdlog::logger >logger )
-:_logger(logger),
-_waveTable(wavetable_nsamples, wavetabletype_str, logger)
-{}
+Oscillator::Oscillator( int o_id, std::string wavetabletype_str, int wavetable_nsamples )
+:
+_id(o_id),
+_logger(spdlog::basic_logger_mt("Oscillator " + std::to_string(o_id), "synthple.log")),    
+_waveTable(wavetable_nsamples, wavetabletype_str, _logger)
+{
+    _logger->set_level(spdlog::level::debug);
+}
 
 float Oscillator::getValueAt(float t_ms){
 
@@ -120,7 +124,7 @@ void Oscillator::requestSilence(){
 
 void Oscillator::setFrequency(float newf){
 
-    _logger->debug("OSCILLATOR: got new freq = {}", newf);
+    // _logger->debug("got new freq = {}", newf);
     _outputFreq = newf;
     _outputPeriod = 1 / newf;
     _outputSilence = false;
