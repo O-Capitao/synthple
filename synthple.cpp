@@ -7,6 +7,9 @@
 #include <spdlog/sinks/basic_file_sink.h>
 // #include <boost/chrono.hpp>
 
+#include <boost/chrono.hpp>
+#include <boost/thread/thread.hpp> 
+
 using namespace synthple;
 using namespace filedata;
 
@@ -95,7 +98,9 @@ void Synthple::_run(){
             if (__aux_command.cmdType == bus::CommandType::STOP){
                 _EXIT = true;
             }
-        }        
+        }
+
+        boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
     }
 
     // _close();

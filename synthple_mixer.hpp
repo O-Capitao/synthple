@@ -34,9 +34,13 @@ namespace synthple::mixer {
         std::vector<Section> _sections;
 
         std::string _loaded_song_name = "";
+
+        filedata::SongFileData *_sfd_ptr;
         int _loaded_section_index = 0;
 
-        float _timeInSong_s, _timeInSection_s;
+        float _timeInSong_s, 
+            _timeInSection_s,
+            _loadedSectionDuration_s;
         
         const float _dt_s = 1.0f / (float)FRAMERATE;
         const int _input_period_in_samplerates = 10;

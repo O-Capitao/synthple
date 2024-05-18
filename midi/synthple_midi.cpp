@@ -177,7 +177,6 @@ _id(readerid),
 _file_path(fp),
 _logger(spdlog::basic_logger_mt("MidiReader " + std::to_string(readerid), "synthple.log")),
 _tempo_bpm(tempobpm),
-_dt_s(dts),
 _length_bars(lbars),
 _beats_per_bar(beatsperbar)
 {   
@@ -194,10 +193,11 @@ _beats_per_bar(beatsperbar)
     _tick_duration_s = _beat_duration_s / _ticks_per_beat;
     
     _populateMidiEvents(midifile);
-    _midi_events_iter = _midi_events.begin();
-
-    _end_of_sequence__tick = _midi_events.back().ticks;
-
+    _curr_evt = _midi_events.begin();
+    _next_evt_aux = std::next(_curr_evt, 1);
+    
+    // _end_of_sequence__tick = _midi_events.back().ticks;
+    _last_time_aux_s = 0.0;
     _duration_s = _tick_duration_s * _ticks_per_beat * (float)_beats_per_bar * (float)_length_bars;
     _total_ticks = _ticks_per_beat * _beats_per_bar * _length_bars;
 
@@ -225,6 +225,11 @@ void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
         _midi_events.push_back({
             MidiEventWrapper(mev)
         });
+
+        // fill out _end_of_sequence__tick
+        if (_midi_events.back().type == MidiEventType::END_OF_SEQUENCE){
+            _end_of_sequence__tick = _midi_events.back().ticks;
+        }
     }
 
     std::string __events_string = "file events:\n";
@@ -242,113 +247,38 @@ void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-// int MonophonicMidiFileReader::_getMidiEventIndexAtTick(int tick){
-//     int retval = 0;
-//     for (MidiEventWrapper &_mew : _midi_events){
-//         if (_mew.ticks < tick ){
-//             retval ++;
-//         } else {
-//             break;
-//         }
-//     }
-//     return retval;
-// }
-
-// ///////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////
-// MidiNote MonophonicMidiFileReader::_getActiveNoteAtTick(int tick){
-//     MidiNote retval = _midi_events[]
-// }
-
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-// void MonophonicMidiFileReader::_activateMidiEvent(int midieventindex){
-//     MidiEventWrapper &mew = _midi_events[midieventindex];
-//     _active_note = mew.note;
-
-//     if (mew.type == MidiEventType::NOTE_OFF){
-//         _is_silent = true;
-//     } else {
-//         _is_silent = false;
-//     }
-// }
-
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-// void MonophonicMidiFileReader::resetToTicks(int tick){
-
-//     _logger->debug("resetting to " + std::to_string(tick) + ".");
-//     _current_tick = tick;
-//     _current_time_s = _tick_duration_s * tick;
-//     _current_midi_evt_index = _getMidiEventIndexAtTick(tick);
-//     _activateMidiEvent(_current_midi_evt_index);
-// }
-
-// ///////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////
-// MidiNote MonophonicMidiFileReader::getNextActiveNote(){
-    
-//      // check current time:
-//     // MidiEventWrapper &next_event = _midi_events[ _current_midi_evt_index++ ];
-
-//     // if (next_event.ticks <= _current_tick){
-//     //     // advance event
-//     //     if (next_event.type == MidiEventType::NOTE_ON){
-//     //         _active_note = next_event.note;
-//     //     } else {
-//     //         _active_note = MidiNote(NoteKey::NOT_A_NOTE, 0);
-//     //     }
-
-//     //     _active_note = next_event.note;
-//     // }
-
-//     // // increment time
-//     // _current_time_s += _dt_s;
-//     // _current_tick = (int)floor(_current_time_s / _tick_duration_s);
-
-//     // // check bounds and loop
-//     // int _ticks_over = _current_tick - _ticks_per_loop;
-
-//     // if (_ticks_over > 0){
-//     //     // reset to ticks
-//     //     resetToTicks(_ticks_over);
-//     // }
-
-//     return MidiNote();
-// }
-
-// ///////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////
-// MidiNote MonophonicMidiFileReader::getStateAt_Time_s(int t_s){
-
-// }
-
 MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
 
+    if ( t_s < _last_time_aux_s){
+        _curr_evt = _midi_events.begin();
+        _next_evt_aux = std::next(_curr_evt, 1);
+    }
+    
+    int _curr_tick = _t_secs__toTicks(t_s);
+    
+    if (_curr_tick < _total_ticks ){
 
-    if (_midi_events_iter != _midi_events.end()){
-        int _curr_tick = _t_secs__toTicks(t_s);
+        _last_time_aux_s = t_s;
 
-        // if (_curr_tick > 960){
-        //     _logger->debug("nhe");
-        // }
-        auto _next_iter = std::next(_midi_events_iter, 1);
+        if (_curr_tick > _end_of_sequence__tick){
+            return nullptr;
+        }
         
-        if ( std::next(_midi_events_iter, 1)->ticks <= _curr_tick ){
+        if ( _next_evt_aux->ticks <= _curr_tick ){
 
-            _midi_events_iter = std::next(_midi_events_iter, 1);
+            _curr_evt = std::next(_curr_evt, 1);
+            _next_evt_aux = std::next(_curr_evt, 1);
 
-            std::string _logginginAux = ((_midi_events_iter->type == MidiEventType::NOTE_ON) ? "NOTE_ON" : "NOTE_OFF");
+            std::string _logginginAux = ((_curr_evt->type == MidiEventType::NOTE_ON) ? "NOTE_ON" : "NOTE_OFF");
             
             _logger->debug("Transitioning into new event at ticks={}\n"
                  "{}\n"
                 "NOTE={}",
-                _curr_tick, _logginginAux, _midi_events_iter->note.note_value );
-
+                _curr_tick, _logginginAux, _curr_evt->note.note_value );
         }
 
-        if (_midi_events_iter->type == MidiEventType::NOTE_ON){
-            return &_midi_events_iter->note;        
+        if (_curr_evt->type == MidiEventType::NOTE_ON){
+            return &_curr_evt->note;        
         }
     }
 
@@ -356,10 +286,10 @@ MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
 }
 
 int MonophonicMidiFileReader::_t_secs__toTicks( float tsecs){
+    float _t_in_cycle = fmod( tsecs, _duration_s );
+    assert(_tick_duration_s > 0 && _t_in_cycle < _duration_s );
     
-    assert(_tick_duration_s > 0 && tsecs < _duration_s );
-    
-    int ticks = (int)floor( tsecs / _tick_duration_s );
+    int ticks = (int)floor( _t_in_cycle / _tick_duration_s );
     
     return ticks;
 }

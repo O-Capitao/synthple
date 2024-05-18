@@ -17,7 +17,7 @@ Mixer::Mixer()
 ///////////////////////////////////////////////////////////////////////
 void Mixer::setSong( filedata::SongFileData *_sfd )
 {
-    
+    _sfd_ptr = _sfd;
     _timeInSong_s = 0;
     _timeInSection_s = 0;
 
@@ -73,6 +73,8 @@ void Mixer::setSection(int sectionindex){
     Section &__loaded_sect = _sections[_loaded_section_index];
     midi::MonophonicMidiFileReader *__first_mfw = __loaded_sect._midiFiles_perTrack.data();
 
+    _loadedSectionDuration_s = __loaded_sect.length_bars * _sfd_ptr->beats_per_bar * 60.0 / _sfd_ptr->bpm;
+
     // assign midi to tracks
     for (int i = 0; i < __loaded_sect._midiFiles_perTrack.size(); i ++ ){
         _tracks[i].midi_fw_ptr = &__first_mfw[i];
@@ -118,18 +120,15 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
 
                     if ( _curr_note && _curr_note != __track.last_played_note_ptr){
 
-                        _logger->debug("processing midi events at t=\"{}\"s", _timeInSection_s);
+                        // _logger->debug("processing midi events at t=\"{}\"s", _timeInSection_s);
 
                         // Change oscillator state
                         float __tgt_freq = _note_frequency_map.noteFreqMap[ _curr_note->note_value ];
-
                         assert(__tgt_freq > 0);
                         
                         __track.oscillator.setFrequency( _note_frequency_map.noteFreqMap[ _curr_note->note_value ] );
-
                         __track.last_played_note_ptr = _curr_note;
                         __track.is_silent = false;
-
                         __track.last_played_note_ptr = _curr_note;
 
                      } else if ( !_curr_note ){
@@ -154,20 +153,21 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
 
             assert(__mixed_values < 1.0);
             
-            _timeInSection_s += _dt_s;
+            // _timeInSection_s += _dt_s;
 
 
 
             // // handle time stuff
             // 
 
-            // float __section_t_spillover = ( (_sections[_loaded_section_index].length_bars * 4 * 60 )/_tempo_bpm) - _timeInSection_s;
+            float __section_t_spillover = _timeInSection_s - _loadedSectionDuration_s;
+            //( (_sections[_loaded_section_index].length_bars *  * 60 )/_tempo_bpm) - _timeInSection_s;
 
-            // if (__section_t_spillover > 0 ){
-            //     _timeInSection_s += _dt_s;
-            // } else {
-            //     _timeInSection_s = __section_t_spillover;
-            // }
+            if (__section_t_spillover < 0 ){
+                _timeInSection_s += _dt_s;
+            } else {
+                _timeInSection_s = __section_t_spillover;
+            }
         }
     }
 }
