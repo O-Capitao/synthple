@@ -18,7 +18,7 @@ namespace synthple::midi {
     };
 
 
-
+    // NoteKey = NOT_A_NOTE for silence.
     struct MidiNote {
 
         MidiNote() { note = NoteKey::A; octave = 4; note_value = toString(); }
@@ -85,6 +85,9 @@ namespace synthple::midi {
         void _populateMidiEvents(smf::MidiFile &file);
         int _t_secs__toTicks( float tsecs);
 
+        // use this to return silence (which does not exist)
+        MidiNote _silence;
+        
         public:
 
             MonophonicMidiFileReader(

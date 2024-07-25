@@ -45,7 +45,7 @@ namespace synthple::mixer {
         
         const float _dt_s = 1.0f / (float)FRAMERATE;
         const int _input_period_in_samplerates = 2;
-        int _midi_click_counter = 0;
+        int _midi_click_counter = 10;
 
         short _sectionRepeat_count = 0;
         float _tempo_bpm = 0;

@@ -28,6 +28,7 @@ _data( nsamples )
     }
     _logger->set_level(spdlog::level::debug);
     _logger->debug("WTABLE: constructed with {} samples", _n_samples);
+    _logger->flush();
 }
 
 ///////////////////////////////////////////////////////////////////////

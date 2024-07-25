@@ -59,6 +59,8 @@ void Synthple::setSong( const std::string &song_to_set ){
     _mixer.setSong(sfd);
     _playThread = boost::thread( boost::bind(&Synthple::_run, this) );
     _logger->info("Loaded Song with Id = {}", _activeSong_id);
+
+    _logger->flush();
 }
 
 ///////////////////////////////////////////////////////////////////////

@@ -3,11 +3,11 @@ bpm: 120
 beats-per-bar: 4
 # MANDATORY: 1 voice per track!
 voices:
-  # - id: &square1 square_1
-  #   type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
-  #   offset: 0  #centered
-  #   n-samples: 32
-  #   gain: 0.3
+  - id: &square1 square_1
+    type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
+    offset: 0  #centered
+    n-samples: 32
+    gain: 0.3
   - id: &triangle1 triangle_1
     type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
     offset: 0  #centered
@@ -18,8 +18,8 @@ sections:
     repeat: 0 # 0 = infinite loop
     length-bars: 2
     tracks:
-      # - voice: *square1
-      #   src: midi/testcase1_single_track_alteredtempo.mid
+      - voice: *square1
+        src: midi/testcase1_single_track_alteredtempo.mid
       - voice: *triangle1
         src: midi/testcase1_single_track_BASS.mid
 

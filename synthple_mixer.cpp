@@ -69,6 +69,9 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
 ///////////////////////////////////////////////////////////////////////
 void Mixer::setSection(int sectionindex){
 
+    _logger->debug("setSEction");
+    _logger->flush();
+
     _loaded_section_index = sectionindex;
     Section &__loaded_sect = _sections[_loaded_section_index];
     midi::MonophonicMidiFileReader *__first_mfw = __loaded_sect._midiFiles_perTrack.data();
@@ -118,22 +121,16 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                     Track &__track = _tracks[j];
                     __track.curr_note_ptr = __track.midi_fw_ptr->getStateAt_Time_s( _timeInSection_s );
 
-                    midi::MidiEventWrapper *active_note_on_evt = __track.midi_fw_ptr->getActiveMidiEventAt_Time_s( _timeInSection_s );
+                    // midi::MidiEventWrapper *active_note_on_evt = __track.midi_fw_ptr->getActiveMidiEventAt_Time_s( _timeInSection_s );
+                    // if (__track.last_played_note_ptr == nullptr)
 
-                    // TODO: fix here
-                    // if ( __track.curr_note_ptr && (!__track.last_played_note_ptr || (__track.curr_note_ptr->note_value != __track.last_played_note_ptr->note_value))){
-                    // if ( __track.curr_note_ptr){
-                    if (active_note_on_evt != nullptr){
+                    if ( __track.curr_note_ptr->note == NoteKey::NOT_A_NOTE ){
+                        // do nothing
+                        __track.is_silent = true;
+                    } else {
 
-                    
-
-
+                                                
                         float __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
-
-                        // if (__tgt_freq <= 0){
-                        //     _logger->info("opppp");
-                        // }
-
                         assert(__tgt_freq > 0);
                         
                         __aux_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr ->note_value ];
@@ -145,14 +142,36 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                         __track.last_played_note_ptr = __track.curr_note_ptr ;
                         __track.is_silent = false;
 
-                     } else if ( !__track.curr_note_ptr ){
+                    }
 
-                        // set to silence.
-                        // silence:
-                        __track.last_played_note_ptr = nullptr;
-                        __track.curr_note_ptr = nullptr;
-                        __track.is_silent = true;
-                     }
+                    // // TODO: fix here
+                    // if ( __track.curr_note_ptr != nullptr
+                    //     && (
+                    //         ( __track.last_played_note_ptr != nullptr && __track.curr_note_ptr->note_value != __track.last_played_note_ptr->note_value )
+                    //         ||
+                    //         ( __track.last_played_note_ptr == nullptr )
+                    //     )){
+
+                    //     float __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
+                    //     assert(__tgt_freq > 0);
+                        
+                    //     __aux_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr ->note_value ];
+
+                    //     _logger->debug("Requesting new Freq for Oscillator \"{}\" at T=\"{}\"s", j, _timeInSection_s);
+                    //     _logger->flush();
+
+                    //     __track.oscillator.setFrequency(__aux_freq );
+                    //     __track.last_played_note_ptr = __track.curr_note_ptr ;
+                    //     __track.is_silent = false;
+
+                    //  } else if ( !__track.curr_note_ptr ){
+
+                    //     // set to silence.
+                    //     // silence:
+                    //     __track.last_played_note_ptr = nullptr;
+                    //     __track.curr_note_ptr = nullptr;
+                    //     __track.is_silent = true;
+                    //  }
                 }
             }
             // end event processing

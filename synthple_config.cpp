@@ -83,6 +83,9 @@ std::string songspath = path_to_data_dir + "/songs/";
         // _songs.push_back(sfd);
         _songs[sfd.id] = sfd;
     }
+
+    _logger->debug("Finished init.");
+    _logger->flush();
 }
 
 
