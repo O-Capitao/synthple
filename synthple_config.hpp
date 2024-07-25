@@ -30,7 +30,8 @@ namespace synthple::filedata {
     };
 
     struct SongFileData {
-        short bpm;
+        short bpm, 
+              beats_per_bar;
         std::string id;
         std::vector<VoiceFileData> voices;
         std::vector<SectionFileData> sections;
@@ -42,7 +43,9 @@ namespace synthple::filedata {
         std::unordered_map<std::string,filedata::SongFileData>  _songs;
 
         public:
-            SynthpleFileData(std::string path_to_data_dir);
+            SynthpleFileData();
             filedata::SongFileData *getSongByName( const std::string &songname );
+
+            void init(std::string path_to_data_dir);
     };
 }

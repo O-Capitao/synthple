@@ -9,13 +9,16 @@ using namespace synthple::filedata;
 // SynthpleFileData////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
-:_logger(spdlog::basic_logger_mt("Config_reader", "synthple.log"))
+SynthpleFileData::SynthpleFileData()
+:_logger(spdlog::basic_logger_mt("Config Reader", "synthple.log"))
 {
     _logger->set_level(spdlog::level::debug);
-    _logger->info( "Constructed. Data File will be read at: {}", path_to_data_dir );
+}
 
-    std::string songspath = path_to_data_dir + "/songs/";
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+void SynthpleFileData::init(std::string path_to_data_dir){
+std::string songspath = path_to_data_dir + "/songs/";
     std::vector<std::string> song_files;
     
     for (const auto & entry : std::filesystem::directory_iterator(songspath))
@@ -30,6 +33,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
         SongFileData sfd = {
             .id = song["id"].as<std::string>(),
             .bpm = song["bpm"].as<short>(),
+            .beats_per_bar = song["beats-per-bar"].as<short>(),
             .voices = std::vector<VoiceFileData>(),
             .sections = std::vector<SectionFileData>()
         };
@@ -42,7 +46,7 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
             sfd.voices.push_back({
                 .id = currvoicedata["id"].as<std::string>(),
                 .type = currvoicedata["type"].as<std::string>(),
-                .n_samples = currvoicedata["n_samples"].as<short>(),
+                .n_samples = currvoicedata["n-samples"].as<short>(),
                 .offset = currvoicedata["offset"].as<float>(),
                 .gain = currvoicedata["gain"].as<float>()
             });
@@ -58,14 +62,14 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
             SectionFileData pfd = {
                 .id = currpartdata["id"].as<std::string>(),
                 .repeat = currpartdata["repeat"].as<short>(),
-                .length_bars = currpartdata["length_bars"].as<short>(),
+                .length_bars = currpartdata["length-bars"].as<short>(),
                 .tracks = std::vector<TrackFileData>()
             };
             
             YAML::Node tracksNode = currpartdata["tracks"];
             
             for (std::size_t ii=0 ; ii < tracksNode.size(); ii++) {
-                auto currtrackdata = tracksNode[i];
+                auto currtrackdata = tracksNode[ii];
                 
                 pfd.tracks.push_back({
                     .voice_id = currtrackdata["voice"].as<std::string>(),
@@ -80,9 +84,10 @@ SynthpleFileData::SynthpleFileData(std::string path_to_data_dir)
         _songs[sfd.id] = sfd;
     }
 
-    _logger->debug("Done reading");
+    _logger->debug("Finished init.");
     _logger->flush();
 }
+
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////

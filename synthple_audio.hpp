@@ -12,7 +12,9 @@ namespace synthple::audio {
         bus::AudioDataBus *inputBus;
     };
 
-    class AudioThread { // TODO: rename to AudioEngine
+    class AudioThread { 
+        
+        // TODO: rename to AudioEngine
 
         std::shared_ptr<spdlog::logger >_logger;
         InternalAudioData *_data = NULL;
@@ -25,12 +27,10 @@ namespace synthple::audio {
 
         public:
 
-            AudioThread( 
-                bus::AudioDataBus *inqueue
-            );
-            
+            AudioThread();
             ~AudioThread();
 
+            void init(bus::AudioDataBus *in_bus);
             void start();
             void stop();
 

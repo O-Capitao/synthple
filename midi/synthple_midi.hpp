@@ -10,8 +10,6 @@
 
 namespace synthple::midi {
 
-    
-    
     enum MidiEventType{
         NOTE_ON,
         NOTE_OFF,
@@ -19,6 +17,8 @@ namespace synthple::midi {
         OTHER
     };
 
+
+    // NoteKey = NOT_A_NOTE for silence.
     struct MidiNote {
 
         MidiNote() { note = NoteKey::A; octave = 4; note_value = toString(); }
@@ -31,8 +31,11 @@ namespace synthple::midi {
         std::string toString();
     };
 
-    struct MidiEventWrapper {
 
+
+    struct MidiEventWrapper {
+        
+        MidiEventWrapper(){}
         MidiEventWrapper( smf::MidiEvent* mev );
         MidiEventWrapper(
             MidiEventType _t,
@@ -44,6 +47,7 @@ namespace synthple::midi {
         MidiNote note;
         int ticks;
 
+        
         std::string toString();
 
         private:
@@ -53,46 +57,48 @@ namespace synthple::midi {
             NoteKey _intToNote(int noteNumber);
     };
 
+
+
     class MonophonicMidiFileReader {
 
+        int _id;
         std::string _file_path;
         std::vector<MidiEventWrapper> _midi_events;
         std::shared_ptr<spdlog::logger> _logger;
 
-        // stuff to help reading a file
-        int _current_tick,
-            _current_midi_evt_index,
-            _ticks_per_loop;
+        std::vector<MidiEventWrapper>::iterator _curr_evt, 
+                                            _next_evt_aux;
 
-        short _length_bars;
+        int _end_of_sequence__tick,
+            _total_ticks;
+
+        short _length_bars,
+            _beats_per_bar;
         
-        float _dt_s,
-              _current_time_s,
-              _tempo_bpm,
+        float _tempo_bpm,
               _ticks_per_beat,
+              _beat_duration_s,
               _tick_duration_s,
+              _last_time_aux_s,
               _duration_s;
 
-        bool _is_silent;
-
-
-        MidiNote _active_note;
-
         void _populateMidiEvents(smf::MidiFile &file);
-        int _getMidiEventIndexAtTick(int tick);
-        // MidiNote  _getActiveNoteAtTick(int tick);
-        void _activateMidiEvent(int midieventindex);
+        int _t_secs__toTicks( float tsecs);
 
+        // use this to return silence (which does not exist)
+        MidiNote _silence;
+        
         public:
 
-            MonophonicMidiFileReader( 
-                std::string filePath, 
-                std::shared_ptr<spdlog::logger> logger, 
+            MonophonicMidiFileReader(
+                int readerid,
+                std::string filePath,
                 float tempobpm, 
                 float dts,
-                short lengthbars );
+                short lengthbars,
+                short beatsperbar );
 
-            void        resetToTicks(int tick);
-            MidiNote    getNextActiveNote();
+            MidiNote *getStateAt_Time_s(float t_s);
+            MidiEventWrapper *getActiveMidiEventAt_Time_s(float t_s);
     };
 }

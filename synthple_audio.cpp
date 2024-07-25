@@ -6,20 +6,18 @@
 
 using namespace synthple::audio;
 
-AudioThread::AudioThread(
-    bus::AudioDataBus *in_bus
-)
+AudioThread::AudioThread()
 :_logger(spdlog::basic_logger_mt("AUDIO THREAD", "synthple.log"))
 {
     _data = new InternalAudioData();
-    _data->inputBus = in_bus;
-    
-    _logger->set_level(spdlog::level::info);
-    _logger->info("Constructed.");
 }
 
 AudioThread::~AudioThread(){
     delete _data;
+}
+
+void AudioThread::init(bus::AudioDataBus *in_bus){
+     _data->inputBus = in_bus;
 }
 
 void AudioThread::start()
