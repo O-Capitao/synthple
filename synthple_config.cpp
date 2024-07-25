@@ -69,7 +69,7 @@ std::string songspath = path_to_data_dir + "/songs/";
             YAML::Node tracksNode = currpartdata["tracks"];
             
             for (std::size_t ii=0 ; ii < tracksNode.size(); ii++) {
-                auto currtrackdata = tracksNode[i];
+                auto currtrackdata = tracksNode[ii];
                 
                 pfd.tracks.push_back({
                     .voice_id = currtrackdata["voice"].as<std::string>(),

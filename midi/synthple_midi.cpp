@@ -245,6 +245,48 @@ void MonophonicMidiFileReader::_populateMidiEvents(smf::MidiFile &file){
     _logger->debug(__events_string);
 }
 
+
+MidiEventWrapper *MonophonicMidiFileReader::getActiveMidiEventAt_Time_s(float t_s) {
+
+    // when loop loops:
+    if ( t_s < _last_time_aux_s){
+        _curr_evt = _midi_events.begin();
+
+        // what if there is no next event?
+        _next_evt_aux = std::next(_curr_evt, 1);
+    }
+    
+
+    int _curr_tick = _t_secs__toTicks(t_s);
+    
+    if (_curr_tick < _total_ticks ){
+
+        _last_time_aux_s = t_s;
+
+        if (_curr_tick > _end_of_sequence__tick){
+            return nullptr;
+        }
+        // TODO : give uuid to MidiEvent at birth to compare every event...
+        if ( _next_evt_aux->ticks <= _curr_tick ){
+
+            _curr_evt = std::next(_curr_evt, 1);
+            _next_evt_aux = std::next(_curr_evt, 1);
+
+            std::string _logginginAux = ((_curr_evt->type == MidiEventType::NOTE_ON) ? "NOTE_ON" : "NOTE_OFF");
+            
+            _logger->debug("Transitioning into new event at ticks={}\n"
+                 "{}\n"
+                "NOTE={}",
+                _curr_tick, _logginginAux, _curr_evt->note.note_value );
+        }
+
+        if (_curr_evt->type == MidiEventType::NOTE_ON){
+            return &(*_curr_evt);
+        }
+    }
+
+    return nullptr;
+}
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
@@ -263,7 +305,7 @@ MidiNote *MonophonicMidiFileReader::getStateAt_Time_s(float t_s) {
         if (_curr_tick > _end_of_sequence__tick){
             return nullptr;
         }
-        
+        // TODO : give uuid to MidiEvent at birth to compare every event...
         if ( _next_evt_aux->ticks <= _curr_tick ){
 
             _curr_evt = std::next(_curr_evt, 1);

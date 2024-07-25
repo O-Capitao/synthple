@@ -47,6 +47,7 @@ namespace synthple::midi {
         MidiNote note;
         int ticks;
 
+        
         std::string toString();
 
         private:
@@ -95,5 +96,6 @@ namespace synthple::midi {
                 short beatsperbar );
 
             MidiNote *getStateAt_Time_s(float t_s);
+            MidiEventWrapper *getActiveMidiEventAt_Time_s(float t_s);
     };
 }
