@@ -109,7 +109,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
 
         Section &__loaded_sect = _sections[_loaded_section_index];
         
-        float __aux_freq = 0;
+        float __aux_freq = 0, __tgt_freq = 0;
 
         for (int i = 0; i < requestedsamples_len; i++){
             
@@ -121,16 +121,20 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                     Track &__track = _tracks[j];
                     __track.curr_note_ptr = __track.midi_fw_ptr->getStateAt_Time_s( _timeInSection_s );
 
-                    // midi::MidiEventWrapper *active_note_on_evt = __track.midi_fw_ptr->getActiveMidiEventAt_Time_s( _timeInSection_s );
-                    // if (__track.last_played_note_ptr == nullptr)
-
                     if ( __track.curr_note_ptr->note == NoteKey::NOT_A_NOTE ){
+
                         // do nothing
                         __track.is_silent = true;
-                    } else {
+                        __track.last_played_note_ptr = __track.curr_note_ptr;
+                        _logger->debug("Requesting Silence for Oscillator \"{}\" at T=\"{}\"s", j, _timeInSection_s);
+                        _logger->flush();
 
+                    } else if (
+                        __track.last_played_note_ptr == nullptr 
+                        ||  (__track.last_played_note_ptr != nullptr && __track.curr_note_ptr->note != __track.last_played_note_ptr->note)
+                    ){
                                                 
-                        float __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
+                        __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
                         assert(__tgt_freq > 0);
                         
                         __aux_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr ->note_value ];
@@ -141,37 +145,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                         __track.oscillator.setFrequency(__aux_freq );
                         __track.last_played_note_ptr = __track.curr_note_ptr ;
                         __track.is_silent = false;
-
                     }
-
-                    // // TODO: fix here
-                    // if ( __track.curr_note_ptr != nullptr
-                    //     && (
-                    //         ( __track.last_played_note_ptr != nullptr && __track.curr_note_ptr->note_value != __track.last_played_note_ptr->note_value )
-                    //         ||
-                    //         ( __track.last_played_note_ptr == nullptr )
-                    //     )){
-
-                    //     float __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
-                    //     assert(__tgt_freq > 0);
-                        
-                    //     __aux_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr ->note_value ];
-
-                    //     _logger->debug("Requesting new Freq for Oscillator \"{}\" at T=\"{}\"s", j, _timeInSection_s);
-                    //     _logger->flush();
-
-                    //     __track.oscillator.setFrequency(__aux_freq );
-                    //     __track.last_played_note_ptr = __track.curr_note_ptr ;
-                    //     __track.is_silent = false;
-
-                    //  } else if ( !__track.curr_note_ptr ){
-
-                    //     // set to silence.
-                    //     // silence:
-                    //     __track.last_played_note_ptr = nullptr;
-                    //     __track.curr_note_ptr = nullptr;
-                    //     __track.is_silent = true;
-                    //  }
                 }
             }
             // end event processing
