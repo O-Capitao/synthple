@@ -127,8 +127,12 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                     if ( __track.curr_note_ptr->note == NoteKey::NOT_A_NOTE ){
                         // do nothing
                         __track.is_silent = true;
-                    } else {
+                        __track.last_played_note_ptr = __track.curr_note_ptr;
 
+                    } else if (
+                        __track.last_played_note_ptr == nullptr 
+                        ||  (__track.last_played_note_ptr != nullptr && __track.curr_note_ptr->note != __track.last_played_note_ptr->note)
+                    ){
                                                 
                         float __tgt_freq = _note_frequency_map.noteFreqMap[ __track.curr_note_ptr->note_value ];
                         assert(__tgt_freq > 0);
