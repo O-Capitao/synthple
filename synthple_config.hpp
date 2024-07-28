@@ -8,6 +8,13 @@
 
 namespace synthple::filedata {
 
+    struct CoreFileData {
+        int frames_in_buffer;
+        short n_channels;
+        int frame_rate;
+        int midi_undersampling_ratio;
+    };
+
     struct VoiceFileData {
         std::string id;
         std::string type;
@@ -40,6 +47,7 @@ namespace synthple::filedata {
     class SynthpleFileData{
 
         std::shared_ptr<spdlog::logger >_logger;
+        filedata::CoreFileData _core;
         std::unordered_map<std::string,filedata::SongFileData>  _songs;
 
         public:

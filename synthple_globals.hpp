@@ -9,8 +9,6 @@
 #define TIME_FOR_BUFFER (FRAMES_IN_BUFFER / FRAMERATE)
 #define MAX_N_VOICES 4
 
-#define AUDIO_TH_WAIT_TIME 33
-
 #define LOG_DASH_SEPARATOR "------------------------------------------"
 
 #include <portaudio.h>

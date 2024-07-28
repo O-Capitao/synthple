@@ -35,7 +35,7 @@ namespace synthple::oscillator {
     };
 
     class Oscillator {
-        int _id;
+        // int _id;
         std::shared_ptr<spdlog::logger >_logger;
         // const config::OscillatorConfig _config;
         

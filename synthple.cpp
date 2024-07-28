@@ -117,6 +117,10 @@ void Synthple::_pushToAudioDataBus( float *topush_data_arr, int topush_length ){
     for (int i = 0; i < topush_length; i++){
         _push_action_retval = _audioDataBus.queue.push( topush_data_arr[i] );
     }
+
+    if (!_push_action_retval){
+        _logger->error("Error pushing value into queue!");
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////

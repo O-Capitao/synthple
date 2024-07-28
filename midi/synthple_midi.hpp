@@ -61,7 +61,7 @@ namespace synthple::midi {
 
     class MonophonicMidiFileReader {
 
-        int _id;
+        // int _id;
         std::string _file_path;
         std::vector<MidiEventWrapper> _midi_events;
         std::shared_ptr<spdlog::logger> _logger;

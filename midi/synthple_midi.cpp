@@ -173,12 +173,12 @@ MonophonicMidiFileReader::MonophonicMidiFileReader(
     short lbars,
     short beatsperbar
 ):
-_id(readerid),
+// _id(readerid),
 _file_path(fp),
 _logger(spdlog::basic_logger_mt("MidiReader " + std::to_string(readerid), "synthple.log")),
-_tempo_bpm(tempobpm),
 _length_bars(lbars),
-_beats_per_bar(beatsperbar)
+_beats_per_bar(beatsperbar),
+_tempo_bpm(tempobpm)
 {   
     _logger->set_level(spdlog::level::debug);
     _logger->info("path = \"{}\", ENTER constructor", fp);

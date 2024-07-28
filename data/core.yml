@@ -1,0 +1,4 @@
+frames_in_buffer: 4096
+n_channels: 1
+frame_rate: 22000
+midi_undersampling_ratio: 100

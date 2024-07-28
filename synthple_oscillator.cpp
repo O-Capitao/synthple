@@ -85,7 +85,7 @@ WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
 ///////////////////////////////////////////////////////////////////////
 Oscillator::Oscillator( int o_id, std::string wavetabletype_str, int wavetable_nsamples )
 :
-_id(o_id),
+// _id(o_id),
 _logger(spdlog::basic_logger_mt("Oscillator " + std::to_string(o_id), "synthple.log")),    
 _waveTable(wavetable_nsamples, wavetabletype_str, _logger)
 {
