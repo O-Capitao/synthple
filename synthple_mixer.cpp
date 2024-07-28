@@ -121,7 +121,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                     Track &__track = _tracks[j];
                     __track.curr_note_ptr = __track.midi_fw_ptr->getStateAt_Time_s( _timeInSection_s );
 
-                    if ( __track.curr_note_ptr->note == NoteKey::NOT_A_NOTE ){
+                    if ( !__track.is_silent && __track.curr_note_ptr->note == NoteKey::NOT_A_NOTE ){
 
                         // do nothing
                         __track.is_silent = true;
