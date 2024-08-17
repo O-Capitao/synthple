@@ -57,9 +57,7 @@ namespace synthple::oscillator {
     class BaseOscillator {
 
         protected:
-            // std::shared_ptr<spdlog::logger >_logger;
-            // std::string _label;
-
+            
             float _outputFreq = 1;
             float _outputPeriod = 1;
 
@@ -68,8 +66,6 @@ namespace synthple::oscillator {
             short _lastIndex = 0;
 
         public:
-            // BaseOscillator(std::string l);
-
             virtual float getValueAt(float t_s) = 0;
             virtual void setFrequency(float newfreq) = 0;
     
@@ -78,10 +74,10 @@ namespace synthple::oscillator {
     };
 
     class SquareOscillator: public BaseOscillator {
-        float _offset;
+        float _inflection = 0;
 
         public:
-            SquareOscillator( float offset );
+            SquareOscillator( float inflx );
             float getValueAt(float t_s);
             void setFrequency( float newfreq );
     };
@@ -98,10 +94,13 @@ namespace synthple::oscillator {
     // _offset = 0 or 1 -> sawtooth
 
     class TriangleOscillator: public BaseOscillator {
-        float _offset = 0, _slope_asc = 0, _slope_desc = 0;
+
+        float _inflection = 0,
+            _slope_asc = 0,
+            _slope_desc = 0;
 
         public:
-            TriangleOscillator( float offset);
+            TriangleOscillator( float inflx);
             float getValueAt(float t_s);
             void setFrequency( float newfreq );
     };

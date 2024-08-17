@@ -9,9 +9,9 @@ Track::Track( filedata::VoiceFileData &_vfd ){
     gain = _vfd.gain;
 
     if (_vfd.type == "SQUARE"){
-        oscillator_ptr = std::make_shared<oscillator::SquareOscillator>( _vfd.offset );
+        oscillator_ptr = std::make_shared<oscillator::SquareOscillator>( _vfd.inflection );
     } else if (_vfd.type == "TRIANGLE"){
-        oscillator_ptr = std::make_shared<oscillator::TriangleOscillator>( _vfd.offset );
+        oscillator_ptr = std::make_shared<oscillator::TriangleOscillator>( _vfd.inflection );
     }else {
         throw std::runtime_error("Bad Oscilator type defined");
     }

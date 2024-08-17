@@ -80,18 +80,18 @@ WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
 
 //
 // SquareOscillator
-SquareOscillator::SquareOscillator( float offset )
-:_offset(offset)
+SquareOscillator::SquareOscillator( float inflx )
+:_inflection(inflx)
 {}
 
 float SquareOscillator::getValueAt(float t_s)
 {
     
     float _t_aux = fmod(t_s, _outputPeriod);
-    float _offset_in_cycle = _offset  * _outputPeriod;
+    float _inflection_in_cycle = _inflection  * _outputPeriod;
 
     
-    if ( _t_aux <= _offset_in_cycle ) {
+    if ( _t_aux <= _inflection_in_cycle ) {
         return 0.0f;
     } else {
         return 1.0f;
@@ -108,8 +108,8 @@ void SquareOscillator::setFrequency( float newfreq )
 }
 
 
-TriangleOscillator::TriangleOscillator( float offset )
-:_offset(offset){}
+TriangleOscillator::TriangleOscillator( float inflx )
+:_inflection(inflx){}
 
 void TriangleOscillator::setFrequency( float newfreq )
 {
@@ -118,8 +118,8 @@ void TriangleOscillator::setFrequency( float newfreq )
     _outputSilence = false;
     _isSilenceRequested = false;
 
-    _slope_asc = 1 / (_offset * _outputPeriod);
-    _slope_desc = 1 / _outputPeriod * ( 1 - _offset );
+    _slope_asc = 1 / (_inflection * _outputPeriod);
+    _slope_desc = 1 / _outputPeriod * ( 1 - _inflection );
 
 }
 
@@ -127,7 +127,7 @@ float TriangleOscillator::getValueAt(float t_s)
 {
     
     float _t_aux = fmod(t_s, _outputPeriod);
-    float _offset_in_cycle = _offset  * _outputPeriod;
+    float _offset_in_cycle = _inflection  * _outputPeriod;
 
     
     if ( _t_aux <= _offset_in_cycle ) {

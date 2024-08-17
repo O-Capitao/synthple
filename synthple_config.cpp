@@ -44,14 +44,18 @@ void SynthpleFileData::init(std::string path_to_data_dir){
 
         for (std::size_t i=0 ; i < voicesNode.size(); i++) {
             auto currvoicedata = voicesNode[i];
-
-            float _offsetval = currvoicedata["offset"] ? currvoicedata["offset"].as<float>() : 0.5;
+            
+            // OPTIONAL STUFF
+            float _inf_pt = currvoicedata["inflection"] ? currvoicedata["inflection"].as<float>() : 0.5;
+            
+            // Only for WaveTables
+            short _n_samples = currvoicedata["n-samples"] ? currvoicedata["n-samples"].as<int>() : 0;
 
             sfd.voices.push_back({
                 .id = currvoicedata["id"].as<std::string>(),
                 .type = currvoicedata["type"].as<std::string>(),
-                .n_samples = currvoicedata["n-samples"].as<short>(),
-                .offset = _offsetval,
+                .n_samples = _n_samples,
+                .inflection = _inf_pt,
                 .gain = currvoicedata["gain"].as<float>()
             });
             _logger->debug("Parsed voice: {}.", currvoicedata["id"].as<std::string>());

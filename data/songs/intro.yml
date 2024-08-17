@@ -5,17 +5,16 @@ beats-per-bar: 4
 voices:
   - id: &square1 square_1
     type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
-    offset: 0.1  #centered
-    n-samples: 32
+    # inflection: 0.5  #centered
     gain: 0.1
   - id: &triangle1 triangle_1
     type: TRIANGLE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
-    offset: 0.20  #centered
-    n-samples: 32
+    # inflection: 0.5  #centered
     gain: 0.5
 sections:
   - id: intro
-    repeat: 0 # 0 = infinite loop
+    # TODO: enable repeat
+    repeat: 1 # 0 = infinite loop
     length-bars: 2
     tracks:
       - voice: *square1
