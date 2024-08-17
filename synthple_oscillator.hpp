@@ -71,8 +71,8 @@ namespace synthple::oscillator {
             // BaseOscillator(std::string l);
 
             virtual float getValueAt(float t_s) = 0;
-            
-            void setFrequency( float newfreq );
+            virtual void setFrequency(float newfreq) = 0;
+    
             void requestSilence();
 
     };
@@ -81,8 +81,29 @@ namespace synthple::oscillator {
         float _offset;
 
         public:
-            SquareOscillator( float offset = 0.85 );
+            SquareOscillator( float offset );
             float getValueAt(float t_s);
+            void setFrequency( float newfreq );
+    };
+
+    //
+    //  1 |_  _  _ .
+    //    |      . |  .
+    //    |    .   |     .
+    //    |  .     |        .
+    //    |.       |           .
+    //    | _ _ _ _ _ _ _ _ _ _ _  1  
+    //      -------  _offset
+    //
+    // _offset = 0 or 1 -> sawtooth
+
+    class TriangleOscillator: public BaseOscillator {
+        float _offset = 0, _slope_asc = 0, _slope_desc = 0;
+
+        public:
+            TriangleOscillator( float offset);
+            float getValueAt(float t_s);
+            void setFrequency( float newfreq );
     };
 
 }

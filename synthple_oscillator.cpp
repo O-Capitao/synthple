@@ -96,15 +96,46 @@ float SquareOscillator::getValueAt(float t_s)
     } else {
         return 1.0f;
     }
-
 }
 
-void BaseOscillator::setFrequency( float newfreq )
+void SquareOscillator::setFrequency( float newfreq )
 {
     _outputFreq = newfreq;
     _outputPeriod = 1 / newfreq;
     _outputSilence = false;
     _isSilenceRequested = false;
+
+}
+
+
+TriangleOscillator::TriangleOscillator( float offset )
+:_offset(offset){}
+
+void TriangleOscillator::setFrequency( float newfreq )
+{
+    _outputFreq = newfreq;
+    _outputPeriod = 1 / newfreq;
+    _outputSilence = false;
+    _isSilenceRequested = false;
+
+    _slope_asc = 1 / (_offset * _outputPeriod);
+    _slope_desc = 1 / _outputPeriod * ( 1 - _offset );
+
+}
+
+float TriangleOscillator::getValueAt(float t_s)
+{
+    
+    float _t_aux = fmod(t_s, _outputPeriod);
+    float _offset_in_cycle = _offset  * _outputPeriod;
+
+    
+    if ( _t_aux <= _offset_in_cycle ) {
+        return _t_aux * _slope_asc;
+    } else {
+        return 1 - _t_aux * _slope_desc;
+    }
+
 }
 
 void BaseOscillator::requestSilence()
