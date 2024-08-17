@@ -19,17 +19,6 @@ SynthpleFileData::SynthpleFileData()
 ///////////////////////////////////////////////////////////////////////
 void SynthpleFileData::init(std::string path_to_data_dir){
 
-
-    std::string coreconfigpath = path_to_data_dir + "/core.yml";
-    YAML::Node core_file_data = YAML::LoadFile(coreconfigpath);
-
-    _core = {
-        .frames_in_buffer = core_file_data["frames_in_buffer"].as<int>(),
-        .n_channels = core_file_data["n_channels"].as<short>(),
-        .frame_rate = core_file_data["frame_rate"].as<int>(),
-        .midi_undersampling_ratio = core_file_data["midi_undersampling_ratio"].as<int>()
-    };
-
     std::string songspath = path_to_data_dir + "/songs/";
     std::vector<std::string> song_files;
     

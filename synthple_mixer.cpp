@@ -3,6 +3,17 @@
 
 using namespace synthple::mixer;
 
+// Track
+Track::Track( filedata::VoiceFileData &_vfd ){
+
+    gain = _vfd.gain;
+
+    if (_vfd.type == "SQUARE"){
+        oscillator_ptr = std::make_shared<oscillator::SquareOscillator>();
+    } else {
+        throw std::runtime_error("Bad Oscilator type defined");
+    }
+}
 
 // Mixer //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -51,11 +62,7 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
 
     for (int __voice_i = 0; __voice_i < _sfd->voices.size(); __voice_i++){
         filedata::VoiceFileData &__vfd = _sfd->voices[__voice_i];
-
-        _tracks.push_back({
-            .gain = __vfd.gain,
-            .oscillator = oscillator::Oscillator( _oscillator_id++, __vfd.type, __vfd.n_samples )
-        });
+        _tracks.push_back( Track( __vfd ) );
     }
 
     setSection(0);
@@ -142,7 +149,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
                         _logger->debug("Requesting new Freq for Oscillator \"{}\" at T=\"{}\"s", j, _timeInSection_s);
                         _logger->flush();
 
-                        __track.oscillator.setFrequency(__aux_freq );
+                        __track.oscillator_ptr->setFrequency(__aux_freq );
                         __track.last_played_note_ptr = __track.curr_note_ptr ;
                         __track.is_silent = false;
                     }
@@ -156,7 +163,7 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
             for (int j = 0; j < _tracks.size(); j++){
                 Track &__track = _tracks[j];
 
-                __mixed_values += __track.is_silent ? 0 : __track.gain * __track.oscillator.getValueAt(_timeInSection_s);
+                __mixed_values += __track.is_silent ? 0 : __track.gain * __track.oscillator_ptr->getValueAt(_timeInSection_s);
 
             }
 

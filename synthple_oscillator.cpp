@@ -78,56 +78,36 @@ WaveTableType WaveTable::mapStringToWaveTableType( std::string wtt_str ){
     }
 }
 
+//
+// SquareOscillator
+SquareOscillator::SquareOscillator( float offset )
+:_offset(offset)
+{}
 
-
-//Oscillator //////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-Oscillator::Oscillator( int o_id, std::string wavetabletype_str, int wavetable_nsamples )
-:
-// _id(o_id),
-_logger(spdlog::basic_logger_mt("Oscillator " + std::to_string(o_id), "synthple.log")),    
-_waveTable(wavetable_nsamples, wavetabletype_str, _logger)
+float SquareOscillator::getValueAt(float t_s)
 {
-    _logger->set_level(spdlog::level::debug);
-}
+    
+    float _t_aux = fmod(t_s, _outputPeriod);
+    float _offset_in_cycle = _offset  * _outputPeriod;
 
-float Oscillator::getValueAt(float t_ms){
-
-    float retval = 0;
-
-    if (!_outputSilence){
-
-        float _t_in_cycle = fmod( (t_ms), _outputPeriod );
-        short _index = (short)floor(((float)_waveTable.get__n_samples() * _t_in_cycle) / (_outputPeriod));
-
-        assert(_index < _waveTable.get__n_samples());
-
-        if (_isSilenceRequested && (_lastIndex > _index)){
-            _isSilenceRequested = false;
-            _outputSilence = true;
-            
-            retval = 0;
-        } else {
-            
-            retval = _waveTable.lookupValueAt( _index );
-        }
-
-        _lastIndex = _index;
+    
+    if ( _t_aux <= _offset_in_cycle ) {
+        return 0.0f;
+    } else {
+        return 1.0f;
     }
 
-    return retval;
 }
 
-void Oscillator::requestSilence(){
-    _isSilenceRequested = true;
-}
-
-void Oscillator::setFrequency(float newf){
-
-    // _logger->debug("got new freq = {}", newf);
-    _outputFreq = newf;
-    _outputPeriod = 1 / newf;
+void BaseOscillator::setFrequency( float newfreq )
+{
+    _outputFreq = newfreq;
+    _outputPeriod = 1 / newfreq;
     _outputSilence = false;
     _isSilenceRequested = false;
+}
+
+void BaseOscillator::requestSilence()
+{
+    _isSilenceRequested = true;
 }

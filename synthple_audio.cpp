@@ -135,7 +135,6 @@ int AudioThread::paStreamCallback(
         && (fill_buffer_counter < N_CHANNELS * FRAMES_IN_BUFFER)
     ){
         out[fill_buffer_counter++] = value;
-        // fill_buffer_counter++;
     }
 
     return paContinue;

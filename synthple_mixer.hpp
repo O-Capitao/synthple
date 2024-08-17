@@ -10,12 +10,16 @@
 namespace synthple::mixer {
 
     struct Track {
-        oscillator::Oscillator oscillator;
+
+        Track( filedata::VoiceFileData &_vfd );
+
+        std::shared_ptr<oscillator::BaseOscillator> oscillator_ptr;
         midi::MonophonicMidiFileReader *midi_fw_ptr = nullptr;
         midi::MidiNote *last_played_note_ptr = nullptr; 
         midi::MidiNote *curr_note_ptr = nullptr;
 
         float gain;
+        std::string id;
         bool is_silent = true;
     };
 
@@ -23,7 +27,6 @@ namespace synthple::mixer {
         short repeat;
         short length_bars;
         float length_s;
-        // std::unordered_map<std::string, midi::MidiFileWrapper>  _midiFiles_perTrack_map;
         std::vector<midi::MonophonicMidiFileReader> _midiFiles_perTrack;
     };
 
