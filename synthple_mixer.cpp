@@ -12,7 +12,9 @@ Track::Track( filedata::VoiceFileData &_vfd ){
         oscillator_ptr = std::make_shared<oscillator::SquareOscillator>( _vfd.inflection );
     } else if (_vfd.type == "TRIANGLE"){
         oscillator_ptr = std::make_shared<oscillator::TriangleOscillator>( _vfd.inflection );
-    }else {
+    }else if(_vfd.type == "SIN"){
+        oscillator_ptr = std::make_shared<oscillator::SinOscillator>( _vfd.n_samples );
+    }else{
         throw std::runtime_error("Bad Oscilator type defined");
     }
 }

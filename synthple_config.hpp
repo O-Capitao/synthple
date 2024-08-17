@@ -12,7 +12,7 @@ namespace synthple::filedata {
         std::string id;
         std::string type;
         
-        short n_samples;
+        int n_samples;
         float inflection;
         float gain;
     };

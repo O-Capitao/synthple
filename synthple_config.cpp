@@ -49,7 +49,7 @@ void SynthpleFileData::init(std::string path_to_data_dir){
             float _inf_pt = currvoicedata["inflection"] ? currvoicedata["inflection"].as<float>() : 0.5;
             
             // Only for WaveTables
-            short _n_samples = currvoicedata["n-samples"] ? currvoicedata["n-samples"].as<int>() : 0;
+            int _n_samples = currvoicedata["n-samples"] ? currvoicedata["n-samples"].as<int>() : 0;
 
             sfd.voices.push_back({
                 .id = currvoicedata["id"].as<std::string>(),

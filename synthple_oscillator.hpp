@@ -7,32 +7,32 @@
 
 namespace synthple::oscillator {
     
-    enum WaveTableType {
-        SINE,
-        SQUARE,
-        SAW,
-        TRIANGLE,
-        CUSTOM
-    };
+    // enum WaveTableType {
+    //     SINE,
+    //     SQUARE,
+    //     SAW,
+    //     TRIANGLE,
+    //     CUSTOM
+    // };
 
-    class WaveTable {
+    // class WaveTable {
 
-        std::shared_ptr<spdlog::logger >_logger;
+    //     std::shared_ptr<spdlog::logger >_logger;
 
-        int _n_samples;
-        WaveTableType _wt_type;
+    //     int _n_samples;
+    //     WaveTableType _wt_type;
 
-        std::vector<float> _data;
+    //     std::vector<float> _data;
 
-        void _generateSinWaveform();
-        void _generateSquareWaveform();
+    //     void _generateSinWaveform();
+    //     void _generateSquareWaveform();
 
-        public:
-            WaveTable( int nsamples, std::string wavetabletype_str, std::shared_ptr<spdlog::logger > logger );
-            float lookupValueAt( short index );
-            static WaveTableType mapStringToWaveTableType( std::string wtt_str );
-            int get__n_samples(){ return _n_samples; }
-    };
+    //     public:
+    //         WaveTable( int nsamples, std::string wavetabletype_str, std::shared_ptr<spdlog::logger > logger );
+    //         float lookupValueAt( short index );
+    //         static WaveTableType mapStringToWaveTableType( std::string wtt_str );
+    //         int get__n_samples(){ return _n_samples; }
+    // };
 
     //
     //  1 |_  _  _ .
@@ -101,6 +101,19 @@ namespace synthple::oscillator {
 
         public:
             TriangleOscillator( float inflx);
+            float getValueAt(float t_s);
+            void setFrequency( float newfreq );
+    };
+
+
+
+    class SinOscillator: public BaseOscillator {
+
+        int _n_samples;        
+        std::vector<float> _wavetable;
+
+        public:
+            SinOscillator(int n_samples);
             float getValueAt(float t_s);
             void setFrequency( float newfreq );
     };
