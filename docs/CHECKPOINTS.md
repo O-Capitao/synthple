@@ -13,9 +13,14 @@
 - tempo hardcoded
 - start() stop() hardcoded em main paraa simular um cliente ext.
 
-### NEXT: ondas quadradas, triangulares, sawtooth, seno.
+### CP#4: ondas quadradas, triangulares, sawtooth, seno.
 
 
+
+
+## FUTURE:
+### NEXT: sequencing
+### NEXT: Drum Tracks / One Shot FX
 ### NEXT: Portamento / Glissando / *Slide*
 
 - detectar notas sobrepostas
