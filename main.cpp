@@ -19,14 +19,14 @@ int main(int argc, char *argv[]){
     synthple.init();
     synthple.setSong("intro");
 
-    // synthple.play();
-
     std::cout << "\nStarting Synthple.\n";
 
-    sleep(10);
+    sleep(20);
+    // while(true){
+
+    // }
 
     std::cout << "Stopping Synthple.\n";
     synthple.stop();
-    sleep(1);
     synthple.close();
 }

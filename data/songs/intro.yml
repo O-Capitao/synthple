@@ -13,7 +13,7 @@ voices:
     gain: 0.5
   - id: &sin1 sin_1
     type: SIN # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
-    n-samples: 32
+    n-samples: 128
     # inflection: 0.5  #centered
     gain: 0.23
 sections:
@@ -27,4 +27,14 @@ sections:
       - voice: *triangle1
         src: midi/testcase1_single_track_BASS.mid
       - voice: *sin1
+        src: midi/testcase1_single_track_alteredtempo.mid
+  - id: afterintro
+    repeat: 0 # 0 = infinite loop
+    length-bars: 2
+    tracks:
+      - voice: *square1
+        src: midi/testcase1_single_track_alteredtempo.mid
+      - voice: *triangle1
         src: midi/testcase1_single_track_BASS.mid
+      - voice: *sin1
+        src: midi/testcase1_single_track_alteredtempo.mid

@@ -75,6 +75,7 @@ namespace synthple::oscillator {
 
     class SquareOscillator: public BaseOscillator {
         float _inflection = 0;
+        float _inflection_in_cycle = 0;
 
         public:
             SquareOscillator( float inflx );
