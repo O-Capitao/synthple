@@ -19,17 +19,6 @@ SynthpleFileData::SynthpleFileData()
 ///////////////////////////////////////////////////////////////////////
 void SynthpleFileData::init(std::string path_to_data_dir){
 
-
-    std::string coreconfigpath = path_to_data_dir + "/core.yml";
-    YAML::Node core_file_data = YAML::LoadFile(coreconfigpath);
-
-    _core = {
-        .frames_in_buffer = core_file_data["frames_in_buffer"].as<int>(),
-        .n_channels = core_file_data["n_channels"].as<short>(),
-        .frame_rate = core_file_data["frame_rate"].as<int>(),
-        .midi_undersampling_ratio = core_file_data["midi_undersampling_ratio"].as<int>()
-    };
-
     std::string songspath = path_to_data_dir + "/songs/";
     std::vector<std::string> song_files;
     
@@ -55,11 +44,18 @@ void SynthpleFileData::init(std::string path_to_data_dir){
 
         for (std::size_t i=0 ; i < voicesNode.size(); i++) {
             auto currvoicedata = voicesNode[i];
+            
+            // OPTIONAL STUFF
+            float _inf_pt = currvoicedata["inflection"] ? currvoicedata["inflection"].as<float>() : 0.5;
+            
+            // Only for WaveTables
+            int _n_samples = currvoicedata["n-samples"] ? currvoicedata["n-samples"].as<int>() : 0;
+
             sfd.voices.push_back({
                 .id = currvoicedata["id"].as<std::string>(),
                 .type = currvoicedata["type"].as<std::string>(),
-                .n_samples = currvoicedata["n-samples"].as<short>(),
-                .offset = currvoicedata["offset"].as<float>(),
+                .n_samples = _n_samples,
+                .inflection = _inf_pt,
                 .gain = currvoicedata["gain"].as<float>()
             });
             _logger->debug("Parsed voice: {}.", currvoicedata["id"].as<std::string>());

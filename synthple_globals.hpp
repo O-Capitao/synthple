@@ -1,8 +1,8 @@
 #pragma once
 
-#define FRAMES_IN_BUFFER 4096                        // Frame - data necessary to render a timestep
-#define N_CHANNELS 1                                // Channels
-#define FRAMERATE 22000                             // value for the mega drive
+#define FRAMES_IN_BUFFER 4096                     // Frame - data necessary to render a timestep
+#define N_CHANNELS 1                              // Channels
+#define FRAMERATE 44000                           // value for the mega drive
 #define SAMPLE_DEPTH 16
 #define BUFFER_SIZE (FRAMES_IN_BUFFER * N_CHANNELS) // total of values inside the queue
 #define DIATONIC_SCALE_SIZE 12
