@@ -26,7 +26,7 @@ Synthple::Synthple( std::string path_to_config )
 
     _audioThread.init( &_audioDataBus );
     _filedata.init(path_to_config);
-
+    _mixer.init( &_commandBus );
     _logger->debug("Finished Construction.");
 
 }
@@ -99,11 +99,16 @@ void Synthple::_run(){
             _logger->debug("got a command!");
             
             if (__aux_command.cmdType == bus::CommandType::STOP){
+                _logger->debug("got a command -> STOP");
                 _EXIT = true;
+            } else if (__aux_command.cmdType == bus::CommandType::SET_SECTION){
+                _logger->debug("got a command -> SET_SECTION, arg={}", __aux_command.arg );
+                assert( __aux_command.arg != "" && atoi( __aux_command.arg.c_str() ) >= 0 );
+                setSongSection( atoi( __aux_command.arg.c_str() ) );
             }
         }
-
-        boost::this_thread::sleep_for(boost::chrono::milliseconds(50));
+        // no sleep here, as it screws up the section changes
+        // boost::this_thread::sleep_for(boost::chrono::milliseconds(5));
     }
 
     // _close();

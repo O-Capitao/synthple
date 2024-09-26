@@ -23,11 +23,11 @@ sections:
     length-bars: 2
     tracks:
       - voice: *square1
-        src: midi/testcase1_single_track_alteredtempo.mid
+        src: midi/testcase1_single_track_BASS.mid
       - voice: *triangle1
         src: midi/testcase1_single_track_BASS.mid
       - voice: *sin1
-        src: midi/testcase1_single_track_alteredtempo.mid
+        src: midi/testcase1_single_track_BASS.mid
   - id: afterintro
     repeat: 0 # 0 = infinite loop
     length-bars: 2
@@ -35,6 +35,6 @@ sections:
       - voice: *square1
         src: midi/testcase1_single_track_alteredtempo.mid
       - voice: *triangle1
-        src: midi/testcase1_single_track_BASS.mid
+        src: midi/testcase1_single_track_alteredtempo.mid
       - voice: *sin1
         src: midi/testcase1_single_track_alteredtempo.mid

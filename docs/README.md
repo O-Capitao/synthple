@@ -157,3 +157,14 @@ int main ()
 ```
 
 #
+
+# MAKEFILEs
+
+sempre:
+
+```Makefile
+
+target: dependencies
+    action
+
+```
