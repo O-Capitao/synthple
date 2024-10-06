@@ -1,0 +1,41 @@
+id: song1
+bpm: 230
+beats-per-bar: 4
+# MANDATORY: 1 voice per track!
+voices:
+  - id: bass
+    type: TRIANGLE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
+    inflection: 0.5  #centered
+    gain: 0.2
+  - id: lead
+    type: SQUARE # one of SQUARE, TRIANGLE, SAW or CUSTOM (TBD)
+    # inflection: 0.5  #centered
+    gain: 0.3
+sections:
+  - id: verse
+    # TODO: enable repeat
+    repeat: 2 # 0 = infinite loop
+    length-bars: 5
+    tracks:
+      - voice: bass
+        src: testsong/basstrack_sect1_1bar.MID
+      - voice: lead
+        src: testsong/leadtrack_sect1_1bar.MID
+  - id: verse
+    # TODO: enable repeat
+    repeat: 4 # 0 = infinite loop
+    length-bars: 2
+    tracks:
+      - voice: bass
+        src: testsong/basstrack_sect2_1bar.MID
+      - voice: lead
+        src: testsong/leadtrack_sect2_1bar.MID
+  - id: verse
+    # TODO: enable repeat
+    repeat: 0 # 0 = infinite loop
+    length-bars: 2
+    tracks:
+      - voice: bass
+        src: testsong/basstrack_sect3_2bar.MID
+      - voice: lead
+        src: testsong/leadtrack_sect3_halfbar.MID

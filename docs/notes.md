@@ -18,8 +18,63 @@
 
 
 
+
+
+
+# 2024 - 08 - 24: sequencing
+
+```yaml
+id: intro
+bpm: 120
+beats-per-bar: 4
+# (...)
+sections:
+  - id: intro
+    # TODO: enable repeat
+    repeat: 1 # 0 = infinite loop
+    length-bars: 2
+    tracks:
+        # midi assignments
+  - id: afterintro
+    repeat: 0 # 0 = infinite loop
+    length-bars: 2
+    tracks:
+        # midi asssignments
+```
+
+# Class SynthpleClock
+
+```cpp
+struct SynthpleCounters {
+
+    int beat__counter;
+    int bar__counter;
+
+    int section__counter;
+
+
+}
+```
+
+
+## O problema neste momento:
+Porque é que o sequenciamento é gerido a meias entre `Synthple` e `Mixer`?
+
+
+Duas maneiras de transitar entre Secção
+
+1) Naturalmente por via da config e sequencia
+> controlado por Mixer.
+
+2) Por fora, chamado de algum cliente. (Forçar)
+> controlado por Synthple.
+
+
+
+
+
+
 ## FUTURE:
-### NEXT: sequencing
 ### NEXT: Drum Tracks / One Shot FX
 ### NEXT: Portamento / Glissando / *Slide*
 
@@ -32,7 +87,6 @@
 ```
 
 - `slide_type=OFF` -> versão sem slide deve ser capaz de lidar com sobreposiçao de notas. e.g.: Mini Moog dá prioridade à nota baixa.
-
 
 
 

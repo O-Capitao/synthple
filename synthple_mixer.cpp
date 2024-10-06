@@ -30,6 +30,13 @@ Mixer::Mixer()
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+void Mixer::init( bus::CommandBus *cmd_bus  )
+{
+    _commandBus = cmd_bus;
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 void Mixer::setSong( filedata::SongFileData *_sfd )
 {
     _sfd_ptr = _sfd;
@@ -80,7 +87,7 @@ void Mixer::setSong( filedata::SongFileData *_sfd )
 ///////////////////////////////////////////////////////////////////////
 void Mixer::setSection(int sectionindex){
 
-    _logger->debug("setSEction");
+    _logger->debug("setSection={}", sectionindex);
     _logger->flush();
 
     _loaded_section_index = sectionindex;
@@ -172,17 +179,40 @@ void Mixer::produceData( float *requestedsamples_vector, int requestedsamples_le
             }
 
             requestedsamples_vector[i] = __mixed_values;
-
             assert(__mixed_values < 1.0);
-
             float __section_t_spillover = _timeInSection_s - _loadedSectionDuration_s;
-            //( (_sections[_loaded_section_index].length_bars *  * 60 )/_tempo_bpm) - _timeInSection_s;
 
             if (__section_t_spillover < 0 ){
-                
                 _timeInSection_s += _dt_s;
             } else {
+
+                Section &_loaded_section = _sections[_loaded_section_index];
+                // special case for:
+                if (_loaded_section.repeat != 0){
+                    if ( _loaded_section_repeat_count == _loaded_section.repeat ){
+                        // time to go to next section
+
+                        // is there a next section
+                        if ( _loaded_section_index <= _sfd_ptr->sections.size() ){
+
+                            _commandBus->queue.push({
+                                .cmdType= bus::CommandType::SET_SECTION,
+                                .arg= std::to_string( _loaded_section_index + 1 )
+                            });
+
+                        } else {
+                            // song has finished, stop playback or output silence
+                            _commandBus->queue.push({
+                                .cmdType= bus::CommandType::STOP,
+                                .arg= ""
+                            });
+                        }
+                    }
+                }
+
                 _logger->debug("spillover of {} at {}", __section_t_spillover, _timeInSection_s );
+                
+                _loaded_section_repeat_count++;
                 _timeInSection_s = __section_t_spillover;
             }
         }

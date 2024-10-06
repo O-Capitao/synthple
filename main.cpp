@@ -17,14 +17,17 @@ int main(int argc, char *argv[]){
     synthple::Synthple synthple( configfilepath );
 
     synthple.init();
-    synthple.setSong("intro");
+    synthple.setSong("song1");
 
     std::cout << "\nStarting Synthple.\n";
 
-    sleep(20);
-    // while(true){
+    while (1){
+        sleep(10);
+    }
 
-    // }
+    // // while(true){
+
+    // // }
 
     std::cout << "Stopping Synthple.\n";
     synthple.stop();

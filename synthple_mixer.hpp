@@ -6,6 +6,7 @@
 #include <synthple_oscillator.hpp>
 #include <midi/synthple_midi.hpp>
 #include <spdlog/spdlog.h>
+#include <synthple_bus.hpp>
 
 namespace synthple::mixer {
 
@@ -39,8 +40,11 @@ namespace synthple::mixer {
 
         std::string _loaded_song_name = "";
 
+        bus::CommandBus *_commandBus;
+
         filedata::SongFileData *_sfd_ptr;
         int _loaded_section_index = 0;
+        int _loaded_section_repeat_count = 0;
 
         float _timeInSong_s, 
             _timeInSection_s,
@@ -59,7 +63,8 @@ namespace synthple::mixer {
         public:  
             // constructs a silent mixer.
             Mixer();
-            
+
+            void init( bus::CommandBus *cmd_bus );
             void setSong( filedata::SongFileData *_sfd );
             void setSection( int sectionindex );
             void setSilence();
