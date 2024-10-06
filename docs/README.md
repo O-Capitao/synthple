@@ -168,3 +168,72 @@ target: dependencies
     action
 
 ```
+
+
+
+## Avliação da coisa Oct 2024
+
+
+proposta para nova config
+
+- Configuração do synthple é feita baseada em ficheiros song,
+localizados debaixo de {datadir}/songs
+
+```yaml
+# song file
+id: songname
+bpm: 230
+signature: 3/4, 4/4 etc etc # TODO
+swing: 0
+
+midifiles:
+    - id: bass1 
+      path: midi/file1.mid
+    - id: horn2
+      path: midi/hornsolo.mid
+
+tracks:
+    - id: basstrack
+      gain: 0.7
+      wave:
+        type: SAW
+        inflection: 0.5
+      envelope:
+        attack: 1
+        sustain: 1
+        decay: 1
+        release: 1
+      effects:
+        - type: reverb1
+          gain-wet: 1
+          gain-dry: 1
+          parameter: 1
+        - type: compression
+          gain-wet: 1
+          gain-dry: 1
+          parameter: 23
+        
+parts:
+    - id: intro
+      repeat: 2 #0 for infinite repeat
+      length-bars: 4 # for a single repeat
+      midi-to-track:
+        - file_id: bass1
+          track_id: basstrack
+          length_bars: 4
+          repeat: 0
+          priority: 3 # in case of overlap highest priority wins
+
+          offset: # where is the midi file put into
+            bars-start: 2
+            beats-start: 0
+          
+          trim:
+            bars-start: 0
+            beats-start: 0
+            bars-end: 0
+            beats-end: 0
+
+
+
+```

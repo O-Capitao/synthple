@@ -187,7 +187,7 @@ _tempo_bpm(tempobpm)
     midifile.joinTracks();
 
     assert(midifile.getEventCount(0) > 0);
-
+    _logger->info("Processing File: {}", fp);
     _beat_duration_s = 60.0 / _tempo_bpm;
     _ticks_per_beat = midifile.getTicksPerQuarterNote();
     _tick_duration_s = _beat_duration_s / _ticks_per_beat;
